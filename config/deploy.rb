@@ -37,10 +37,10 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 
 namespace :deploy do
 
-  after :restart, :restart_sidekiq do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      execute "sudo /bin/systemctl restart sidekiq"
-    end
-  end
+ # after :restart, :restart_sidekiq do
+ #   on roles(:web), in: :groups, limit: 3, wait: 10 do
+ #     execute "sudo /bin/systemctl restart sidekiq"
+ #   end
+ # end
 
 end
