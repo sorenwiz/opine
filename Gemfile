@@ -27,7 +27,7 @@ gem 'dotenv-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
+# Use Unicorn as the app serverç
 # gem 'unicorn'
 gem 'therubyracer', '= 0.12.1'
 
