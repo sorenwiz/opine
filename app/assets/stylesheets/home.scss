@@ -1,3 +1,83 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$navbar-margin-bottom: 0;
+$navbar-border-radius: 0;
+$navbar-default-bg: #fff;
+$navbar-default-link-color: #000;
+$navbar-default-border: transparent;
+
+$footer-default-padding: 80px 0 60px;
+$footer-default-bg: #121212;
+$footer-default-color: #fff;
+$footer-default-link-color: #fff;
+$footer-default-link-hover-color: #fff;
+$footer-default-link-active-color: #fff;
+
+$state-success-text: #5adc96;
+
+$jumbotron-heading-font-size: 64px;
+$jumbotron-font-size: 36px;
+$jumbotron-bg: #fff;
+
+@import "bootstrap";
+@import "footer";
+
+body {
+  background: #fff image-url("body-bg.jpg") no-repeat top center/cover;
+}
+
+.navbar-default .navbar-nav > li > .navbar-btn {
+  color: #fff;
+}
+
+.container {
+  .jumbotron {
+    border-radius: 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 0;
+  }
+}
+
+.jumbotron-title {
+  font-weight: 400;
+  font-size: 64px;
+}
+
+.jumbotron-subtitle {
+  font-size: 36px;
+}
+
+.jumbotron-image {
+  @include img-responsive();
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer-default {
+  background-color: $footer-default-bg;
+  color: $footer-default-color;
+  padding: $footer-default-padding;
+
+  .footer-link {
+    color: $footer-default-link-color;
+    &:hover {
+      color: $footer-default-link-hover-color;
+    }
+    &:active,
+    &:focus {
+      color: $footer-default-link-active-color;
+    }
+  }
+}
+
+.footer-brand {
+  color: #fff;
+}
+
+.btn-signin {
+  @include button-variant(#fff, #0c0c0c, #0c0c0c);
+  border-radius: 20px;
+}

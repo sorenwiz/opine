@@ -7,4 +7,6 @@ html
     = javascript_include_tag 'application'
     = csrf_meta_tags
   body
+    = render 'components/header'
     = yield
+    = render 'components/footer'
