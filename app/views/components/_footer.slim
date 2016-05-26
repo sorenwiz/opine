@@ -1,31 +1,63 @@
-.container
-  footer.footer.footer-default
-    .row
-      .col-md-2.col-md-offset-1
-        = link_to "Opine", root_path, class: 'footer-brand'
-        p.text-muted Non-profit forening
-        p.text-muted Copyright 2016
-      .col-md-2
-        h4.list-title Kategorier
-        ul.list-unstyled
-          li Dansk politik
-          li EU
-          li Miljø
-          li Samfund
-          li Økonomi
-      .col-md-2
-        h4.list-title Om Opine
-        ul.list-unstyled
-          li Om Opine
-          li Konceptet
-          li Om os
-          li Donér
-          li Kontakt os
-      .col-md-2
-        h4.list-title Fun Stats
-        ul.list-unstyled
-          li Fun stats
-          li 593.234 har stemt.
-          li 23 aktive afstemninger.
-          li 324 har stemt i dag.
-        p.text-muted Cookies - Privatlivspolitik
+.wrapper-footer
+  .container
+    footer.footer.footer-default
+      .row
+        .col-md-2
+          = link_to "Opine", root_path, class: 'footer-brand'
+          p.text-muted Non-profit forening
+          p.text-muted Copyright 2016
+        .col-md-2
+          h4.list-title Kategorier
+          ul.footer-list
+            li.footer-item
+              = link_to "Dansk politik", "", class: 'footer-link'
+            li.footer-item
+              = link_to "EU", "", class: 'footer-link'
+            li.footer-item
+              = link_to "Miljø", "", class: 'footer-link'
+            li.footer-item
+              = link_to "Samfund", "", class: 'footer-link'
+            li.footer-item
+              = link_to "Økonomi", "", class: 'footer-link'
+        .col-md-2.col-md-offset-1
+          h4.list-title Om Opine
+          ul.footer-list
+            li.footer-item
+              = link_to "Konceptet", "", class: 'footer-link'
+            li.footer-item
+              = link_to "Om os", "", class: 'footer-link'
+            li.footer-item
+              = link_to "Donér", "", class: 'footer-link'
+            li.footer-item
+              = link_to "Kontakt os", "", class: 'footer-link'
+        .col-md-3.col-md-offset-1
+          h4.list-title Fun Stats
+          ul.footer-list
+            li.footer-item
+              = link_to "593.234 har stemt.", "", class: 'footer-link'
+            li.footer-item
+              = link_to "23 aktive afstemninger.", "", class: 'footer-link'
+            li.footer-item
+              = link_to "324 har stemt i dag.", "", class: 'footer-link'
+          p.text-muted Cookies - Privatlivspolitik
+          ul.list-inline
+            li
+              = link_to root_path, class: 'social-link'
+                span.fa-stack.fa-lg
+                  i.fa.fa-circle.fa-stack-2x
+                  i.fa.fa-facebook.fa-stack-1x.fa-inverse
+            li
+              = link_to root_path, class: 'social-link'
+                span.fa-stack.fa-lg
+                  i.fa.fa-circle.fa-stack-2x
+                  i.fa.fa-tumblr.fa-stack-1x.fa-inverse
+            li
+              = link_to root_path, class: 'social-link'
+                span.fa-stack.fa-lg
+                  i.fa.fa-circle.fa-stack-2x
+                  i.fa.fa-pinterest.fa-stack-1x.fa-inverse
+            li
+              = link_to root_path, class: 'social-link'
+                span.fa-stack.fa-lg
+                  i.fa.fa-circle.fa-stack-2x
+                  i.fa.fa-twitter.fa-stack-1x.fa-inverse

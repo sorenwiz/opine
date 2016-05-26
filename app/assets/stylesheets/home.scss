@@ -1,26 +1,5 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-$navbar-margin-bottom: 0;
-$navbar-border-radius: 0;
-$navbar-default-bg: #fff;
-$navbar-default-link-color: #000;
-$navbar-default-border: transparent;
-
-$footer-default-padding: 80px 0 60px;
-$footer-default-bg: #121212;
-$footer-default-color: #fff;
-$footer-default-link-color: #fff;
-$footer-default-link-hover-color: #fff;
-$footer-default-link-active-color: #fff;
-
-$state-success-text: #5adc96;
-
-$jumbotron-heading-font-size: 64px;
-$jumbotron-font-size: 36px;
-$jumbotron-bg: #fff;
-
+@import "variables";
+@import "fonts";
 @import "bootstrap";
 @import "footer";
 
@@ -28,26 +7,79 @@ body {
   background: #fff image-url("body-bg.jpg") no-repeat top center/cover;
 }
 
+.navbar-default {
+  padding-top: 35px;
+}
+
+.navbar-brand {
+  @include text-hide();
+  @include img-retina(image-path("brand.png"), image-path("brand@2x.png"), 131px, 68px);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 131px;
+  height: 68px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-weight: bold;
+  font-size: 19px;
+}
+
 .navbar-default .navbar-nav > li > .navbar-btn {
   color: #fff;
+  font-weight: normal;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 170px;
+  margin: 4px 0 4px $grid-gutter-width;
+}
+
+@media (min-width: $screen-sm-min) {
+  .navbar-right {
+    margin-right: 0 !important;
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .wrapper {
+    background-color: #fff;
+  }
+
+  .wrapper-gray {
+    background-color: #f2f3f7;
+  }
+
+  .wrapper-footer {
+    background-color: $footer-default-bg;
+  }
+
+  .wrapper,
+  .wrapper-gray,
+  .wrapper-footer {
+    padding-left: 100px;
+    padding-right: 100px;
+    max-width: 1370px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .container {
   .jumbotron {
     border-radius: 0;
     text-align: center;
-    border-bottom: 1px solid #ddd;
     margin-bottom: 0;
   }
 }
 
 .jumbotron-title {
-  font-weight: 400;
   font-size: 64px;
+  font-weight: 700;
 }
 
 .jumbotron-subtitle {
   font-size: 36px;
+  font-weight: 300;
 }
 
 .jumbotron-image {
@@ -74,10 +106,65 @@ body {
 }
 
 .footer-brand {
+  display: inline-block;
+  @include text-hide();
+  @include img-retina(image-path("brand-white.png"), image-path("brand-white@2x.png"), 106px, 55px);
+  background-size: contain;
+  width: 106px;
+  height: 55px;
   color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer-list {
+  line-height: 2;
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-item {
+  font-size: 18px;
 }
 
 .btn-signin {
   @include button-variant(#fff, #0c0c0c, #0c0c0c);
   border-radius: 20px;
+}
+
+.section-info {
+  padding: 100px 0 70px;
+  background-color: #f2f3f7;
+}
+
+.section-info-title {
+  font-size: 50px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #121212;
+}
+
+.section-info-text {
+  font-size: 28px;
+  color: #121212;
+}
+
+.section-info-image {
+  @include img-responsive();
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.social-link {
+  color: rgba(255, 255, 255, 0.5);
+  &:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .fa-inverse {
+    color: #121212;
+  }
 }

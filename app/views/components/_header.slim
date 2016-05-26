@@ -1,21 +1,22 @@
-header.container
-  nav.navbar.navbar-default.navbar-static-top
-    .navbar-header
-      button.navbar-toggle data-target="#navbar" data-toggle="collapse" type="button"
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      = link_to "Opine", root_path, class: "navbar-brand"
-    #navbar.collapse.navbar-collapse
-      ul.nav.navbar-nav.navbar-right
-        li
-          = link_to "Afstemninger"
-        li
-          = link_to "Resultater"
-        li
-          = link_to "Konceptet"
-        li
-          = link_to "Om os"
-        li
-          = link_to "Log ind", nil, class: "btn btn-signin navbar-btn"
+header.wrapper
+  .container
+    nav.navbar.navbar-default.navbar-static-top
+      .navbar-header
+        button.navbar-toggle data-target="#navbar" data-toggle="collapse" type="button"
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        = link_to "Opine", root_path, class: "navbar-brand"
+      #navbar.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+          li
+            = link_to "Afstemninger"
+          li
+            = link_to "Resultater"
+          li
+            = link_to "Konceptet"
+          li
+            = link_to "Om os"
+          li
+            = link_to "Log ind", nil, class: "btn btn-signin navbar-btn"

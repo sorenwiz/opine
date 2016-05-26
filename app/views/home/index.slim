@@ -1,9 +1,23 @@
-.container
-  .jumbotron
-    h1.jumbotron-title
-      span Giv
-      span.text-success<> din mening
-      span til kende
-    p.jumbotron-subtitle Your opinion matters
-    = image_tag "jumbotron-image.png", alt: 'Your opinion matters', class: 'jumbotron-image', width: '762', height: '327'
-  .section.section
+.wrapper
+  .container
+    .jumbotron
+      h1.jumbotron-title
+        span Giv
+        span.text-success<> din mening
+        span til kende
+      p.jumbotron-subtitle Your opinion matters
+      = image_tag "jumbotron-image@2x.png", alt: 'Your opinion matters', class: 'jumbotron-image', width: '762', height: '327'
+    .section.section
+section.wrapper-gray.section-info
+  .container
+    .row
+      .col-sm-9
+        h2.section-info-title
+          span Mangler du også et sted at give
+          span.text-success<> din mening
+          span - og se hvad andre synes?
+        p.section-info-text
+          strong Det gør vi.
+          span Derfor har vi skabt Opine hvor vi alle kan vise hvad vi synes om aktuelle emner. Vi håber det kan fremme demokratiet.
+      .col-sm-3
+        = image_tag "section-info@2x.png", alt: 'Section info image', class: 'section-info-image', width: '232', height: '334'
