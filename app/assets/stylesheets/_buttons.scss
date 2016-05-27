@@ -1,0 +1,4 @@
+.btn-signin {
+  @include button-variant(#fff, #0c0c0c, #0c0c0c);
+  border-radius: $btn-border-radius-base;
+}

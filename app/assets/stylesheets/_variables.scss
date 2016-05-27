@@ -2,6 +2,7 @@
 $headings-font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $headings-font-weight: 500;
 $font-family-base: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-h2: 28px;
 
 // Navbar
 $navbar-margin-bottom: 0;
@@ -19,9 +20,24 @@ $footer-default-link-hover-color: #fff;
 $footer-default-link-active-color: #fff;
 
 // Components
+$grid-gutter-width: 30px;
 $state-success-text: #5adc96;
+$padding-large-horizontal: 50px;
 
 // Jumbotron
 $jumbotron-heading-font-size: 64px;
 $jumbotron-font-size: 36px;
 $jumbotron-bg: #fff;
+
+// Cards
+$card-deck-margin: $grid-gutter-width;
+$card-spacer-y: $grid-gutter-width;
+
+// Buttons
+$btn-border-radius-base: 25px;
+$btn-border-radius-small: $btn-border-radius-base;
+$btn-border-radius-large: $btn-border-radius-base;
+
+$btn-default-color: #7b7b7b;
+$btn-default-bg: #efefef;
+$btn-default-border: #efefef;

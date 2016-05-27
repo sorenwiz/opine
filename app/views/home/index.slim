@@ -7,7 +7,51 @@
         span til kende
       p.jumbotron-subtitle Your opinion matters
       = image_tag "jumbotron-image@2x.png", alt: 'Your opinion matters', class: 'jumbotron-image', width: '762', height: '327'
-    .section.section
+section.wrapper.section-polls
+  .container
+    h2.section-polls-title
+      span.fa.fa-fw.fa-line-chart>
+      | Aktuelle afstemninger
+    .card-deck-wrapper
+      .card-deck
+        .card-sm-6.card
+          .card-image
+            = image_tag "card-poll-1.jpg", alt: 'Card Poll 1', class: 'img-responsive'
+          .card-header
+            h4.card-title Skal Danmark købe nye kampfly?
+            .card-meta Folketinget har besluttet, at det danske forsvar skal have nye kampfly. Flyene skal erstatte de nuværende F-16’ere, som er mere end 30 år gamle. Nu er tiden kommet, hvor politikerne skal vælge, hvilket fly det skal være.
+        .card-sm-3.card
+          .card-image
+            = image_tag "card-poll-2.jpg", alt: 'Card Poll 2', class: 'img-responsive'
+          .card-header
+            h4.card-title Skal DS ekspande-re på trods blabla.?
+            .card-meta Folketinget har besluttet, at det danske forsvar skal have nye kampfly. Flyene skal erstatte de nuværende F-16’ere, som er mere end 30 år gamle. Nu er tiden kommet, hvor politikerne skal vælge, hvilket fly det skal være.
+        .card-sm-3.card.card--purple
+          .card-header
+            h4.card-title.card-title--lg Har du et forslag til en afstemning?
+            .card-meta.card-meta--lg Vi opretter afstemninger over aktuelle emner i Danmark og i verden. Har du et spørgsmål du gerne vil have frem så skriv til os!
+    .card-deck-wrapper
+      .card-deck
+        .card-sm-3.card
+          .card-image
+            = image_tag "card-poll-4.jpg", alt: 'Card Poll 2', class: 'img-responsive'
+          .card-header
+            h4.card-title Donald Trump eller Hillary Clinton?
+            .card-meta Der er snart præsidentvalg i USA. Det har indflydelse på Danmark. Hvem skal være USA’s 45’erende præsident?
+        .card-sm-3.card
+          .card-image
+            = image_tag "card-poll-5.jpg", alt: 'Card Poll 2', class: 'img-responsive'
+          .card-header
+            h4.card-title Hvordan skal konflikten i Syrien løses?
+            .card-meta Der er snart præsidentvalg i USA. Det har indflydelse på Danmark. Hvem skal være USA’s 45’erende præsident?
+        .card-sm-3.card
+          .card-image
+            = image_tag "card-poll-6.jpg", alt: 'Card Poll 2', class: 'img-responsive'
+          .card-header
+            h4.card-title Skal politikernes pensions-alder forhøjes?
+            .card-meta Der er snart præsidentvalg i USA. Det har indflydelse på Danmark. Hvem skal være USA’s 45’erende præsident?
+    .m-y.text-center
+      button(type='button' class='btn btn-default btn-lg') Indlæs flere afstemninger...
 section.wrapper-gray.section-info
   .container
     .row
