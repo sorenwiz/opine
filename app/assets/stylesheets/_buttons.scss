@@ -1,4 +1,11 @@
-.btn-signin {
-  @include button-variant(#fff, #0c0c0c, #0c0c0c);
-  border-radius: $btn-border-radius-base;
+.btn {
+  border-width: 4px;
+}
+
+.btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+
+.btn-tertiary {
+  @include button-variant($btn-tertiary-color, $btn-tertiary-bg, $btn-tertiary-border);
 }

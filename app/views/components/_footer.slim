@@ -30,7 +30,7 @@
               = link_to "Donér", "", class: 'footer-link'
             li.footer-item
               = link_to "Kontakt os", "", class: 'footer-link'
-        .col-md-3.col-md-offset-1
+        .col-md-4.col-md-offset-1
           h4.list-title Fun Stats
           ul.footer-list
             li.footer-item
@@ -39,7 +39,10 @@
               = link_to "23 aktive afstemninger.", "", class: 'footer-link'
             li.footer-item
               = link_to "324 har stemt i dag.", "", class: 'footer-link'
-          p.text-muted Cookies - Privatlivspolitik
+          p
+            = link_to "Cookies", root_path, class: 'text-muted'
+            span.text-muted<> &mdash;
+            = link_to "Privatlivspolitik", root_path, class: 'text-muted'
           ul.list-inline
             li
               = link_to root_path, class: 'social-link'

@@ -20,8 +20,14 @@ $footer-default-link-hover-color: #fff;
 $footer-default-link-active-color: #fff;
 
 // Components
+$text-muted: #aeaeae;
 $grid-gutter-width: 30px;
 $state-success-text: #5adc96;
+$padding-small-vertical: 2px;
+$padding-small-horizontal: 10px;
+$padding-base-vertical: 4px;
+$padding-base-horizontal: 30px;
+$padding-large-vertical: 8px;
 $padding-large-horizontal: 50px;
 $wrapper-extra-width: 1370px; /* $container-lg + 200px */
 
@@ -39,6 +45,19 @@ $btn-border-radius-base: 25px;
 $btn-border-radius-small: $btn-border-radius-base;
 $btn-border-radius-large: $btn-border-radius-base;
 
+
 $btn-default-color: #7b7b7b;
 $btn-default-bg: #efefef;
 $btn-default-border: #efefef;
+
+$btn-primary-color: #fff;
+$btn-primary-bg: #ff6a06;
+$btn-primary-border: #ff6a06;
+
+$btn-secondary-color: #fff;
+$btn-secondary-bg: #0c0c0c;
+$btn-secondary-border: #0c0c0c;
+
+$btn-tertiary-color: #fff;
+$btn-tertiary-bg: transparent;
+$btn-tertiary-border: #fff;
