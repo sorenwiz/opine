@@ -11,6 +11,7 @@ html
     = javascript_include_tag 'https://use.fontawesome.com/a7d9fb2ffb.js'
     = csrf_meta_tags
   body
-    = render 'components/header'
-    = yield
-    = render 'components/footer'
+    .page-shadow
+      = render 'components/header'
+      = yield
+      = render 'components/footer'

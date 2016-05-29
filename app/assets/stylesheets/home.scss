@@ -35,6 +35,10 @@ body {
   }
 }
 
+.page-shadow {
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.08);
+}
+
 @media only screen and (min-width: $screen-lg-min) {
   .wrapper {
     background-color: #fff;
@@ -50,10 +54,9 @@ body {
 
   .wrapper,
   .wrapper-gray,
-  .wrapper-footer {
-    padding-left: 100px;
-    padding-right: 100px;
-    max-width: 1370px;
+  .wrapper-footer,
+  .page-shadow {
+    max-width: $wrapper-extra-width;
     margin-right: auto;
     margin-left: auto;
   }
