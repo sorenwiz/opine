@@ -2,11 +2,12 @@ header.wrapper
   .container
     nav.navbar.navbar-default.navbar-static-top
       .navbar-header
-        button.navbar-toggle data-target="#navbar" data-toggle="collapse" type="button"
+        button.navbar-toggle.navbar-btn data-target="#navbar" data-toggle="collapse" type="button"
           span.sr-only Toggle navigation
           span.icon-bar
           span.icon-bar
           span.icon-bar
+        = link_to "Log ind", root_path, class: "btn btn-secondary navbar-btn pull-right visible-xs"
         = link_to "Opine", root_path, class: "navbar-brand"
       #navbar.collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-right

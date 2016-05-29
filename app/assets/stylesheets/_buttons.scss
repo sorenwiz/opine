@@ -2,10 +2,18 @@
   border-width: 4px;
 }
 
-.btn-secondary {
+%btn-secondary {
   @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
 
-.btn-tertiary {
+.btn-secondary {
+  @extend %btn-secondary;
+}
+
+%btn-tertiary {
   @include button-variant($btn-tertiary-color, $btn-tertiary-bg, $btn-tertiary-border);
+}
+
+.btn-tertiary {
+  @extend %btn-tertiary;
 }

@@ -1,0 +1,42 @@
+.footer-default {
+  background-color: $footer-default-bg;
+  color: $footer-default-color;
+  padding: $footer-default-padding;
+
+  .footer-link {
+    color: $footer-default-link-color;
+    &:hover {
+      color: $footer-default-link-hover-color;
+    }
+    &:active,
+    &:focus {
+      color: $footer-default-link-active-color;
+    }
+  }
+}
+
+.footer-brand {
+  display: inline-block;
+  @include text-hide();
+  @include img-retina(image-path("brand-white.png"), image-path("brand-white@2x.png"), 106px, 55px);
+  background-size: contain;
+  width: 106px;
+  height: 55px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer-list {
+  line-height: 2;
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-item {
+  font-size: 18px;
+}
