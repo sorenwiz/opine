@@ -42,6 +42,7 @@ body {
 .jumbotron-title {
   font-size: 56px;
   font-weight: 700;
+  margin: 0;
 }
 
 .jumbotron-subtitle {
@@ -53,13 +54,6 @@ body {
   @include img-responsive();
   margin-right: auto;
   margin-left: auto;
-}
-
-@media only screen and (max-width: $screen-xs-max) {
-  .jumbotron {
-    padding-top: $jumbotron-padding / 2;
-    padding-bottom: $jumbotron-padding / 2;
-  }
 }
 
 @media only screen and (min-width: $screen-sm-min) {
@@ -143,6 +137,8 @@ body {
   }
   .card-text + .card-text {
     padding-left: 10px;
+    flex: 1 0 auto;
+    text-align: right;
   }
   .btn-primary {
     order: 3;

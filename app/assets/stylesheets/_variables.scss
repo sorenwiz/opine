@@ -40,6 +40,7 @@ $wrapper-extra-width: 1370px; /* $container-lg + 200px */
 $jumbotron-heading-font-size: 64px;
 $jumbotron-font-size: 36px;
 $jumbotron-bg: #fff;
+$jumbotron-padding: 16px;
 
 // Cards
 $card-deck-margin: $grid-gutter-width;
@@ -51,14 +52,13 @@ $btn-border-radius-base: 25px;
 $btn-border-radius-small: $btn-border-radius-base;
 $btn-border-radius-large: $btn-border-radius-base;
 
-
 $btn-default-color: #7b7b7b;
 $btn-default-bg: #efefef;
 $btn-default-border: #efefef;
 
 $btn-primary-color: #fff;
-$btn-primary-bg: #ff6a06;
-$btn-primary-border: #ff6a06;
+$btn-primary-bg: #5adc96;
+$btn-primary-border: #5adc96;
 
 $btn-secondary-color: #fff;
 $btn-secondary-bg: #0c0c0c;
