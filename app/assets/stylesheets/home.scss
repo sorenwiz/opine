@@ -1,3 +1,4 @@
+/* Homepage styles */
 body {
   background: #fff image-url("body-bg.jpg") no-repeat top center/cover;
 }
@@ -36,11 +37,15 @@ body {
     border-radius: 0;
     text-align: center;
     margin-bottom: 0;
+    @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
 .jumbotron-title {
-  font-size: 56px;
+  font-size: 54px;
   font-weight: 700;
   margin: 0;
 }
@@ -66,29 +71,57 @@ body {
 }
 
 .section-info {
-  padding: 50px 0 30px;
+  padding: 30px 0 30px;
   background-color: #f2f3f7;
+  @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    text-align: center;
+  }
   @media only screen and (min-width: $screen-md-min) {
     padding: 100px 0 70px;
   }
 }
 
 .section-info-title {
-  font-size: 50px;
+  font-size: 30px;
   line-height: 1.25;
   font-weight: 700;
   color: #121212;
 }
 
 .section-info-text {
-  font-size: 28px;
+  font-size: 17px;
   color: #121212;
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  .section-info-title {
+    font-size: 30px;
+  }
+  .section-info-text {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .section-info-title {
+    font-size: 50px;
+  }
+  .section-info-text {
+    font-size: 28px;
+  }
 }
 
 .section-info-image {
   @include img-responsive();
   margin-right: auto;
   margin-left: auto;
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+  .social-list {
+    text-align: center;
+    margin: $grid-gutter-width 0;
+  }
 }
 
 .social-link {
@@ -102,8 +135,11 @@ body {
 }
 
 .section-polls {
-  padding: 50px 0;
+  padding: 0 0 50px 0;
   background-color: #fff;
+  @media only screen and (min-width: $screen-sm-min) {
+    padding: 50px 0;
+  }
   &.wrapper {
     border-top: 1px solid #e6e6e6;
   }
@@ -114,45 +150,85 @@ body {
   font-weight: 400;
 }
 
-.card-sm-6 {
-  .card-footer {
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.card-sm-3 {
-  .card-footer {
-    font-size: 16px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-flow: row wrap;
-  }
-  .card-text {
-    display: inline-block;
-    padding-bottom: 10px;
-  }
-  .card-text + .card-text {
-    padding-left: 10px;
-    flex: 1 0 auto;
-    text-align: right;
-  }
-  .btn-primary {
-    order: 3;
-  }
-}
-
-.card-sm-4 {
-  .card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Start cards on the homepage */
+@media only screen and (max-width: $screen-md-max) {
+  .card-lg-6,
+  .card-lg-4,
+  .card-lg-3 {
+    .card-footer {
+      font-size: 16px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-flow: row wrap;
+    }
     .card-text {
-      display: block;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    .card-text + .card-text {
+      padding-left: 10px;
+      flex: 1 0 auto;
       text-align: right;
+    }
+    .btn-primary {
+      display: block;
+      width: 100%;
+      order: 3;
+    }
+    .flex-end {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row nowrap;
+      flex: 1 0 auto;
     }
   }
 }
+
+@media only screen and (min-width: $screen-lg-min) {
+
+  .card-lg-6 {
+    .card-footer {
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .card-lg-3 {
+    .card-footer {
+      font-size: 16px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-flow: row wrap;
+    }
+    .card-text {
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    .card-text + .card-text {
+      padding-left: 10px;
+      flex: 1 0 auto;
+      text-align: right;
+    }
+    .btn-primary {
+      order: 3;
+    }
+  }
+
+  .card-lg-4 {
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .card-text {
+        display: block;
+        text-align: right;
+      }
+    }
+  }
+}
+
+/* End cards on the homepage */

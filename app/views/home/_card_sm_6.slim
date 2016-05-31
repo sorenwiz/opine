@@ -1,6 +1,6 @@
-.card-sm-6.card
-  .card-image
-    = image_tag "card-poll-1.jpg", alt: 'Card Poll 1', class: 'img-responsive'
+.card-sm-7.card-md-6.card-lg-6.card
+  .card-image(style="background-image: url(#{image_path('card-poll-1.jpg')});")
+    /= image_tag "card-poll-1.jpg", alt: 'Card Poll 1', class: 'img-responsive'
   .card-header
     h4.card-title Skal Danmark købe nye kampfly?
     .card-meta Folketinget har besluttet, at det danske forsvar skal have nye kampfly. Flyene skal erstatte de nuværende F-16’ere, som er mere end 30 år gamle. Nu er tiden kommet, hvor politikerne skal vælge, hvilket fly det skal være.

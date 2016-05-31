@@ -1,6 +1,6 @@
-.card-sm-3.card
-  .card-image
-    = image_tag "card-poll-2.jpg", alt: 'Card Poll 2', class: 'img-responsive'
+.card-sm-5.card-md-3.card-lg-3.card
+  .card-image(style="background-image: url(#{image_path('card-poll-2.jpg')});")
+    /= image_tag "card-poll-2.jpg", alt: 'Card Poll 2', class: 'img-responsive'
   .card-header
     h4.card-title Skal DS ekspande-re på trods blabla.?
     .card-meta Folketinget har besluttet, at det danske forsvar skal have nye kampfly.

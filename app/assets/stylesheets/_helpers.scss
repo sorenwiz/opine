@@ -1,0 +1,12 @@
+.visible-breakpoint {
+  display: none;
+}
+
+@media only screen and (max-width: $grid-float-breakpoint-max) {
+  .visible-breakpoint {
+    display: block;
+  }
+  .invisible-breakpoint {
+    display: none !important;
+  }
+}

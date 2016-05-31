@@ -95,8 +95,13 @@
 
 // Button sizes
 @mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
   line-height: $line-height;
   border-radius: $border-radius;
+  @media only screen and (max-width: $screen-xs-max) {
+    padding: $padding-vertical round($padding-horizontal / 3);
+  }
+  @media only screen and (min-width: $screen-sm-min) {
+    padding: $padding-vertical $padding-horizontal;
+  }
 }

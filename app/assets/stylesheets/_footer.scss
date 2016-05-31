@@ -1,7 +1,11 @@
 .footer-default {
   background-color: $footer-default-bg;
   color: $footer-default-color;
-  padding: $footer-default-padding;
+  padding: $footer-default-padding-y $footer-default-padding-x;
+
+  @media only screen and (min-width: $screen-sm-min) {
+    padding: round($footer-default-padding-y * 1.33) $footer-default-padding-x;
+  }
 
   .footer-link {
     color: $footer-default-link-color;
@@ -17,6 +21,7 @@
 
 .footer-brand {
   display: inline-block;
+  vertical-align: top;
   @include text-hide();
   @include img-retina(image-path("brand-white.png"), image-path("brand-white@2x.png"), 106px, 55px);
   background-size: contain;
@@ -27,6 +32,7 @@
 }
 
 .footer-title {
+  margin-top: 0;
   font-size: 24px;
   font-weight: 700;
 }

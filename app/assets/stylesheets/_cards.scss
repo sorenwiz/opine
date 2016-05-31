@@ -16,22 +16,27 @@
   .card-header,
   .card-body,
   .card-footer {
-    padding: 3rem 3rem 0 3rem;
+    padding: 2rem 2rem 0 2rem;
 
     &:last-child {
-      padding-bottom: 3rem;
+      padding-bottom: 2rem;
     }
     @media only screen and (max-width: $screen-xs-max) {
       margin-bottom: $grid-gutter-width;
     }
+    @media only screen and (min-width: $screen-md-min) {
+      padding: 3rem 3rem 0 3rem;
+      &:last-child {
+        padding-bottom: 3rem;
+      }
+    }
   }
 
   .card-image {
-    padding-top: 3rem;
+    background: transparent no-repeat center/cover;
+    height: 260px;
 
     &:first-child {
-      padding-top: 0;
-
       img {
         width: 100%;
         border-top-left-radius: .3rem;
@@ -46,34 +51,100 @@
       }
     }
   }
+
   .card-title {
     font-size: 24px;
     line-height: 1.3;
     margin-bottom: .25rem;
     margin-top: 0;
   }
+
   .card-title--lg {
     font-size: 32px;
   }
+
   .card-meta {
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 0;
     margin-top: 0;
   }
+
   .card-meta--lg {
     font-size: 18px;
   }
 }
 
-@media only screen and (min-width: $screen-sm-min) {
-  $space-between-cards: $card-deck-margin;
+@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+  .card-deck {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -$card-deck-margin / 2;
+    margin-left: -$card-deck-margin / 2;
+    .card {
+      margin-right: $card-deck-margin / 2;
+      margin-left: $card-deck-margin / 2;
+      margin-bottom: $card-spacer-y; // Margin balancing
+      flex: 1 0 32%;
+    }
+  }
+
+  .card-sm-12 {
+    @include make-sm-column(12, 0);
+  }
+
+  .card-sm-11 {
+    @include make-sm-column(11, 0);
+  }
+
+  .card-sm-10 {
+    @include make-sm-column(10, 0);
+  }
+
+  .card-sm-9 {
+    @include make-sm-column(9, 0);
+  }
+
+  .card-sm-8 {
+    @include make-sm-column(8, 0);
+  }
+
+  .card-sm-7 {
+    @include make-sm-column(7, 0);
+  }
+
+  .card-sm-6 {
+    @include make-sm-column(6, 0);
+  }
+
+  .card-sm-5 {
+    @include make-sm-column(5, 0);
+  }
+
+  .card-sm-4 {
+    @include make-sm-column(4, 0);
+  }
+
+  .card-sm-3 {
+    @include make-sm-column(3, 0);
+  }
+
+  .card-sm-2 {
+    @include make-sm-column(2, 0);
+  }
+
+  .card-sm-1 {
+    @include make-sm-column(1, 0);
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
   .card-deck {
     display: table;
     width: 100%;
     margin-bottom: $card-spacer-y; // Margin balancing
     table-layout: fixed;
-    border-spacing: $space-between-cards 0;
+    border-spacing: $card-deck-margin 0;
 
     .card {
       display: table-cell;
@@ -82,20 +153,44 @@
     }
   }
   .card-deck-wrapper {
-    margin-right: (-$space-between-cards);
-    margin-left: (-$space-between-cards);
+    margin-right: (-$card-deck-margin);
+    margin-left: (-$card-deck-margin);
   }
-  .card-sm-6 {
-    width: 50%;
+  .card-lg-12 {
+    width: (8.333333333% * 12);
   }
-  .card-sm-5 {
-    width: 41.66%;
+  .card-lg-11 {
+    width: (8.333333333% * 11);
   }
-  .card-sm-4 {
-    width: 33.33%;
+  .card-lg-10 {
+    width: (8.333333333% * 10);
   }
-  .card-sm-3 {
-    width: 25%;
+  .card-lg-9 {
+    width: (8.333333333% * 9);
+  }
+  .card-lg-8 {
+    width: (8.333333333% * 8);
+  }
+  .card-lg-7 {
+    width: (8.333333333% * 7);
+  }
+  .card-lg-6 {
+    width: (8.333333333% * 6);
+  }
+  .card-lg-5 {
+    width: (8.333333333% * 5);
+  }
+  .card-lg-4 {
+    width: (8.333333333% * 4);
+  }
+  .card-lg-3 {
+    width: (8.333333333% * 3);
+  }
+  .card-lg-2 {
+    width: (8.333333333% * 2);
+  }
+  .card-lg-1 {
+    width: (8.333333333%);
   }
 }
 
@@ -103,4 +198,18 @@
   background-color: #681fb2;
   border-color: #681fb2;
   color: #fff;
+  @media only screen and (max-width: $screen-xs-max) {
+    padding-top: 30px;
+
+    .card-button {
+      display: block;
+      width: 100%;
+    }
+  }
+  @media only screen and (min-width: $screen-lg-min) {
+    .card-button {
+      display: block;
+      width: 100%;
+    }
+  }
 }

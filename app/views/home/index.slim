@@ -16,18 +16,18 @@ section.wrapper.section-polls
       .card-deck
         = render 'card_sm_6'
         = render 'card_sm_3'
-        .card-sm-3.card.card--purple
+        .card-sm-12.card-md-12.card-lg-3.card.card--purple
           .card-header
             h4.card-title.card-title--lg Har du et forslag til en afstemning?
             .card-meta.card-meta--lg Vi opretter afstemninger over aktuelle emner i Danmark og i verden. Har du et spørgsmål du gerne vil have frem så skriv til os!
           .card-footer
-            = link_to "Skriv til Opine", root_path, class: 'btn btn-tertiary btn-lg btn-block'
+            = link_to "Skriv til Opine", root_path, class: 'btn btn-tertiary btn-lg card-button'
     .card-deck-wrapper
       .card-deck
         = render 'card_sm_4'
-        .card-sm-4.card
-          .card-image
-            = image_tag "card-poll-5.jpg", alt: 'Card Poll 2', class: 'img-responsive'
+        .card-sm-6.card-lg-4.card
+          .card-image(style="background-image: url(#{image_path('card-poll-5.jpg')});")
+            /= image_tag "card-poll-5.jpg", alt: 'Card Poll 2', class: 'img-responsive'
           .card-header
             h4.card-title Hvordan skal konflikten i Syrien løses?
             .card-meta Der er snart præsidentvalg i USA. Det har indflydelse på Danmark. Hvem skal være USA’s 45’erende præsident?
@@ -36,9 +36,20 @@ section.wrapper.section-polls
             .flex-end
               strong.card-text<> Politik
               span.card-text.text-muted<> 2.213 har stemt
-        .card-sm-4.card
-          .card-image
-            = image_tag "card-poll-6.jpg", alt: 'Card Poll 2', class: 'img-responsive'
+        .card-sm-6.card-lg-4.card
+          .card-image(style="background-image: url(#{image_path('card-poll-6.jpg')});")
+            /= image_tag "card-poll-6.jpg", alt: 'Card Poll 2', class: 'img-responsive'
+          .card-header
+            h4.card-title Skal politikernes pensions-alder forhøjes?
+            .card-meta Der er snart præsidentvalg i USA. Det har indflydelse på Danmark. Hvem skal være USA’s 45’erende præsident?
+          .card-footer
+            = link_to "Stem", root_path, class: 'btn btn-primary btn-lg'
+            .flex-end
+              strong.card-text<> Politik
+              span.card-text.text-muted<> 2.213 har stemt
+        .card-sm-6.card-lg-4.card.hidden-lg
+          .card-image(style="background-image: url(#{image_path('card-poll-6.jpg')});")
+            /= image_tag "card-poll-6.jpg", alt: 'Card Poll 2', class: 'img-responsive'
           .card-header
             h4.card-title Skal politikernes pensions-alder forhøjes?
             .card-meta Der er snart præsidentvalg i USA. Det har indflydelse på Danmark. Hvem skal være USA’s 45’erende præsident?
@@ -52,13 +63,13 @@ section.wrapper.section-polls
 section.wrapper-gray.section-info
   .container
     .row
-      .col-sm-9
+      .col-xs-12.col-md-9
         h2.section-info-title
           span Mangler du også et sted at give
           span.text-success<> din mening
           span - og se hvad andre synes?
         p.section-info-text
-          strong Det gør vi.
+          strong<> Det gør vi.
           span Derfor har vi skabt Opine hvor vi alle kan vise hvad vi synes om aktuelle emner. Vi håber det kan fremme demokratiet.
-      .col-sm-3
+      .col-md-3.invisible-breakpoint
         = image_tag "section-info@2x.png", alt: 'Section info image', class: 'section-info-image', width: '232', height: '334'

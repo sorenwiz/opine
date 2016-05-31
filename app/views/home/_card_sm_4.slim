@@ -1,6 +1,6 @@
-.card-sm-4.card
-  .card-image
-    = image_tag "card-poll-4.jpg", alt: 'Card Poll 2', class: 'img-responsive'
+.card-sm-6.card-md-4.card-lg-4.card
+  .card-image(style="background-image: url(#{image_path('card-poll-4.jpg')});")
+    /= image_tag "card-poll-4.jpg", alt: 'Card Poll 2', class: 'img-responsive'
   .card-header
     h4.card-title Donald Trump eller Hillary Clinton?
     .card-meta Der er snart præsidentvalg i USA. Det har indflydelse på Danmark. Hvem skal være USA’s 45’erende præsident?

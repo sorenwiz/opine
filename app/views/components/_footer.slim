@@ -2,12 +2,12 @@
   .container
     footer.footer.footer-default
       .row
-        .col-md-2
+        .col-sm-2.col-md-2.hidden-xs
           = link_to "Opine", root_path, class: 'footer-brand'
           p.text-muted Non-profit forening
           p.text-muted Copyright 2016
-        .col-md-2
-          h4.list-title Kategorier
+        .col-xs-6.col-sm-3.col-md-2
+          h4.footer-title Kategorier
           ul.footer-list
             li.footer-item
               = link_to "Dansk politik", "", class: 'footer-link'
@@ -19,8 +19,8 @@
               = link_to "Samfund", "", class: 'footer-link'
             li.footer-item
               = link_to "Økonomi", "", class: 'footer-link'
-        .col-md-2.col-md-offset-1
-          h4.list-title Om Opine
+        .col-xs-6.col-sm-3.col-md-2.col-md-offset-1
+          h4.footer-title Om Opine
           ul.footer-list
             li.footer-item
               = link_to "Konceptet", "", class: 'footer-link'
@@ -30,37 +30,47 @@
               = link_to "Donér", "", class: 'footer-link'
             li.footer-item
               = link_to "Kontakt os", "", class: 'footer-link'
-        .col-md-4.col-md-offset-1
-          h4.list-title Fun Stats
-          ul.footer-list
-            li.footer-item
-              = link_to "593.234 har stemt.", "", class: 'footer-link'
-            li.footer-item
-              = link_to "23 aktive afstemninger.", "", class: 'footer-link'
-            li.footer-item
-              = link_to "324 har stemt i dag.", "", class: 'footer-link'
-          p
-            = link_to "Cookies", root_path, class: 'text-muted'
-            span.text-muted<> &mdash;
-            = link_to "Privatlivspolitik", root_path, class: 'text-muted'
-          ul.list-inline
-            li
-              = link_to root_path, class: 'social-link'
-                span.fa-stack.fa-lg
-                  i.fa.fa-circle.fa-stack-2x
-                  i.fa.fa-facebook.fa-stack-1x.fa-inverse
-            li
-              = link_to root_path, class: 'social-link'
-                span.fa-stack.fa-lg
-                  i.fa.fa-circle.fa-stack-2x
-                  i.fa.fa-tumblr.fa-stack-1x.fa-inverse
-            li
-              = link_to root_path, class: 'social-link'
-                span.fa-stack.fa-lg
-                  i.fa.fa-circle.fa-stack-2x
-                  i.fa.fa-pinterest.fa-stack-1x.fa-inverse
-            li
-              = link_to root_path, class: 'social-link'
-                span.fa-stack.fa-lg
-                  i.fa.fa-circle.fa-stack-2x
-                  i.fa.fa-twitter.fa-stack-1x.fa-inverse
+        .col-xs-12.col-sm-4.col-md-4.col-md-offset-1
+          .hidden-xs
+            h4.footer-title Fun Stats
+            ul.footer-list
+              li.footer-item
+                = link_to "593.234 har stemt.", "", class: 'footer-link'
+              li.footer-item
+                = link_to "23 aktive afstemninger.", "", class: 'footer-link'
+              li.footer-item
+                = link_to "324 har stemt i dag.", "", class: 'footer-link'
+            p
+              = link_to "Cookies", root_path, class: 'text-muted'
+              span.text-muted<> &mdash;
+              = link_to "Privatlivspolitik", root_path, class: 'text-muted'
+          .row
+            .col-xs-12.col-md-12
+              ul.list-inline.social-list
+                li
+                  = link_to root_path, class: 'social-link'
+                    span.fa-stack.fa-lg
+                      i.fa.fa-circle.fa-stack-2x
+                      i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                li
+                  = link_to root_path, class: 'social-link'
+                    span.fa-stack.fa-lg
+                      i.fa.fa-circle.fa-stack-2x
+                      i.fa.fa-tumblr.fa-stack-1x.fa-inverse
+                li
+                  = link_to root_path, class: 'social-link'
+                    span.fa-stack.fa-lg
+                      i.fa.fa-circle.fa-stack-2x
+                      i.fa.fa-pinterest.fa-stack-1x.fa-inverse
+                li
+                  = link_to root_path, class: 'social-link'
+                    span.fa-stack.fa-lg
+                      i.fa.fa-circle.fa-stack-2x
+                      i.fa.fa-twitter.fa-stack-1x.fa-inverse
+        .col-xs-12.visible-xs
+          .row
+            .col-xs-6
+              = link_to "Opine", root_path, class: 'footer-brand'
+            .col-xs-6
+              p.text-muted Non-profit forening
+              p.text-muted Copyright 2016

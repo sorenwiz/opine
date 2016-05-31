@@ -17,7 +17,8 @@ $navbar-default-toggle-icon-bar-bg: #fff;
 $navbar-default-toggle-border-color: transparent;
 
 // Footer
-$footer-default-padding: 80px 0 60px;
+$footer-default-padding-y: 60px;
+$footer-default-padding-x: 0;
 $footer-default-bg: #121212;
 $footer-default-color: #fff;
 $footer-default-link-color: #fff;
@@ -25,6 +26,8 @@ $footer-default-link-hover-color: #fff;
 $footer-default-link-active-color: #fff;
 
 // Components
+$container-sm: 100%;
+$grid-float-breakpoint: 992px;
 $text-muted: #aeaeae;
 $grid-gutter-width: 30px;
 $state-success-text: #5adc96;
