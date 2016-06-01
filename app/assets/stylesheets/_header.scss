@@ -31,6 +31,26 @@
     font-weight: normal;
     padding-top: 7px;
     padding-bottom: 7px;
+
+    &:focus,
+    &.focus {
+      color: $btn-secondary-color;
+      background-color: lighten($btn-secondary-bg, 10%);
+      border-color: lighten($btn-secondary-border, 10%);
+    }
+
+    &:hover {
+      color: $btn-secondary-color;
+      background-color: lighten($btn-secondary-bg, 12%);
+      border-color: lighten($btn-secondary-border, 12%);
+    }
+
+    &:active,
+    &.active {
+      background-color: lighten($btn-secondary-bg, 12%);
+      border-color: lighten($btn-secondary-border, 12%);
+    }
+
   }
 }
 

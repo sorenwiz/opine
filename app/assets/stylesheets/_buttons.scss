@@ -97,6 +97,35 @@ a.btn {
   @extend %btn-tertiary;
 }
 
+// Outline buttons
+// -------------------------
+
+// Remove all backgrounds
+.btn-outline-primary {
+  @include button-outline-variant($btn-primary-bg);
+}
+.btn-outline-secondary {
+  @include button-outline-variant($btn-secondary-bg);
+}
+.btn-outline-tertiary {
+  @include button-outline-variant($btn-tertiary-bg);
+  &:hover,
+  &:active {
+    color: #000;
+  }
+}
+.btn-outline-info {
+  @include button-outline-variant($btn-info-bg);
+}
+.btn-outline-success {
+  @include button-outline-variant($btn-success-bg);
+}
+.btn-outline-warning {
+  @include button-outline-variant($btn-warning-bg);
+}
+.btn-outline-danger {
+  @include button-outline-variant($btn-danger-bg);
+}
 
 // Link buttons
 // -------------------------
