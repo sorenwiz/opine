@@ -14,8 +14,26 @@ section.wrapper.section-polls
       | Aktuelle afstemninger
     .card-deck-wrapper
       .card-deck
-        = render 'card_sm_6'
-        = render 'card_sm_3'
+        .card-sm-7.card-md-6.card-lg-6.card
+          .card-image(style="background-image: url(#{image_path('card-poll-1.jpg')});")
+          /= image_tag "card-poll-1.jpg", alt: 'Card Poll 1', class: 'img-responsive'
+          .card-header
+            h4.card-title Skal Danmark købe nye kampfly?
+            .card-meta Folketinget har besluttet, at det danske forsvar skal have nye kampfly. Flyene skal erstatte de nuværende F-16’ere, som er mere end 30 år gamle. Nu er tiden kommet, hvor politikerne skal vælge, hvilket fly det skal være.
+          .card-footer
+            = link_to "Stem", root_path, class: 'btn btn-primary btn-lg'
+            span.card-text.text-muted<> 2.213 har stemt
+            strong.card-text<> Politik
+        .card-sm-5.card-md-3.card-lg-3.card
+          .card-image(style="background-image: url(#{image_path('card-poll-2.jpg')});")
+          /= image_tag "card-poll-2.jpg", alt: 'Card Poll 2', class: 'img-responsive'
+          .card-header
+            h4.card-title Skal DS ekspande-re på trods blabla.?
+            .card-meta Folketinget har besluttet, at det danske forsvar skal have nye kampfly.
+          .card-footer
+            = link_to "Stem", root_path, class: 'btn btn-primary btn-lg btn-block'
+            span.card-text.text-muted<> 2.213 har stemt
+            strong.card-text<> Velfærd
         .card-sm-12.card-md-12.card-lg-3.card.card--purple
           .card-header
             h4.card-title.card-title--lg Har du et forslag til en afstemning?
@@ -24,7 +42,17 @@ section.wrapper.section-polls
             = link_to "Skriv til Opine", root_path, class: 'btn btn-tertiary btn-lg card-button'
     .card-deck-wrapper
       .card-deck
-        = render 'card_sm_4'
+        .card-sm-6.card-md-4.card-lg-4.card
+          .card-image(style="background-image: url(#{image_path('card-poll-4.jpg')});")
+          /= image_tag "card-poll-4.jpg", alt: 'Card Poll 2', class: 'img-responsive'
+          .card-header
+            h4.card-title Donald Trump eller Hillary Clinton?
+            .card-meta Der er snart præsidentvalg i USA. Det har indflydelse på Danmark. Hvem skal være USA’s 45’erende præsident?
+          .card-footer
+            = link_to "Stem", root_path, class: 'btn btn-primary btn-lg'
+            .flex-end
+              strong.card-text<> Politik
+              span.card-text.text-muted<> 2.213 har stemt
         .card-sm-6.card-lg-4.card
           .card-image(style="background-image: url(#{image_path('card-poll-5.jpg')});")
             /= image_tag "card-poll-5.jpg", alt: 'Card Poll 2', class: 'img-responsive'
