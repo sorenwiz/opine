@@ -1,0 +1,20 @@
+.section-jumbotron
+  .container
+    .section-jumbotron-hgroup
+      h2 Hvordan skal konflikten i Syrien løses?
+      p Konflikten i Syrien har nu varet 5 år, kan den stoppes?
+
+    .card-deck-wrapper
+      .card-deck
+        .card-sm-12.card-lg-8.card.card--borderless
+          .card-image(style="background-image: url(#{image_path('polls-show.jpg')}); height: 380px;")
+            = link_to "Foto: Colourbox", root_path, class: 'card-image--caption'
+        .card-sm-12.card-lg-4.card
+          .card-body
+            p.card-meta Antal stemmer
+            h2.card-title.card-title--lg 1.260 har stemt
+          .card-body
+            p.card-meta Afstemning udløber om
+            h2.card-title.card-title--lg Ubegrænset
+          .card-footer
+            = link_to "Din mening?", root_path, class: 'btn btn-primary btn-lg'

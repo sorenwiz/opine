@@ -1,0 +1,46 @@
+.show-wrapper {
+  .section-jumbotron {
+    background-color: #292929;
+    padding: 50px 0 20px;
+  }
+  .section-jumbotron-hgroup {
+    color: #fff;
+    text-align: center;
+    margin-bottom: $grid-gutter-width;
+
+    h2 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+    p {
+      font-size: 22px;
+    }
+    @media only screen and (min-width: $screen-sm-min) {
+      h2 {
+        font-size: 38px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    .card-sm-12.card--borderless {
+      margin-bottom: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .card-sm-12.card--borderless + .card-sm-12 {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row nowrap;
+      .card-body {
+        padding: $card-padding * 0.5;
+      }
+    }
+  }
+}

@@ -9,6 +9,13 @@
   z-index: 999;
   box-shadow: 0 2px 4px rgba(0, 0, 2, 0.05);
 
+  &--borderless {
+    border: 0;
+    .card-image {
+      border-radius: .3rem;
+    }
+  }
+
   @media only screen and (max-width: $screen-xs-max) {
     margin-bottom: $card-deck-margin;
   }
@@ -37,6 +44,18 @@
     background: transparent no-repeat center/cover;
     height: 260px;
     overflow: hidden;
+  }
+  .card-image--caption {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      cursor: pointer;
+    }
   }
 
   .card-title {
@@ -88,6 +107,9 @@
 
   .card-sm-12 {
     @include make-sm-column(12, 0);
+  }
+  .card-sm-12 + .card-sm-12 {
+    flex: 0 1 auto;
   }
 
   .card-sm-11 {
