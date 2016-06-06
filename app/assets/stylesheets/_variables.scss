@@ -39,6 +39,15 @@ $padding-large-vertical: 8px;
 $padding-large-horizontal: 50px;
 $wrapper-extra-width: 1370px; /* $container-lg + 200px */
 
+// Tabs
+$nav-tabs-color: #121212;
+$nav-tabs-border-color: transparent;
+$nav-tabs-link-hover-border-color: $nav-tabs-border-color;
+$nav-tabs-active-link-hover-bg: $nav-tabs-border-color;
+$nav-tabs-active-link-hover-border-color: $nav-tabs-border-color;
+$nav-tabs-justified-link-border-color: transparent;
+$nav-tabs-justified-active-link-border-color: #fff;
+
 // Jumbotron
 $jumbotron-heading-font-size: 64px;
 $jumbotron-font-size: 36px;

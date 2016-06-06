@@ -1,8 +1,4 @@
 /* Homepage styles */
-body {
-  background: #fff image-url("body-bg.jpg") no-repeat top center/cover;
-}
-
 @media (min-width: $grid-float-breakpoint) {
   .home-wrapper.index-wrapper .navbar-default {
     padding-top: 35px;

@@ -18,3 +18,83 @@
             h2.card-title.card-title--lg Ubegrænset
           .card-footer
             = link_to "Din mening?", root_path, class: 'btn btn-primary btn-lg'
+
+.section-tabs
+  .container
+    ul.nav.nav-tabs role="tablist"
+      li class="active" role="presentation"
+        a href="#first" role="tab" data-toggle="tab" Din mening?
+      li role="presentation"
+        a href="#second" role="tab" data-toggle="tab" Resultater
+      li role="presentation"
+        a href="#third" role="tab" data-toggle="tab" Fakta
+.section-tab-content
+  .container
+    .tab-content
+      #first.tab-pane.active role="tabpanel"
+        .row
+          .col-lg-8
+            / start .card /
+            .card
+              .card-header
+                h4.card-title
+                  span.fa.fa-fw.fa-bullhorn<>
+                  | Sæt din stemme
+              .card-body
+                form
+                  .form-group
+                    .checkbox
+                      label
+                        input type="checkbox"
+                        span Den syriske krig skal stoppes på diplomatisk vis.
+                  .form-group
+                    .checkbox
+                      label
+                        input type="checkbox"
+                        span Krigen skal og kan kun stoppes militært.
+                  .form-group
+                    .checkbox
+                      label
+                        input type="checkbox"
+                        span En international magt bør afsætte det syriske styre.
+                  .form-group
+                    .checkbox
+                      label
+                        input type="checkbox"
+                        span Den syriske krig skal stoppes på diplomatisk vis.
+                  .form-group
+                    .checkbox
+                      label
+                        input type="checkbox"
+                        span Den syriske krig skal stoppes på diplomatisk vis.
+              .card-footer
+                .row
+                  .col-sm-3
+                    = link_to "Stem", root_path, class: 'btn btn-primary btn-lg btn-block'
+                  .col-sm-9.text-center-xs
+                    p.card-text.text-muted<> Du stemmer anonymt. Din stemme indgår kun i statistik. Du kan ændre din stemme inden for 24 timer.
+            / end .card /
+            h2 Hvad syntes du?
+            = image_tag 'facebook-placeholder', class: 'img-responsive', alt: 'Facebook Comments placeholder'
+          .col-lg-4.invisible-breakpoint
+            .card
+              .card-image(style="background-image: url(#{image_path('card-poll-5.jpg')});")
+              .card-header
+                h4.card-title Krig i Syrien
+                .card-meta
+                  p Krigen i Syrien er et af verdens største konflikter. I 5 år har der været krig mellem det syriske styre og dets allierede mod armerede oprører.
+                  p Krigen der i 2011 startede med demonstrationer med inspiration fra det arabiske forår er i dag det mest omtalte emne.
+                  p I dag er der over 100 grupper der kæmper med og mod hinanden.
+              .card-footer
+                = link_to "Læs mere om baggrunden", root_path, class: 'link-classic'
+      #second.tab-pane role="tabpanel"
+        .card
+          .card-header
+            h4.card-title Tab #2
+      #third.tab-pane role="tabpanel"
+        .card
+          .card-header
+            h4.card-title Tab #3
+
+    h2 Se andre afstemninger
+    = render 'home/row_of_cards'

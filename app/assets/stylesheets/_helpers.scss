@@ -10,3 +10,9 @@
     display: none !important;
   }
 }
+
+@media only screen and (max-width: $screen-xs-max) {
+  .text-center-xs {
+    text-align: center;
+  }
+}

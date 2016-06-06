@@ -1,3 +1,7 @@
+body {
+  background: #fff image-url("body-bg.jpg") no-repeat top center/cover;
+}
+
 .wrapper-footer {
   background-color: $footer-default-bg;
 }
@@ -24,5 +28,16 @@
     max-width: $wrapper-extra-width;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+.link-classic {
+  font-size: 16px;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    color: #0018ff;
   }
 }
