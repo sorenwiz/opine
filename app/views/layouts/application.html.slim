@@ -11,7 +11,7 @@ html
     = javascript_include_tag 'https://use.fontawesome.com/a7d9fb2ffb.js'
     = csrf_meta_tags
   body
-    .page-shadow
+    .page-shadow class="#{controller_name}-wrapper #{action_name}-wrapper"
       = render 'components/header'
       = yield
       = render 'components/footer'
