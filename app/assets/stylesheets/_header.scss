@@ -1,8 +1,7 @@
 .navbar-brand {
   @include text-hide();
+  background: no-repeat center/contain;
   @include img-retina(image-path("brand.png"), image-path("brand@2x.png"), 79px, 41px);
-  background-repeat: no-repeat;
-  background-position: center;
   width: 79px;
   height: 41px;
 }
@@ -66,7 +65,7 @@
 @media (min-width: $grid-float-breakpoint) {
   .navbar-default {
     padding: $navbar-padding-vertical 0;
-    
+
     .navbar-nav > li > .navbar-btn {
       min-width: 170px;
       margin: 4px 0 4px $grid-gutter-width;
@@ -74,9 +73,9 @@
   }
 
   .navbar-brand {
-    @include img-retina(image-path("brand.png"), image-path("brand@2x.png"), 131px, 68px);
-    width: 131px;
-    height: 68px;
+    @include img-retina(image-path("brand.png"), image-path("brand@2x.png"), 96px, 50px);
+    width: 96px;
+    height: 50px;
   }
 
   .navbar-right {
