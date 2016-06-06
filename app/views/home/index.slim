@@ -14,11 +14,15 @@ section.wrapper.section-polls
       | Aktuelle afstemninger
     .card-deck-wrapper
       .card-deck
-        - 3.times do |card|
-          = render 'card/large' if card == 0
-          = render 'card/small' if card == 1
-          = render 'card/purple' if card == 2
-    = render 'home/row_of_cards'
+        - 3.times do |i|
+          - extra_css = 'card-sm-7 card-lg-6' if i == 0
+          - extra_css = 'card-sm-5 card-lg-3' if i == 1
+          - if i == 2
+            = render partial: 'card/purple'
+          -else
+            = render partial: 'card/card', locals: {extra_css: extra_css}
+        - 3.times do |i|
+          = render partial: 'card/card'
     .m-y.text-center
       button(type='button' class='btn btn-default btn-lg') Indlæs flere afstemninger...
 section.wrapper-gray.section-info
