@@ -34,6 +34,8 @@ gem 'dotenv-rails'
 # Use Unicorn as the app serverç
 # gem 'unicorn'
 gem 'therubyracer', '= 0.12.1'
+gem 'activeadmin', '~> 1.0.0.pre2'
+gem 'active_skin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
