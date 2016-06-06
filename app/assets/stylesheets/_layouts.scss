@@ -1,0 +1,28 @@
+.wrapper-footer {
+  background-color: $footer-default-bg;
+}
+
+.wrapper {
+  background-color: #fff;
+}
+
+.wrapper-gray {
+  background-color: #f2f3f7;
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  .page-shadow {
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .wrapper,
+  .wrapper-gray,
+  .wrapper-footer,
+  .page-shadow {
+    max-width: $wrapper-extra-width;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

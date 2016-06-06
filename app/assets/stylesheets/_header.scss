@@ -65,8 +65,8 @@
 }
 @media (min-width: $grid-float-breakpoint) {
   .navbar-default {
-    padding-top: 35px;
-
+    padding: $navbar-padding-vertical 0;
+    
     .navbar-nav > li > .navbar-btn {
       min-width: 170px;
       margin: 4px 0 4px $grid-gutter-width;
