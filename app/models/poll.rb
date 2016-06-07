@@ -14,6 +14,7 @@
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #  slug                :string(255)
+#  category_id         :integer
 #
 
 class Poll < ActiveRecord::Base
@@ -21,6 +22,7 @@ class Poll < ActiveRecord::Base
   friendly_id :heading, use: [:slugged, :finders]
 
   has_many :vote_options, dependent: :destroy
+  belongs_to :category
 
   accepts_nested_attributes_for :vote_options, allow_destroy: true
 
