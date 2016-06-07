@@ -32,5 +32,5 @@ task :upload_dotenv do
   end
 end
 
-after "deploy:updated", "upload_dotenv"
+before "deploy:updated", "upload_dotenv"
 
