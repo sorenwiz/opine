@@ -4,8 +4,7 @@ html
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge"
     meta name="viewport" content="width=device-width, initial-scale=1"
-    title
-      | Opine
+    title= @page_title.presence || 'Opine - Giv din mening til kende'
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = javascript_include_tag 'https://use.fontawesome.com/a7d9fb2ffb.js'

@@ -4,8 +4,8 @@
   .card-image(style="background-image: url(#{image_path('card-poll-1.jpg')});")
     = link_to "33 dage tilbage", root_path, class: 'card-link card-link--badge btn btn-lg btn-tertiary'
   .card-header
-    h4.card-title Skal Danmark købe nye kampfly?
-    .card-meta Folketinget har besluttet, at det danske forsvar skal have nye kampfly. Flyene skal erstatte de nuværende F-16’ere, som er mere end 30 år gamle. Nu er tiden kommet, hvor politikerne skal vælge, hvilket fly det skal være.
+    h4.card-title= poll.heading
+    .card-meta= poll.teaser
   .card-footer
     = link_to "Stem", poll, class: 'btn btn-primary btn-lg'
     span.card-text.text-muted<> 2.213 har stemt

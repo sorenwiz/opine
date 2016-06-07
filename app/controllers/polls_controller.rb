@@ -5,6 +5,8 @@ class PollsController < ApplicationController
   end
 
   def show
-
+    @poll = Poll.find params[:id]
+    @vote_options = @poll.vote_options.to_a.shuffle
+    @related_polls = Poll.where.not(id: @poll.id).first(3)
   end
 end

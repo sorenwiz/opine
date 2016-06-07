@@ -1,8 +1,8 @@
 .section-jumbotron
   .container
     .section-jumbotron-hgroup
-      h2 Hvordan skal konflikten i Syrien løses?
-      p Konflikten i Syrien har nu varet 5 år, kan den stoppes?
+      h2= @poll.heading
+      p= @poll.description_heading
 
     .card-deck-wrapper
       .card-deck
@@ -42,37 +42,21 @@
                   | Sæt din stemme
               .card-body
                 form
-                  .form-group
-                    .checkbox
-                      label
-                        input type="checkbox"
-                        span Den syriske krig skal stoppes på diplomatisk vis.
-                  .form-group
-                    .checkbox
-                      label
-                        input type="checkbox"
-                        span Krigen skal og kan kun stoppes militært.
-                  .form-group
-                    .checkbox
-                      label
-                        input type="checkbox"
-                        span En international magt bør afsætte det syriske styre.
-                  .form-group
-                    .checkbox
-                      label
-                        input type="checkbox"
-                        span Den syriske krig skal stoppes på diplomatisk vis.
-                  .form-group
-                    .checkbox
-                      label
-                        input type="checkbox"
-                        span Den syriske krig skal stoppes på diplomatisk vis.
+                  -@vote_options.each do |vote_option|
+                    .form-group
+                      .checkbox
+                        label
+                          input type="checkbox"
+                          span=vote_option.text
               .card-footer
                 .row
                   .col-sm-3
                     = link_to "Stem", root_path, class: 'btn btn-primary btn-lg btn-block'
                   .col-sm-9.text-center-xs
-                    p.card-text.text-muted<> Du stemmer anonymt. Din stemme indgår kun i statistik. Du kan ændre din stemme inden for 24 timer.
+                    p.card-text.text-muted<>
+                      |Du stemmer anonymt.
+                      br
+                      |Din stemme indgår kun i statistik
             / end .card /
             h2 Hvad syntes du?
             = image_tag 'facebook-placeholder', class: 'img-responsive', alt: 'Facebook Comments placeholder'
@@ -80,11 +64,9 @@
             .card
               .card-image(style="background-image: url(#{image_path('card-poll-5.jpg')});")
               .card-header
-                h4.card-title Krig i Syrien
+                h4.card-title=@poll.description_heading
                 .card-meta
-                  p Krigen i Syrien er et af verdens største konflikter. I 5 år har der været krig mellem det syriske styre og dets allierede mod armerede oprører.
-                  p Krigen der i 2011 startede med demonstrationer med inspiration fra det arabiske forår er i dag det mest omtalte emne.
-                  p I dag er der over 100 grupper der kæmper med og mod hinanden.
+                  p=@poll.description
               .card-footer
                 = link_to "Læs mere om baggrunden", root_path, class: 'link-classic'
       #second.tab-pane role="tabpanel"
@@ -97,4 +79,6 @@
             h4.card-title Tab #3
 
     h2 Se andre afstemninger
-    = render 'home/row_of_cards'
+    .card-deck-wrapper
+      .card-deck
+        = render @related_polls
