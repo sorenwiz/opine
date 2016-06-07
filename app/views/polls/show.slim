@@ -15,7 +15,7 @@
             h2.card-title.card-title--lg 1.260 har stemt
           .card-body
             p.card-meta Afstemning udløber om
-            h2.card-title.card-title--lg Ubegrænset
+            h2.card-title.card-title--lg= time_ago_in_words(@poll.expires_at.to_date).capitalize
           .card-footer
             = link_to "Din mening?", root_path, class: 'btn btn-primary btn-lg'
 

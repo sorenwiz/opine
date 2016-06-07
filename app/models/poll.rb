@@ -8,7 +8,7 @@
 #  teaser              :text(65535)
 #  description_heading :string(255)
 #  description         :text(65535)
-#  expires_at          :datetime
+#  expires_at          :date
 #  user_id             :integer
 #  order               :integer
 #  created_at          :datetime         not null
@@ -26,6 +26,6 @@ class Poll < ActiveRecord::Base
 
   accepts_nested_attributes_for :vote_options, allow_destroy: true
 
-  validates_presence_of :description, :teaser, :heading, :description_heading
+  validates_presence_of :description, :teaser, :heading, :description_heading, :expires_at
 
 end
