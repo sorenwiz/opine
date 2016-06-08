@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :polls
+  resources :static_pages
 end
