@@ -1,0 +1,66 @@
+.app-login {
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.auth-container {
+  max-width: 570px;
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
+}
+
+.auth-navbar {
+  margin-bottom: $grid-gutter-width * 0.5;
+
+  @media only screen and (min-width: $screen-sm-min) {
+    margin-bottom: $grid-gutter-width;
+  }
+
+  @media only screen and (min-width: $screen-lg-min) {
+    margin-bottom: $grid-gutter-width * 1.5;
+  }
+
+  &__brand {
+  }
+  &__button {
+  }
+}
+
+.auth-panel {
+  color: #070707;
+  background-color: #fff;
+  border-radius: $border-radius-small;
+  box-shadow: 0 2px 5px rgba(0, 0, 2, 0.05);
+  padding: $grid-gutter-width;
+  margin-bottom: $grid-gutter-width * 0.5;
+  text-align: center;
+  @media only screen and (min-width: $screen-sm-min) {
+    padding: $grid-gutter-width * 2;
+  }
+  @media only screen and (min-width: $screen-lg-min) {
+    padding: $grid-gutter-width * 3;
+  }
+}
+
+.auth-title {
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0 0 ($grid-gutter-width * 0.5) 0;
+  @media only screen and (min-width: $screen-sm-min) {
+    font-size: 24px;
+  }
+}
+
+.auth-text {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 300;
+  margin: 0 0 ($grid-gutter-width * 0.5) 0;
+  @media only screen and (min-width: $screen-sm-min) {
+    font-size: 18px;
+  }
+}

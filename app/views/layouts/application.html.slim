@@ -5,12 +5,17 @@ html
     meta http-equiv="X-UA-Compatible" content="IE=edge"
     meta name="viewport" content="width=device-width, initial-scale=1"
     title= @page_title.presence || 'Opine - Giv din mening til kende'
-    = stylesheet_link_tag    'application', media: 'all'
+    = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = javascript_include_tag 'https://use.fontawesome.com/a7d9fb2ffb.js'
     = csrf_meta_tags
   body
-    .page-shadow class="#{controller_name}-wrapper #{action_name}-wrapper"
-      = render 'components/header'
-      = yield
-      = render 'components/footer'
+    - app_extra_class = @app_extra_class || 'app-default'
+    .app class=app_extra_class
+      - unless @skip_content
+        .page-shadow class="#{controller_name}-wrapper #{action_name}-wrapper"
+          = render 'components/header'
+          = yield
+          = render 'components/footer'
+      - else
+        = yield

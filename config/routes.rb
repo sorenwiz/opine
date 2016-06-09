@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :polls
   resources :static_pages
+  get 'sign_in' => 'static_pages#sign_in'
 end
