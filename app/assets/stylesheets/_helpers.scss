@@ -12,12 +12,65 @@
 }
 
 @media only screen and (max-width: $screen-xs-max) {
+  .text-left-xs {
+    text-align: left;
+  }
   .text-center-xs {
     text-align: center;
+  }
+  .text-right-xs {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .text-left-lg {
+    text-align: left;
+  }
+  .text-center-lg {
+    text-align: center;
+  }
+  .text-right-lg {
+    text-align: right;
   }
 }
 
 .bg-1d1d1d {
   background-color: #1d1d1d;
   color: #fff;
+}
+
+// Copied from bootstrap v4 alpha
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $lengths in $spacers {
+    $length-x: map-get($lengths, x);
+    $length-y: map-get($lengths, y);
+
+    .#{$abbrev}-a-#{$size} {
+      #{$prop}: $length-y $length-x !important;
+    }
+    // a = All sides
+    .#{$abbrev}-t-#{$size} {
+      #{$prop}-top: $length-y !important;
+    }
+    .#{$abbrev}-r-#{$size} {
+      #{$prop}-right: $length-x !important;
+    }
+    .#{$abbrev}-b-#{$size} {
+      #{$prop}-bottom: $length-y !important;
+    }
+    .#{$abbrev}-l-#{$size} {
+      #{$prop}-left: $length-x !important;
+    }
+
+    // Axes
+    .#{$abbrev}-x-#{$size} {
+      #{$prop}-right: $length-x !important;
+      #{$prop}-left: $length-x !important;
+    }
+    .#{$abbrev}-y-#{$size} {
+      #{$prop}-top: $length-y !important;
+      #{$prop}-bottom: $length-y !important;
+    }
+  }
 }

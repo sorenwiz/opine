@@ -31,6 +31,7 @@ $grid-float-breakpoint: 992px;
 $text-muted: #aeaeae;
 $grid-gutter-width: 30px;
 $state-success-text: #5adc96;
+$state-success-bg: #5adc96;
 $padding-small-vertical: 2px;
 $padding-small-horizontal: 10px;
 $padding-base-vertical: 4px;
@@ -79,3 +80,35 @@ $btn-secondary-border: #0c0c0c;
 $btn-tertiary-color: #0c0c0c;
 $btn-tertiary-bg: #fff;
 $btn-tertiary-border: #fff;
+
+// Spacing
+$spacer:   1rem !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: (
+        0: (
+                x: 0,
+                y: 0
+        ),
+        1: (
+                x: $spacer-x,
+                y: $spacer-y
+        ),
+        2: (
+                x: ($spacer-x * 1.5),
+                y: ($spacer-y * 1.5)
+        ),
+        3: (
+                x: ($spacer-x * 3),
+                y: ($spacer-y * 3)
+        ),
+        4: (
+                x: ($spacer-x * 4),
+                y: ($spacer-y * 4)
+        ),
+        5: (
+                x: ($spacer-x * 5),
+                y: ($spacer-y * 5)
+        )
+) !default;
+$border-width: 1px !default;

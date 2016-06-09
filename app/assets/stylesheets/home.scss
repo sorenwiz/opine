@@ -26,6 +26,12 @@
       font-size: 64px;
     }
   }
+  .jumbotron-title--sm {
+    font-size: 28px;
+    @media only screen and (min-width: $screen-sm-min) {
+      font-size: 38px;
+    }
+  }
 
   .jumbotron-subtitle {
     font-size: 22px;
@@ -41,6 +47,12 @@
       font-size: 28px;
     }
   }
+  .jumbotron-subtitle--xs {
+    font-size: 16px;
+    @media only screen and (min-width: $screen-sm-min) {
+      font-size: 22px;
+    }
+  }
 
   .jumbotron-image {
     @include img-responsive();
@@ -52,8 +64,26 @@
     color: inherit;
     font-size: 22px;
   }
+
+  .jumbotron--border-top {
+    position: relative;
+    &:before {
+      content: "";
+      background-color: #5adc96;
+      border-radius: 3px;
+      position: absolute;
+      top: -15px;
+      height: 12px;
+      left: 25%;
+      right: 25%;
+    }
+  }
   @media only screen and (min-width: $screen-lg-min) {
-    .jumbotron-sidebar-border {
+    .jumbotron--border-top:before {
+      left: 50%;
+      right: 15px;
+    }
+    .jumbotron--border-left {
       position: relative;
       padding-top: 20px;
       padding-bottom: 20px;
