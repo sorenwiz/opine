@@ -22,10 +22,14 @@
   @media only screen and (min-width: $screen-lg-min) {
     margin-bottom: $grid-gutter-width * 1.5;
   }
-
-  &__brand {
-  }
+  
   &__button {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    @media only screen and (min-width: $grid-float-breakpoint) {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
   }
 }
 
