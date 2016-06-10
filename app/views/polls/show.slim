@@ -7,7 +7,7 @@
     .card-deck-wrapper
       .card-deck
         .card-sm-12.card-lg-8.card.card--borderless
-          .card-image(style="background-image: url(#{image_path('polls-show.jpg')}); height: 380px;")
+          .card-image(style="background-image: url(#{image_path(@poll.background_image.url(:mediumrails))}); height: 380px;")
             = link_to "Foto: Colourbox", root_path, class: 'card-image--caption'
         .card-sm-12.card-lg-4.card
           .card-body
@@ -62,7 +62,7 @@
             = image_tag 'facebook-placeholder', class: 'img-responsive', alt: 'Facebook Comments placeholder'
           .col-lg-4.invisible-breakpoint
             .card
-              .card-image(style="background-image: url(#{image_path('card-poll-5.jpg')});")
+              .card-image(style="background-image: url(#{image_path(@poll.image.url(:medium))});")
               .card-header
                 h4.card-title=@poll.description_heading
                 .card-meta

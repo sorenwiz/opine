@@ -1,6 +1,6 @@
 ActiveAdmin.register Poll do
   config.filters = false
-  permit_params :heading, :teaser, :description_heading, :description, :expires_at, vote_options_attributes: [ :id, :text, :_destroy ]
+  permit_params :category_id, :image, :background_image, :sub_heading, :order, :heading, :teaser, :description_heading, :description, :expires_at, vote_options_attributes: [:id, :text, :_destroy]
 
   index do
     column :heading
@@ -18,7 +18,14 @@ ActiveAdmin.register Poll do
 
   form do |f|
     f.semantic_errors # shows errors on :base
-    f.inputs # builds an input field for every attribute
+    f.inputs :category, :heading, :sub_heading, :teaser, :description_heading, :description, :order, :expires_at
+
+    f.inputs "Images" do
+      f.input :image, as: :file, hint: image_tag(f.object.image.url(:medium))
+      #f.input :image_cache, as: :hidden
+      f.input :background_image, as: :file, hint: image_tag(f.object.background_image.url(:medium))
+      #f.input :background_image_cache, as: :hidden
+    end
 
     f.inputs "Vote options" do
       f.has_many :vote_options, allow_destroy: true, heading: 'test' do |vote_form|
@@ -30,7 +37,18 @@ ActiveAdmin.register Poll do
   end
 
   show do
-    attributes_table *Poll.column_names.map(&:to_sym)
+    attributes_table :category, :heading, :sub_heading, :teaser, :description_heading, :description, :order, :expires_at
+
+    panel "Images" do
+      attributes_table_for resource do
+        row :image do
+          image_tag resource.image.url(:medium)
+        end
+        row :background_image do
+          image_tag resource.background_image.url(:medium)
+        end
+      end
+    end
 
     panel "Vote options" do
       table_for poll.vote_options do

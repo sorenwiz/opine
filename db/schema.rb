@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607212514) do
+ActiveRecord::Schema.define(version: 20160610120138) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -53,18 +53,26 @@ ActiveRecord::Schema.define(version: 20160607212514) do
   end
 
   create_table "polls", force: :cascade do |t|
-    t.string   "heading",             limit: 255
-    t.string   "sub_heading",         limit: 255
-    t.text     "teaser",              limit: 65535
-    t.string   "description_heading", limit: 255
-    t.text     "description",         limit: 65535
+    t.string   "heading",                       limit: 255
+    t.string   "sub_heading",                   limit: 255
+    t.text     "teaser",                        limit: 65535
+    t.string   "description_heading",           limit: 255
+    t.text     "description",                   limit: 65535
     t.date     "expires_at"
-    t.integer  "user_id",             limit: 4
-    t.integer  "order",               limit: 4
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
-    t.string   "slug",                limit: 255
-    t.integer  "category_id",         limit: 4
+    t.integer  "user_id",                       limit: 4
+    t.integer  "order",                         limit: 4
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
+    t.string   "slug",                          limit: 255
+    t.integer  "category_id",                   limit: 4
+    t.string   "image_file_name",               limit: 255
+    t.string   "image_content_type",            limit: 255
+    t.integer  "image_file_size",               limit: 4
+    t.datetime "image_updated_at"
+    t.string   "background_image_file_name",    limit: 255
+    t.string   "background_image_content_type", limit: 255
+    t.integer  "background_image_file_size",    limit: 4
+    t.datetime "background_image_updated_at"
   end
 
   create_table "vote_options", force: :cascade do |t|
