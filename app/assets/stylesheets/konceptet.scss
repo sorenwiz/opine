@@ -1,0 +1,24 @@
+.static_pages-wrapper.show-wrapper {
+  .section-jumbotron,
+  .container .jumbotron {
+    padding-bottom: 0;
+  }
+  @media only screen and (max-width: $screen-md-max) {
+    .container .jumbotron {
+      text-align: center;
+    }
+    .jumbotron-image {
+      max-width: 300px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    .jumbotron-image-wrapper {
+      margin-top: $grid-gutter-width;
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+    }
+  }
+}

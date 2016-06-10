@@ -1,0 +1,36 @@
+.section-jumbotron.wrapper.bg-1d1d1d
+  .container
+    .jumbotron
+      .row
+        .col-sm-12.col-lg-7.jumbotron--border-left
+          h1.jumbotron-title Din mening tæller.
+          p.jumbotron-subtitle.jumbotron-subtitle--sm Med Opine giver du din stemme til kende så den almindelige borger kan danne et billede af hvad Danmark mener.
+          = link_to "Opine er for alle.", root_path, class: 'jumbotron-link jumbotron-link--lg'
+        .col-sm-12.col-lg-5.jumbotron-image-wrapper
+          = image_tag "konceptet-image@2x.png", alt: 'Din mening tæller.', class: 'jumbotron-image', width: '477', height: '635'
+section.wrapper.p-y-5
+  .container
+    .jumbotron
+      .row
+
+        .col-lg-7.col-lg-push-5.jumbotron--border-top.text-right-lg
+          h2.jumbotron-title Aktuelle emner.
+          p.jumbotron-subtitle.jumbotron-subtitle--sm Med Opine giver du din stemme til kende så den almindelige borger kan danne et billede af hvad Danmark mener.
+          = link_to "Opine er for alle.", root_path, class: 'jumbotron-link jumbotron-link--lg'
+        .col-lg-5.col-lg-pull-7.jumbotron-image-wrapper
+          = image_tag "konceptet-image-2@2x.png", alt: 'konceptet-image-2.png', class: 'jumbotron-image', width: '362', height: '380'
+section.bg-success.p-t-4
+  .container.text-center
+    .jumbotron
+      h2.jumbotron-title Bidrag - stem - vær med.
+      p.jumbotron-subtitle.jumbotron-subtitle--sm Konceptet er enkelt. Vi tilføjer løbende afstemninger, hvor du kan stemme og give din mening til kende. Når du stemmer er du med til at danne et billede. Vi viser billedet.
+      .jumbotron-image-wrapper
+        = image_tag "jumbotron-image@2x.png", alt: 'Your opinion matters', class: 'jumbotron-image m-t-2', width: '762', height: '327'
+section.wrapper.p-y-4
+  .container
+    .media.jumbotron
+      .media-body.media-middle
+        h2.jumbotron-title.jumbotron-title--sm Vil du være med?
+        p.jumbotron-subtitle.jumbotron-subtitle--xs Udover at kunne stemme, kan du også være frivillig i Opine. Som frivillig kan du være med i rådet som sætter afstemninger ud på Opine.
+      .media-right.media-middle
+        = link_to "Meld dig ind", root_path, class: 'btn btn-secondary'
