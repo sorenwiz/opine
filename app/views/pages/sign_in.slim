@@ -7,5 +7,5 @@
   .auth-panel
     h2.auth-title Login med Facebook
     p.auth-text For at stemme på Opine skal du været logget ind. På Opine kan du logge ind med Facebook. Din stemme forbliver anonym.
-    = link_to 'Forbind til Facebook', root_path, class: 'btn btn-primary-alt btn-lg'
+    = link_to 'Forbind til Facebook', user_omniauth_authorize_path(:facebook, origin: params[:after]), class: 'btn btn-primary-alt btn-lg'
   p.text-muted.text-center Copyright &mdash; Foreningen Opine &mdash; 2016

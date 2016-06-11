@@ -7,7 +7,7 @@ header.wrapper
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        = link_to "Log ind", root_path, class: "btn btn-secondary navbar-btn pull-right visible-breakpoint"
+        = link_to "Log ind", sign_in_path, class: "btn btn-secondary navbar-btn pull-right visible-breakpoint"
         = link_to "Opine", root_path, class: "navbar-brand"
       #navbar.collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-right
@@ -16,8 +16,8 @@ header.wrapper
           li
             = link_to "Resultater"
           li
-            = link_to "Konceptet"
+            = link_to "Konceptet", concept_path
           li
             = link_to "Om os"
           li
-            = link_to "Log ind", nil, class: "btn btn-secondary navbar-btn invisible-breakpoint"
+            = link_to "Log ind", sign_in_path, class: "btn btn-secondary navbar-btn invisible-breakpoint"

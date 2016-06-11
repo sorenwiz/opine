@@ -9,16 +9,9 @@
         .col-xs-6.col-sm-3.col-md-2
           h4.footer-title Kategorier
           ul.footer-list
-            li.footer-item
-              = link_to "Dansk politik", "", class: 'footer-link'
-            li.footer-item
-              = link_to "EU", "", class: 'footer-link'
-            li.footer-item
-              = link_to "Miljø", "", class: 'footer-link'
-            li.footer-item
-              = link_to "Samfund", "", class: 'footer-link'
-            li.footer-item
-              = link_to "Økonomi", "", class: 'footer-link'
+            -Category.all.each do |category|
+              li.footer-item
+                = link_to category.name, "", class: 'footer-link'
         .col-xs-6.col-sm-3.col-md-2.col-md-offset-1
           h4.footer-title Om Opine
           ul.footer-list
