@@ -9,8 +9,10 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  resources :polls
   resources :static_pages
-  get 'concept' => 'pages#concept', as: 'concept'
-  get 'sign_in' => 'pages#sign_in', as: 'sign_in'
+  localized do
+    resources :polls
+    get 'concept' => 'pages#concept', as: 'concept'
+    get 'sign_in' => 'pages#sign_in', as: 'sign_in'
+  end
 end

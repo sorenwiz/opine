@@ -7,7 +7,10 @@ header.wrapper
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        = link_to "Log ind", sign_in_path, class: "btn btn-secondary navbar-btn pull-right visible-breakpoint"
+        - if user_signed_in?
+          = link_to "Log ud", destroy_user_session_path, method: :delete, class: "btn btn-secondary navbar-btn pull-right visible-breakpoint"
+        -else
+          = link_to "Log ind", sign_in_path, class: "btn btn-secondary navbar-btn pull-right visible-breakpoint"
         = link_to "Opine", root_path, class: "navbar-brand"
       #navbar.collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-right
@@ -20,4 +23,7 @@ header.wrapper
           li
             = link_to "Om os"
           li
-            = link_to "Log ind", sign_in_path, class: "btn btn-secondary navbar-btn invisible-breakpoint"
+            -if user_signed_in?
+              = link_to "Log ud", destroy_user_session_path, method: :delete, class: "btn btn-secondary navbar-btn invisible-breakpoint"
+            -else
+              = link_to "Log ind", sign_in_path, class: "btn btn-secondary navbar-btn invisible-breakpoint"

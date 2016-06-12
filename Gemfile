@@ -19,6 +19,7 @@ gem 'slim-rails'
 gem 'devise', '~> 3.2'
 gem 'paperclip'
 gem 'friendly_id'
+gem 'route_translator', '= 4.3.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
