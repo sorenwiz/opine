@@ -21,7 +21,7 @@ section.wrapper.section-polls
       .card-deck
         =render @polls
     .m-y.text-center
-      button(type='button' class='btn btn-default btn-lg') Indlæs flere afstemninger...
+      =link_to 'Vis alle afstemninger', polls_path, class: 'btn btn-default btn-lg'
 section.wrapper-gray.section-info
   .container
     .row
