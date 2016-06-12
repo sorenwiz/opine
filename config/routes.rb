@@ -11,7 +11,12 @@ Rails.application.routes.draw do
 
   resources :static_pages
   localized do
-    resources :polls
+    resources :polls do
+      member do
+        post 'vote'
+      end
+    end
+
     get 'concept' => 'pages#concept', as: 'concept'
     get 'sign_in' => 'pages#sign_in', as: 'sign_in'
   end

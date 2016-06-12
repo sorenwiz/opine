@@ -30,6 +30,7 @@ class Poll < ActiveRecord::Base
   friendly_id :heading, use: [:slugged, :finders]
 
   has_many :vote_options, dependent: :destroy
+  has_many :votes, dependent: :destroy
   belongs_to :category
 
   has_attached_file :image, styles: { medium: "368x260#" }

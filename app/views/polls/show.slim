@@ -12,7 +12,7 @@
         .card-sm-12.card-lg-4.card
           .card-body
             p.card-meta Antal stemmer
-            h2.card-title.card-title--lg 1.260 har stemt
+            h2.card-title.card-title--lg #{@poll.votes.count} har stemt
           .card-body
             p.card-meta Afstemning udløber om
             h2.card-title.card-title--lg= time_ago_in_words(@poll.expires_at.to_date).capitalize
@@ -36,27 +36,27 @@
           .col-lg-8
             / start .card /
             .card
-              .card-header
-                h4.card-title
-                  span.fa.fa-fw.fa-bullhorn<>
-                  | Sæt din stemme
-              .card-body
-                form
+              =form_tag vote_poll_path(@poll)
+                .card-header
+                  h4.card-title
+                    span.fa.fa-fw.fa-bullhorn<>
+                    | Sæt din stemme
+                .card-body
                   -@vote_options.each do |vote_option|
                     .form-group
                       .checkbox
                         label
-                          input type="checkbox"
+                          input type="radio" name="vote_option_id" value=vote_option.id
                           span=vote_option.text
-              .card-footer
-                .row
-                  .col-sm-3
-                    = link_to "Stem", root_path, class: 'btn btn-primary btn-lg btn-block'
-                  .col-sm-9.text-center-xs
-                    p.card-text.text-muted<>
-                      |Du stemmer anonymt.
-                      br
-                      |Din stemme indgår kun i statistik
+                .card-footer
+                  .row
+                    .col-sm-3
+                      = submit_tag "Stem", class: 'btn btn-primary btn-lg btn-block'
+                    .col-sm-9.text-center-xs
+                      p.card-text.text-muted<>
+                        |Du stemmer anonymt.
+                        br
+                        |Din stemme indgår kun i statistik
             / end .card /
             h2 Hvad syntes du?
             = image_tag 'facebook-placeholder', class: 'img-responsive', alt: 'Facebook Comments placeholder'
