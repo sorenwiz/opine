@@ -33,12 +33,14 @@ class Poll < ActiveRecord::Base
   has_many :votes, dependent: :destroy
   belongs_to :category
 
-  has_attached_file :image, styles: { medium: "368x260#" }
-  has_attached_file :background_image, styles: { medium: "740x380#" }
+  has_attached_file :image, styles: {medium: "368x260#"}
+  has_attached_file :background_image, styles: {medium: "740x380#"}
 
   accepts_nested_attributes_for :vote_options, allow_destroy: true
 
   validates_presence_of :description, :teaser, :heading, :description_heading, :expires_at
-  validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }, presence: true
-  validates_attachment :background_image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }, presence: true
+  validates_attachment :image, content_type: {content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]}, presence: true
+  validates_attachment :background_image, content_type: {content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]}, presence: true
+
+  scope :active, -> { where('expires_at >= ?', Date.today) }
 end

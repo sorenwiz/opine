@@ -1,0 +1,9 @@
+-2.times
+  .card-deck-wrapper
+    .card-deck.pull-left
+      =render @polls.pop(3)
+
+.card-deck-wrapper
+  .card-deck
+    =render @polls.pop(2)
+    = render partial: 'card/purple'

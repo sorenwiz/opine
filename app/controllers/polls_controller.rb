@@ -2,7 +2,7 @@ class PollsController < ApplicationController
   before_filter :get_poll, only: [:show, :vote]
 
   def index
-
+    @polls = Poll.active.to_a
   end
 
   def show

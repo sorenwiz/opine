@@ -30,7 +30,7 @@
               li.footer-item
                 = link_to "593.234 har stemt.", "", class: 'footer-link'
               li.footer-item
-                = link_to "23 aktive afstemninger.", "", class: 'footer-link'
+                = link_to "#{Poll.active.count} aktive afstemninger.", "", class: 'footer-link'
               li.footer-item
                 = link_to "324 har stemt i dag.", "", class: 'footer-link'
             p
