@@ -8,7 +8,7 @@ header.wrapper
           span.icon-bar
           span.icon-bar
         - if user_signed_in?
-          = link_to "Log ud", destroy_user_session_path, method: :delete, class: "btn btn-secondary navbar-btn pull-right visible-breakpoint"
+          = link_to "Log ud", destroy_user_session_path, method: :delete, class: "btn btn-primary-alt navbar-btn pull-right visible-breakpoint"
         -else
           = link_to "Log ind", sign_in_path, class: "btn btn-secondary navbar-btn pull-right visible-breakpoint"
         = link_to "Opine", root_path, class: "navbar-brand"
@@ -22,8 +22,12 @@ header.wrapper
             = link_to "Konceptet", concept_path
           li
             = link_to "Om os"
-          li
-            -if user_signed_in?
-              = link_to "Log ud", destroy_user_session_path, method: :delete, class: "btn btn-secondary navbar-btn invisible-breakpoint"
-            -else
+          -if user_signed_in?
+            li.m-l-2
+              = link_to root_path, class: 'navbar-user' do
+                = image_tag "default-avatar.jpg", class: "img-circle", width: 50, height: 50
+            li.m-l-2
+              = link_to "Log ud", destroy_user_session_path, method: :delete, class: "btn btn-primary-alt navbar-btn invisible-breakpoint"
+          -else
+            li.m-l-2
               = link_to "Log ind", sign_in_path, class: "btn btn-secondary navbar-btn invisible-breakpoint"

@@ -28,31 +28,35 @@
     font-weight: bold;
     font-size: 19px;
   }
+  .navbar-nav > li > .navbar-user {
+    padding: 0;
+  }
   .navbar-nav > li > .navbar-btn {
-    color: #fff;
     font-weight: normal;
     padding-top: 7px;
     padding-bottom: 7px;
 
-    &:focus,
-    &.focus {
-      color: $btn-secondary-color;
-      background-color: lighten($btn-secondary-bg, 10%);
-      border-color: lighten($btn-secondary-border, 10%);
-    }
+    &.btn-secondary {
+      color: #fff;
+      &:focus,
+      &.focus {
+        color: $btn-secondary-color;
+        background-color: lighten($btn-secondary-bg, 10%);
+        border-color: lighten($btn-secondary-border, 10%);
+      }
 
-    &:hover {
-      color: $btn-secondary-color;
-      background-color: lighten($btn-secondary-bg, 12%);
-      border-color: lighten($btn-secondary-border, 12%);
-    }
+      &:hover {
+        color: $btn-secondary-color;
+        background-color: lighten($btn-secondary-bg, 12%);
+        border-color: lighten($btn-secondary-border, 12%);
+      }
 
-    &:active,
-    &.active {
-      background-color: lighten($btn-secondary-bg, 12%);
-      border-color: lighten($btn-secondary-border, 12%);
+      &:active,
+      &.active {
+        background-color: lighten($btn-secondary-bg, 12%);
+        border-color: lighten($btn-secondary-border, 12%);
+      }
     }
-
   }
 }
 
@@ -71,7 +75,7 @@
 
     .navbar-nav > li > .navbar-btn {
       min-width: 170px;
-      margin: 4px 0 4px $grid-gutter-width;
+      margin: 4px 0;
     }
   }
 
