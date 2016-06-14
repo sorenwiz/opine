@@ -42,6 +42,7 @@ $btn-padding-large-vertical: 8px;
 $btn-padding-large-horizontal: 50px;
 $wrapper-extra-width: 1370px; /* $container-lg + 200px */
 $input-border: #d0d0d0;
+$line-height-xl: 1.3;
 
 // Tabs
 $nav-tabs-color: #121212;
@@ -67,6 +68,7 @@ $card-padding: 3rem;
 $btn-border-radius-base: 25px;
 $btn-border-radius-small: $btn-border-radius-base;
 $btn-border-radius-large: $btn-border-radius-base;
+$btn-border-radius-xl: 30px;
 
 $btn-default-color: #7b7b7b;
 $btn-default-bg: #efefef;
@@ -85,7 +87,7 @@ $btn-tertiary-bg: #fff;
 $btn-tertiary-border: #fff;
 
 // Spacing
-$spacer:   1rem !default;
+$spacer: 1rem !default;
 $spacer-x: $spacer !default;
 $spacer-y: $spacer !default;
 $spacers: (
@@ -112,6 +114,14 @@ $spacers: (
         5: (
                 x: ($spacer-x * 5),
                 y: ($spacer-y * 5)
+        ),
+        6: (
+                x: ($spacer-x * 6),
+                y: ($spacer-y * 6)
+        ),
+        7: (
+                x: ($spacer-x * 7),
+                y: ($spacer-y * 7)
         )
 ) !default;
 $border-width: 1px !default;
