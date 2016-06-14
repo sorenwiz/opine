@@ -1,5 +1,6 @@
 -extra_css ||= nil
 -card_class = extra_css.presence || 'card-sm-6 card-lg-4'
+-custom_footer = local_assigns[:custom_footer].nil? ? local_assigns[:custom_footer] : false
 
 .card class=card_class
   .card-image(style="background-image: url(#{image_path(poll.image.url(:medium))});")
@@ -10,5 +11,10 @@
     .card-meta= poll.teaser
   .card-footer
     = link_to "Stem", poll, class: 'btn btn-primary btn-lg'
-    span.card-text.text-muted<> 2.213 har stemt
-    strong.card-text<>= poll.category.name
+    - if custom_footer
+      .flex-end
+        strong.card-text<>= poll.category.name
+        span.card-text.text-muted<> 2.213 har stemt
+    - else
+      span.card-text.text-muted<> 2.213 har stemt
+      strong.card-text<>= poll.category.name
