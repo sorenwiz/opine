@@ -12,7 +12,6 @@ section.wrapper.p-y-5
   .container
     .jumbotron
       .row
-
         .col-lg-7.col-lg-push-5.jumbotron--border-top.text-right-lg
           h2.jumbotron-title Aktuelle emner.
           p.jumbotron-subtitle.jumbotron-subtitle--sm Med Opine giver du din stemme til kende så den almindelige borger kan danne et billede af hvad Danmark mener.
@@ -26,11 +25,4 @@ section.bg-success.p-t-4
       p.jumbotron-subtitle.jumbotron-subtitle--sm Konceptet er enkelt. Vi tilføjer løbende afstemninger, hvor du kan stemme og give din mening til kende. Når du stemmer er du med til at danne et billede. Vi viser billedet.
       .jumbotron-image-wrapper
         = image_tag "jumbotron-image@2x.png", alt: 'Your opinion matters', class: 'jumbotron-image m-t-2', width: '762', height: '327'
-section.wrapper.p-y-4
-  .container
-    .media.jumbotron
-      .media-body.media-middle
-        h2.jumbotron-title.jumbotron-title--sm Vil du være med?
-        p.jumbotron-subtitle.jumbotron-subtitle--xs Udover at kunne stemme, kan du også være frivillig i Opine. Som frivillig kan du være med i rådet som sætter afstemninger ud på Opine.
-      .media-right.media-middle
-        = link_to "Meld dig ind", root_path, class: 'btn btn-secondary'
+= render 'pages/shared/signup'

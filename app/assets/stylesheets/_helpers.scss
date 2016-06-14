@@ -74,3 +74,25 @@
     }
   }
 }
+
+.section-paragraph {
+  font-size: 24px;
+  line-height: 1.75;
+  font-weight: 400;
+  position: relative;
+  padding-top: 10px;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 80%;
+    background-color: #5adc96;
+    height: 12px;
+    border-radius: 3px;
+  }
+}
+
+.section-border-top {
+  border-top: 1px solid #e3e3e3;
+}

@@ -21,7 +21,7 @@ header.wrapper
           li
             = link_to "Konceptet", concept_path
           li
-            = link_to "Om os"
+            = link_to "Om os", omos_path
           -if user_signed_in?
             li.m-l-2
               = link_to root_path, class: 'navbar-user' do

@@ -1,0 +1,7 @@
+.form-control {
+  border: 3px solid #f1f1f1;
+  box-shadow: none;
+  &:not(textarea) {
+    border-radius: $btn-border-radius-large;
+  }
+}

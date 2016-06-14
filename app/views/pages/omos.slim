@@ -1,0 +1,31 @@
+.section-jumbotron.wrapper.bg-1d1d1d
+  .container
+    .jumbotron
+      .row
+        .col-sm-12.col-lg-7.p-t-4
+          h1.jumbotron-title.m-b-2 Opine er for alle.
+          p.jumbotron-subtitle.jumbotron-subtitle--sm Foreningen Opine så første gang dagens lys 2016 da bla bla. I dag har vi en vision om, at nå ud til hele Danmark med målet om at danne et billede af hvad vi mener om aktuelle emner.
+        .col-sm-12.col-lg-5.p-t-4.jumbotron-image-wrapper
+          = image_tag "omos-image@2x.png", alt: 'Din mening tæller.', class: 'jumbotron-image', width: '320', height: '380'
+section.wrapper.p-y-5
+  .container
+    p.section-paragraph.m-b-4 Formålet for Foreningen Opine er at udvikle og drive den demokratiserende online-platform Opine. Denne platform består centralt af funktionalitet og indhold som udgør afstemninger omkring nationale, regionale og internationale spørgsmål af bred folkelig interesse og relevans.
+    form.row.contact-form
+      .col-sm-3.contact-info
+        h5.contact-title Kontakt os
+        = link_to "hej@opine.dk", root_path, class: "contact-link contact-link--email"
+        = link_to "tlf. 12 34 56 78", root_path, class: "contact-link contact-link--tel"
+        address.contact-address
+          | Adressevej 123
+          | 2100 København Ø
+      .col-sm-3
+        .form-group
+          = text_field_tag "fullname", nil, {class: "form-control input-lg", placeholder: "Dit fulde navn"}
+        .form-group
+          = email_field_tag "email", nil, {class: "form-control input-lg", placeholder: "Din email"}
+        .form-group
+          = telephone_field_tag "phone", nil, {class: "form-control input-lg", placeholder: "Dit telefonnummer"}
+      .col-sm-6
+        .form-group
+          = text_area_tag "message", nil, {class: "form-control input-lg", rows: "6", placeholder: "Message"}
+= render 'pages/shared/signup'
