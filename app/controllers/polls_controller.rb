@@ -7,7 +7,7 @@ class PollsController < ApplicationController
 
   def show
     @vote_options = @poll.vote_options.to_a.shuffle
-    @related_polls = Poll.where.not(id: @poll.id).first(3)
+    @related_polls = Poll.active.where.not(id: @poll.id).first(3)
     @page_title = @poll.heading
   end
 
@@ -20,6 +20,6 @@ class PollsController < ApplicationController
   private
 
   def get_poll
-    @poll = Poll.find params[:id]
+    @poll = Poll.active.find params[:id]
   end
 end
