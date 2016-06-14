@@ -11,10 +11,6 @@
     .card-meta= poll.teaser
   .card-footer
     = link_to "Stem", poll, class: 'btn btn-primary btn-lg'
-    - if custom_footer
-      .flex-end
-        strong.card-text<>= poll.category.name
-        span.card-text.text-muted<> 2.213 har stemt
-    - else
-      span.card-text.text-muted<> 2.213 har stemt
+    .flex-end
       strong.card-text<>= poll.category.name
+      span.card-text.text-muted<> 2.213 har stemt
