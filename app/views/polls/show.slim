@@ -59,7 +59,7 @@
                         |Din stemme indgår kun i statistik
             / end .card /
             h2 Hvad syntes du?
-            = image_tag 'facebook-placeholder', class: 'img-responsive', alt: 'Facebook Comments placeholder'
+            .fb-comments data-href=request.url data-numposts="5"
           .col-lg-4.invisible-breakpoint
             .card
               .card-image(style="background-image: url(#{image_path(@poll.image.url(:medium))});")

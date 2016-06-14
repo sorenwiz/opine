@@ -8,6 +8,7 @@ html
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = javascript_include_tag 'https://use.fontawesome.com/a7d9fb2ffb.js'
+    = render 'layouts/facebook_include'
     = csrf_meta_tags
   body
     - app_extra_class = @app_extra_class || 'app-default'
