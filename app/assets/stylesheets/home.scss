@@ -148,23 +148,6 @@
   margin-left: auto;
 }
 
-@media only screen and (max-width: $screen-xs-max) {
-  .social-list {
-    text-align: center;
-    margin: $grid-gutter-width 0;
-  }
-}
-
-.social-link {
-  color: rgba(255, 255, 255, 0.5);
-  &:hover {
-    color: rgba(255, 255, 255, 0.75);
-  }
-  .fa-inverse {
-    color: #121212;
-  }
-}
-
 .section-polls {
   padding: 0 0 50px 0;
   background-color: #fff;

@@ -38,6 +38,13 @@
               span.text-muted<> &mdash;
               = link_to "Privatlivspolitik", root_path, class: 'text-muted'
           .row
+            .col-xs-12.visible-xs
+              .row
+                .col-xs-6
+                  = link_to "Opine", root_path, class: 'footer-brand'
+                .col-xs-6
+                  p.text-muted Non-profit forening
+                  p.text-muted Copyright 2016
             .col-xs-12.col-md-12
               ul.list-inline.social-list
                 li
@@ -60,10 +67,3 @@
                     span.fa-stack.fa-lg
                       i.fa.fa-circle.fa-stack-2x
                       i.fa.fa-instagram.fa-stack-1x.fa-inverse
-        .col-xs-12.visible-xs
-          .row
-            .col-xs-6
-              = link_to "Opine", root_path, class: 'footer-brand'
-            .col-xs-6
-              p.text-muted Non-profit forening
-              p.text-muted Copyright 2016

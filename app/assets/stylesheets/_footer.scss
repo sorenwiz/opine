@@ -46,3 +46,27 @@
 .footer-item {
   font-size: 18px;
 }
+
+@media only screen and (max-width: $screen-xs-min) {
+  /* Center list only for < 480px */
+  .social-list {
+    text-align: center;
+    margin: $grid-gutter-width 0;
+  }
+}
+@media only screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max){
+  .social-list {
+    @include make-xs-column-offset(6);
+    padding-left: 5px;
+  }
+}
+
+.social-link {
+  color: rgba(255, 255, 255, 0.5);
+  &:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .fa-inverse {
+    color: #121212;
+  }
+}
