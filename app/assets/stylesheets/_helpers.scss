@@ -12,6 +12,10 @@
 }
 
 @media only screen and (max-width: $screen-xs-max) {
+  .btn-block-xs {
+    display: block;
+    width: 100%;
+  }
   .text-left-xs {
     text-align: left;
   }
@@ -19,6 +23,30 @@
     text-align: center;
   }
   .text-right-xs {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .text-left-sm {
+    text-align: left;
+  }
+  .text-center-sm {
+    text-align: center;
+  }
+  .text-right-sm {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .text-left-md {
+    text-align: left;
+  }
+  .text-center-md {
+    text-align: center;
+  }
+  .text-right-md {
     text-align: right;
   }
 }
@@ -76,11 +104,16 @@
 }
 
 .section-paragraph {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.75;
   font-weight: 400;
   position: relative;
   padding-top: 10px;
+
+  @media only screen and (min-width: $screen-sm-min) {
+    font-size: 24px;
+  }
+
   &:before {
     content: "";
     position: absolute;

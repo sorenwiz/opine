@@ -41,3 +41,15 @@
     color: #0018ff;
   }
 }
+
+@media only screen and (max-width: $screen-xs-max) {
+  .media-default {
+    .media-left,
+    .media-body,
+    .media-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}

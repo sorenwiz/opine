@@ -11,21 +11,25 @@ section.wrapper.p-y-5
   .container
     p.section-paragraph.m-b-4 Formålet for Foreningen Opine er at udvikle og drive den demokratiserende online-platform Opine. Denne platform består centralt af funktionalitet og indhold som udgør afstemninger omkring nationale, regionale og internationale spørgsmål af bred folkelig interesse og relevans.
     form.row.contact-form
-      .col-sm-3.contact-info
+      .col-sm-12.col-lg-3.contact-info
         h5.contact-title Kontakt os
         = link_to "hej@opine.dk", root_path, class: "contact-link contact-link--email"
         = link_to "tlf. 12 34 56 78", root_path, class: "contact-link contact-link--tel"
         address.contact-address
           | Adressevej 123
+          br
           | 2100 København Ø
-      .col-sm-3
+      .col-sm-5.col-lg-3
         .form-group
           = text_field_tag "fullname", nil, {class: "form-control input-lg", placeholder: "Dit fulde navn"}
         .form-group
           = email_field_tag "email", nil, {class: "form-control input-lg", placeholder: "Din email"}
         .form-group
           = telephone_field_tag "phone", nil, {class: "form-control input-lg", placeholder: "Dit telefonnummer"}
-      .col-sm-6
+      .col-sm-7.col-lg-6
         .form-group
           = text_area_tag "message", nil, {class: "form-control input-lg", rows: "6", placeholder: "Message"}
+      .col-xs-12.m-t-2
+        .form-group.text-center-xs.text-center-sm.text-center-md.text-right-lg
+          = submit_tag "Send besked", class: "btn btn-primary-alt btn-lg btn-block-xs"
 = render 'pages/shared/signup'

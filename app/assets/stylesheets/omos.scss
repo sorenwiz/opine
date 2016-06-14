@@ -1,23 +1,50 @@
 .pages-wrapper.omos-wrapper {
-  .contact {}
-  .contact-form {}
-  .contact-info {}
+  .section-jumbotron {
+    text-align: center;
+  }
+
+  @media only screen and (min-width: $screen-lg-min) {
+    .section-jumbotron {
+      text-align: left;
+    }
+  }
+
+  .contact {
+  }
+  .contact-form {
+  }
+  .contact-info {
+  }
   .contact-title {
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 700;
     margin-bottom: 20px;
     margin-top: 0;
+
+    @media only screen and (min-width: $screen-sm-min) {
+      font-size: 38px;
+    }
   }
   .contact-link {
     display: block;
     color: #333;
-    font-size: 24px;
+    font-size: 18px;
+
+    @media only screen and (min-width: $screen-sm-min) {
+      font-size: 24px;
+    }
   }
-  .contact-link--email {}
-  .contact-link--tel {}
+  .contact-link--email {
+  }
+  .contact-link--tel {
+  }
   .contact-address {
     color: #333;
-    font-size: 24px;
+    font-size: 18px;
     margin-top: 20px;
+
+    @media only screen and (min-width: $screen-sm-min) {
+      font-size: 24px;
+    }
   }
 }
