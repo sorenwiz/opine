@@ -17,7 +17,10 @@
 
 .navbar-header .navbar-toggle {
   margin-left: 10px;
-  padding: 10px;
+  padding: 10px 9px;
+  .icon-bar {
+    width: 16px;
+  }
 }
 
 .navbar-default {
