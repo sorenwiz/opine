@@ -17,7 +17,7 @@
             p.card-meta Afstemning udløber om
             h2.card-title.card-title--lg= time_ago_in_words(@poll.expires_at.to_date).capitalize
           .card-footer
-            = link_to "Din mening?", root_path, class: 'btn btn-primary btn-lg'
+            = link_to "Din mening?", "#poll-content", class: 'btn btn-primary btn-xl btn-block m-t-6'
 
 .section-tabs
   .container
@@ -35,7 +35,7 @@
         .row
           .col-lg-8
             / start .card /
-            .card
+            #poll-content.card
               =form_tag vote_poll_path(@poll)
                 .card-header
                   h4.card-title
