@@ -42,12 +42,12 @@
                     span.fa.fa-fw.fa-bullhorn<>
                     | Sæt din stemme
                 .card-body
-                  -@vote_options.each do |vote_option|
+                  - @vote_options.each_with_index do |vote_option, i|
                     .form-group
                       .checkbox
-                        label
-                          input type="radio" name="vote_option_id" value=vote_option.id
-                          span=vote_option.text
+                        input id="vote_option_id_#{i}" type="radio" name="vote_option_id" value=vote_option.id
+                        label for="vote_option_id_#{i}" = vote_option.text
+
                 .card-footer
                   .row
                     .col-sm-3
