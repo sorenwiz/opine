@@ -1,8 +1,7 @@
 -extra_css ||= nil
 -card_class = extra_css.presence || 'card-sm-6 card-lg-4'
--custom_footer = local_assigns[:custom_footer].nil? ? local_assigns[:custom_footer] : false
 
-.card class=card_class
+.card.is-footer-fixed-bottom class=card_class
   .card-image(style="background-image: url(#{image_path(poll.image.url(:medium))});")
     = link_to poll, class: 'card-link card-link--badge btn btn-lg btn-tertiary'
       | #{time_ago_in_words(poll.expires_at.to_date).capitalize} tilbage
