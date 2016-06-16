@@ -59,6 +59,10 @@
     background: transparent no-repeat center/cover;
     height: 260px;
     overflow: hidden;
+    &:first-child {
+      border-top-left-radius: .3rem;
+      border-top-right-radius: .3rem;
+    }
   }
   .card-image--caption {
     position: absolute;
