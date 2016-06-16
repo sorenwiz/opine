@@ -14,14 +14,14 @@ section.wrapper.section-polls
       | Aktuelle afstemninger
     .card-deck-wrapper
       .card-deck
-        - @polls.pop(2).each_with_index do |poll, i|
-          = render poll
+        = render @polls.pop(2)
         = render partial: 'card/purple'
     .card-deck-wrapper
       .card-deck
         = render @polls
     .m-y.text-center
-      =link_to 'Vis alle afstemninger', polls_path, class: 'btn btn-default btn-lg'
+      = link_to 'Vis alle afstemninger', polls_path, class: 'btn btn-default btn-lg'
+
 section.wrapper-gray.section-info
   .container
     .row
