@@ -1,9 +1,17 @@
--2.times
-  .card-deck-wrapper
-    .card-deck.pull-left
-      =render @polls.pop(3)
+section.wrapper
+  .container
+    h2 Afstemninger
+    - 2.times
+      .card-deck-wrapper
+        .card-deck
+          = render @polls.pop(3)
 
-.card-deck-wrapper
-  .card-deck
-    =render @polls.pop(2)
-    = render partial: 'card/purple'
+section.wrapper.section-polls
+  .container
+    h2.section-polls-title
+      span.fa.fa-fw.fa-line-chart>
+      | Aktuelle afstemninger
+    .card-deck-wrapper
+      .card-deck
+        = render @polls.pop(2)
+        = render partial: 'card/purple'
