@@ -2,9 +2,8 @@ class PagesController < ApplicationController
   def concept
   end
 
-  def omos
+  def about_us
   end
-
 
   def sign_in
     @app_extra_class = 'app-login'

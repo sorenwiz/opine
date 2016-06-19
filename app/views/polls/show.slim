@@ -51,7 +51,10 @@
                 .card-footer
                   .row
                     .col-sm-3
-                      = submit_tag "Stem", class: 'btn btn-primary btn-lg btn-block'
+                      -if @user_vote
+                        p Din stemme er gemt
+                      -else
+                        = submit_tag "Stem", class: 'btn btn-primary btn-lg btn-block'
                     .col-sm-9.text-center-xs
                       p.card-text.text-muted<>
                         |Du stemmer anonymt.

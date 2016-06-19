@@ -12,4 +12,4 @@
     = link_to "Stem", poll, class: 'btn btn-primary btn-lg'
     .flex-end
       strong.card-text<>= poll.category.name
-      span.card-text.text-muted<> 2.213 har stemt
+      span.card-text.text-muted<> #{poll.votes.count} har stemt
