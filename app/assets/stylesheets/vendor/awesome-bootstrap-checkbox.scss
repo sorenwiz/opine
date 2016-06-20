@@ -33,7 +33,7 @@ $check-icon: $fa-var-check !default;
 }
 
 .checkbox {
-  padding-left: 15px;
+  padding-left: 25px;
 
   label {
     display: inline-block;
@@ -76,6 +76,7 @@ $check-icon: $fa-var-check !default;
   input[type="radio"] {
     opacity: 0;
     z-index: 1;
+    position: absolute;
 
     &:focus + label::before {
       @include tab-focus();
