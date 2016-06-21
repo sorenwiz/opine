@@ -52,4 +52,8 @@ class User < ActiveRecord::Base
     user.authentications.create({provider: auth.provider, uid: auth.uid})
     return user
   end
+
+  def facebook_id
+    authentications.last.uid
+  end
 end
