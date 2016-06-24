@@ -4,12 +4,12 @@
       h2= @poll.heading
       p= @poll.sub_heading
 
-    .card-deck-wrapper
-      .card-deck
-        .card-sm-12.card-lg-8.card.card--borderless
+    .flex-card-deck-wrapper
+      .flex-card-deck
+        .flex-card-sm-12.flex-card-lg-8.card.card--borderless
           .card-image(style="background-image: url(#{image_path(@poll.background_image.url(:medium))}); height: 380px;")
             = link_to "Foto: Colourbox", root_path, class: 'card-image--caption'
-        .card-sm-12.card-lg-4.card
+        .flex-card-sm-12.flex-card-lg-4.card
           .card-body
             p.card-meta Antal stemmer
             h2.card-title.card-title--lg #{@poll.votes.count} har stemt
@@ -32,8 +32,8 @@
   .container
     .tab-content
       #first.tab-pane.active role="tabpanel"
-        .row
-          .col-lg-8
+        .flex-card-deck
+          .flex-card-sm-12.flex-card-lg-8
             / start .card /
             #poll-content.card
               =form_tag vote_poll_path(@poll)
@@ -64,7 +64,7 @@
             .m-t-5
               h2 Hvad syntes du?
               .fb-comments data-href=request.url data-numposts="5" data-width="100%"
-          .col-lg-4.invisible-breakpoint
+          .flex-card-lg-4.invisible-breakpoint
             .card
               .card-image(style="background-image: url(#{image_path(@poll.image.url(:medium))});")
               .card-header
