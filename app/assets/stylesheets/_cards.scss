@@ -240,6 +240,9 @@
   background-color: #681fb2;
   border-color: #681fb2;
   color: #fff;
+  .card-title {
+    color: #fff;
+  }
   @media only screen and (max-width: $screen-xs-max) {
     padding-top: 30px;
 
