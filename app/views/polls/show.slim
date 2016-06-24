@@ -61,8 +61,9 @@
                         br
                         |Din stemme indgår kun i statistik
             / end .card /
-            h2 Hvad syntes du?
-            .fb-comments data-href=request.url data-numposts="5"
+            .m-t-5
+              h2 Hvad syntes du?
+              .fb-comments data-href=request.url data-numposts="5" data-width="100%"
           .col-lg-4.invisible-breakpoint
             .card
               .card-image(style="background-image: url(#{image_path(@poll.image.url(:medium))});")
@@ -81,7 +82,7 @@
           .card-header
             h4.card-title Tab #3
 
-    h2 Se andre afstemninger
+    h2.m-t-5 Se andre afstemninger
     .card-deck-wrapper
       .card-deck.m-t-2
         = render @related_polls
