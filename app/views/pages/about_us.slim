@@ -7,7 +7,7 @@
           p.jumbotron-subtitle.jumbotron-subtitle--sm Foreningen Opine så første gang dagens lys 2016 da bla bla. I dag har vi en vision om, at nå ud til hele Danmark med målet om at danne et billede af hvad vi mener om aktuelle emner.
         .flex-figure.p-y-4.jumbotron-image-wrapper
           = image_tag "omos-image@2x.png", alt: 'Din mening tæller.', class: 'jumbotron-image m-r-0', width: '320', height: '380'
-section.wrapper.p-y-5
+section.wrapper.p-y-7
   .container
     p.section-paragraph.m-b-4 Formålet for Foreningen Opine er at udvikle og drive den demokratiserende online-platform Opine. Denne platform består centralt af funktionalitet og indhold som udgør afstemninger omkring nationale, regionale og internationale spørgsmål af bred folkelig interesse og relevans.
     form.row.contact-form
@@ -30,6 +30,6 @@ section.wrapper.p-y-5
         .form-group
           = text_area_tag "message", nil, {class: "form-control input-lg", rows: "6", placeholder: "Message"}
       .col-xs-12.m-t-2
-        .form-group.text-center-xs.text-center-sm.text-center-md.text-right-lg
+        .text-center-xs.text-center-sm.text-center-md.text-right-lg
           = submit_tag "Send besked", class: "btn btn-primary-alt btn-lg btn-block-xs"
 = render 'pages/shared/signup'
