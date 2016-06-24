@@ -1,7 +1,7 @@
 - extra_css ||= nil
 - card_class = extra_css.presence || 'card-sm-6 card-lg-4'
 
-.card.is-footer-fixed-bottom class=card_class
+.card.is-footer-fixed-bottom.js-card-clickable class=card_class data-href=poll_path(poll)
   .card-image(style="background-image: url(#{image_path(poll.image.url(:medium))});")
     = link_to poll, class: 'card-link card-link--badge btn btn-lg btn-tertiary'
       | #{time_ago_in_words(poll.expires_at.to_date).capitalize} tilbage
