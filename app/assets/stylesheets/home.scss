@@ -1,10 +1,15 @@
 /* Homepage styles */
-@media (min-width: $grid-float-breakpoint) {
-  .home-wrapper.index-wrapper .navbar-default {
-    padding-top: 35px;
+.home-wrapper.index-wrapper {
+  .jumbotron-title,
+  .jumbotron-subtitle {
+    color: #000;
+  }
+  @media (min-width: $grid-float-breakpoint) {
+    .navbar-default {
+      padding-top: 35px;
+    }
   }
 }
-
 .container {
   .jumbotron {
     border-radius: 0;
