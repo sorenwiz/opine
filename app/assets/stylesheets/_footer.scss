@@ -1,7 +1,7 @@
 .footer-default {
   background-color: $footer-default-bg;
   color: $footer-default-color;
-  padding: $footer-default-padding-y $footer-default-padding-x;
+  padding: $footer-default-padding-y * 0.5 $footer-default-padding-x * 0.5;
 
   @media only screen and (min-width: $screen-sm-min) {
     padding: round($footer-default-padding-y * 1.33) $footer-default-padding-x;
@@ -52,7 +52,7 @@
   /* Center list only for < 480px */
   .social-list {
     text-align: center;
-    margin: $grid-gutter-width 0;
+    margin: $grid-gutter-width 0 0;
   }
 }
 @media only screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max){
