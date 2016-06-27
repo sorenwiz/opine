@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def about_us
+    @message = ContactUsMessage.new
   end
 
   def sign_in
