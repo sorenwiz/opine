@@ -24,30 +24,34 @@
           .flex-card-sm-12.flex-card-lg-8
             / start .card /
             #poll-content.card
-              =form_tag vote_poll_path(@poll)
-                .card-header
-                  h4.card-title
-                    span.fa.fa-fw.fa-bullhorn<>
-                    | Sæt din stemme
-                .card-body
-                  - @vote_options.each_with_index do |vote_option, i|
-                    .form-group
-                      .checkbox
-                        input id="vote_option_id_#{i}" type="radio" name="vote_option_id" value=vote_option.id
-                        label for="vote_option_id_#{i}" = vote_option.text
+              - thank_you = true
+              - if thank_you
+                = render 'polls/thank_you'
+              - else
+                =form_tag vote_poll_path(@poll)
+                  .card-header
+                    h4.card-title
+                      span.fa.fa-fw.fa-bullhorn<>
+                      | Sæt din stemme
+                  .card-body
+                    - @vote_options.each_with_index do |vote_option, i|
+                      .form-group
+                        .checkbox
+                          input id="vote_option_id_#{i}" type="radio" name="vote_option_id" value=vote_option.id
+                          label for="vote_option_id_#{i}" = vote_option.text
 
-                .card-footer
-                  .row
-                    .col-sm-3
-                      -if @user_vote
-                        p Din stemme er gemt
-                      -else
-                        = submit_tag "Stem", class: 'btn btn-primary btn-lg btn-block'
-                    .col-sm-9.text-center-xs
-                      p.card-text.text-muted<>
-                        |Du stemmer anonymt.
-                        br
-                        |Din stemme indgår kun i statistik
+                  .card-footer
+                    .row
+                      .col-sm-3
+                        -if @user_vote
+                          p Din stemme er gemt
+                        -else
+                          = submit_tag "Stem", class: 'btn btn-primary btn-lg btn-block'
+                      .col-sm-9.text-center-xs
+                        p.card-text.text-muted<>
+                          |Du stemmer anonymt.
+                          br
+                          |Din stemme indgår kun i statistik
             / end .card /
             .m-t-5
               h2 Hvad syntes du?
