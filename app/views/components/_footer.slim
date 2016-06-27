@@ -24,14 +24,14 @@
             li.footer-item
               = link_to "Kontakt os", "", class: 'footer-link'
         .col-xs-12.col-sm-4.col-md-4.col-md-offset-1
-          .hidden-xs
+          .hidden
             h4.footer-title Fun Stats
             ul.footer-list
-              li.footer-item.hidden
+              li.footer-item
                 = link_to "593.234 har stemt.", "", class: 'footer-link'
               li.footer-item
                 = link_to "#{Poll.active.count} aktive afstemninger.", "", class: 'footer-link'
-              li.footer-item.hidden
+              li.footer-item
                 = link_to "324 har stemt i dag.", "", class: 'footer-link'
             p
               = link_to "Cookies", root_path, class: 'text-muted'
