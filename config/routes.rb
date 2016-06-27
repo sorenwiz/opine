@@ -20,6 +20,5 @@ Rails.application.routes.draw do
     get 'concept' => 'pages#concept', as: 'concept'
     get 'sign_in' => 'pages#sign_in', as: 'sign_in'
     get 'about-us' => 'pages#about_us', as: 'about_us'
-    get 'statutes' => 'pages#statutes', as: 'statutes'
   end
 end
