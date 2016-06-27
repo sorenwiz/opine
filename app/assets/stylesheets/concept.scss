@@ -21,5 +21,14 @@
       overflow: hidden;
       width: 100%;
     }
+
+  }
+  .concept-image {
+    max-width: 100%;
+  }
+  @media only screen and (max-width: $screen-xs-max) {
+    .concept-image-wrapper {
+      height: 130px;
+    }
   }
 }
