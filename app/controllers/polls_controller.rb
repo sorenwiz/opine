@@ -1,7 +1,7 @@
 class PollsController < ApplicationController
   before_filter :get_poll, only: [:show, :vote]
   before_filter :require_user!, only: :vote, unless: :user_signed_in?
-  before_filter :set_wallpaper, only: :show
+  before_filter :set_images, only: :show
 
   def index
     @polls = Poll.active.to_a
@@ -38,7 +38,9 @@ class PollsController < ApplicationController
     Vote.exists?(user_id: current_user, poll_id: @poll.id)
   end
 
-  def set_wallpaper
+  def set_images
     @wallpaper = @poll.wallpaper.url(:big) if @poll.wallpaper.exists?
+    @poll_image = @poll.image.url(:medium) if @poll.image.exists?
+    @poll_title = @poll.heading
   end
 end
