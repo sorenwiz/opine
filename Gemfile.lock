@@ -89,6 +89,8 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    chart-js-rails (0.1.0)
+      railties (> 3.1)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -326,6 +328,7 @@ DEPENDENCIES
   capistrano-passenger
   capistrano-rails
   capistrano-rvm
+  chart-js-rails
   coffee-rails (~> 4.1.0)
   devise (~> 3.2)
   dotenv-rails
@@ -352,4 +355,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.12.4
+   1.12.5
