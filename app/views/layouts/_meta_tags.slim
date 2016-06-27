@@ -1,1 +1,1 @@
-meta property="og:image" content=(@poll_image.presence || image_path('icons/favicon-196x196.png'))
+meta property="og:image" content=(@poll_image.present? ? asset_url(@poll_image) : image_url('icons/favicon-196x196.png'))
