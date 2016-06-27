@@ -23,6 +23,10 @@
 #  background_image_content_type :string(255)
 #  background_image_file_size    :integer
 #  background_image_updated_at   :datetime
+#  wallpaper_file_name           :string(255)
+#  wallpaper_content_type        :string(255)
+#  wallpaper_file_size           :integer
+#  wallpaper_updated_at          :datetime
 #
 
 class Poll < ActiveRecord::Base
@@ -35,6 +39,7 @@ class Poll < ActiveRecord::Base
 
   has_attached_file :image, styles: {medium: "368x260#"}
   has_attached_file :background_image, styles: {medium: "740x380#"}
+  has_attached_file :wallpaper, styles: {big: "1920x2000#"}
 
   accepts_nested_attributes_for :vote_options, allow_destroy: true
 

@@ -6,18 +6,8 @@
 
     .flex-card-deck-wrapper
       .flex-card-deck
-        .flex-card-sm-12.flex-card-lg-8.card.card--borderless
+        .flex-card-sm-12.flex-card-lg-12.card.card--borderless
           .card-image(style="background-image: url(#{image_path(@poll.background_image.url(:medium))}); height: 380px;")
-            = link_to "Foto: Colourbox", root_path, class: 'card-image--caption'
-        .flex-card-sm-12.flex-card-lg-4.card
-          .card-body
-            p.card-meta Antal stemmer
-            h2.card-title.card-title--lg #{@poll.votes.count} har stemt
-          .card-body
-            p.card-meta Afstemning udløber om
-            h2.card-title.card-title--lg= time_ago_in_words(@poll.expires_at.to_date).capitalize
-          .card-footer
-            = link_to "Din mening?", "#poll-content", class: 'btn btn-primary btn-xl btn-block m-t-6'
 
 .section-tabs
   .container
@@ -26,8 +16,6 @@
         a href="#first" role="tab" data-toggle="tab" Din mening?
       li role="presentation"
         a href="#second" role="tab" data-toggle="tab" Resultater
-      li role="presentation"
-        a href="#third" role="tab" data-toggle="tab" Fakta
 .section-tab-content
   .container
     .tab-content
@@ -71,16 +59,10 @@
                 h4.card-title=@poll.description_heading
                 .card-meta
                   p=@poll.description
-              .card-footer
-                = link_to "Læs mere om baggrunden", root_path, class: 'link-classic'
       #second.tab-pane role="tabpanel"
         .card
           .card-header
-            h4.card-title Tab #2
-      #third.tab-pane role="tabpanel"
-        .card
-          .card-header
-            h4.card-title Tab #3
+            h4.card-title Resultater vil være tilgængelige når mindst 1000 stemmer er indgivet.
 
     h2.m-t-5 Se andre afstemninger
     .card-deck-wrapper

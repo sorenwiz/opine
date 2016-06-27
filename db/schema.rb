@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160612113811) do
+ActiveRecord::Schema.define(version: 20160627130244) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -84,6 +84,10 @@ ActiveRecord::Schema.define(version: 20160612113811) do
     t.string   "background_image_content_type", limit: 255
     t.integer  "background_image_file_size",    limit: 4
     t.datetime "background_image_updated_at"
+    t.string   "wallpaper_file_name",           limit: 255
+    t.string   "wallpaper_content_type",        limit: 255
+    t.integer  "wallpaper_file_size",           limit: 4
+    t.datetime "wallpaper_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

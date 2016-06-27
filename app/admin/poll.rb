@@ -1,6 +1,6 @@
 ActiveAdmin.register Poll do
   config.filters = false
-  permit_params :category_id, :image, :background_image, :sub_heading, :order, :heading, :teaser, :description_heading, :description, :expires_at, vote_options_attributes: [:id, :text, :_destroy]
+  permit_params :category_id, :image, :background_image, :wallpaper,:sub_heading, :order, :heading, :teaser, :description_heading, :description, :expires_at, vote_options_attributes: [:id, :text, :_destroy]
 
   index do
     column :heading
@@ -25,6 +25,7 @@ ActiveAdmin.register Poll do
       #f.input :image_cache, as: :hidden
       f.input :background_image, as: :file, hint: image_tag(f.object.background_image.url(:medium))
       #f.input :background_image_cache, as: :hidden
+      f.input :wallpaper, as: :file, hint: image_tag(f.object.wallpaper.url(:big), style: 'width:20%')
     end
 
     f.inputs "Vote options" do
@@ -46,6 +47,9 @@ ActiveAdmin.register Poll do
         end
         row :background_image do
           image_tag resource.background_image.url(:medium)
+        end
+        row :wallpaper do
+          image_tag resource.wallpaper.url(:big), style: 'width:20%'
         end
       end
     end

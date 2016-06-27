@@ -9,10 +9,12 @@ html
     = javascript_include_tag 'application'
     = javascript_include_tag 'https://use.fontawesome.com/a7d9fb2ffb.js'
     = render 'layouts/facebook_include'
+    = render 'layouts/icons'
     = csrf_meta_tags
   body
     - app_extra_class = @app_extra_class || 'app-default'
-    .app class=app_extra_class
+    - wallpaper_css = "background-image:url(\"#{@wallpaper}\")" if @wallpaper
+    .app class=app_extra_class style=wallpaper_css
       - unless @skip_content
         .page-shadow class="#{controller_name}-wrapper #{action_name}-wrapper"
           = render 'components/header'
