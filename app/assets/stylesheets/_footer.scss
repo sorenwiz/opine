@@ -18,6 +18,10 @@
       color: $footer-default-link-active-color;
     }
   }
+  .footer-link--muted {
+    font-weight: normal;
+    color: #595959;
+  }
 }
 
 .footer-brand {
