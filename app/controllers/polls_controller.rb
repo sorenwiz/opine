@@ -39,7 +39,7 @@ class PollsController < ApplicationController
   end
 
   def set_images
-    @wallpaper = @poll.wallpaper.url(:big) if @poll.wallpaper.exists?
+    @wallpaper = @poll.wallpaper.url if @poll.wallpaper.exists?
     @poll_image = @poll.image.url(:medium) if @poll.image.exists?
     @poll_title = @poll.heading
   end
