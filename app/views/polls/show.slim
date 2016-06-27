@@ -62,30 +62,20 @@
       #second.tab-pane role="tabpanel"
         .card
           .card-header
-            h4.card-title Resultater vil være tilgængelige når mindst 1000 stemmer er indgivet.
+            h4.card-title
           .card-body
-            canvas#chartjs height="500"
+            canvas#chartjs data-labels=@graph_data.map(&:first) data-counts=@graph_data.map(&:last) data-graph-data= height="500"
             - if true
               javascript:
                 var ctx = document.getElementById("chartjs");
                 var myChart = new Chart(ctx, {
                   type: 'bar',
                   data: {
-                    labels: [
-                      "Krigen skal og kan kun stoppes militært.",
-                      "En international magt bør afsætte det syriske styre.",
-                      "Krigen skal stoppes af Assad og Rusland - militært eller diplomatisk.",
-                      "Krigen skal stoppes af USA og oprørene - militært eller diplomatisk.",
-                      "Krigen skal stoppes af USA og oprørene - militært eller diplomatisk.",
-                      "Krigen skal stoppes af test",
-                      "Krigen skal stoppes af test 2 teadasddsaf ddasasdd asdv dfsdff dsst",
-                      "Krigen skal stoppes af test 2 test",
-                      "Krigen skal stoppes af test 2 tes asdadasdadt"
-                    ],
+                    labels: $('#chartjs').data().labels,
                     datasets: [
                       {
-                        label: '# of Votes',
-                        data: [35, 29, 32, 19, 43, 40, 19, 52, 15],
+                        label: 'Antal stemmer',
+                        data: $('#chartjs').data().counts,
                         backgroundColor: [
                           'rgba(90, 220, 150, 1)',
                           'rgba(104, 31, 178, 1)',
