@@ -24,8 +24,7 @@
           .flex-card-sm-12.flex-card-lg-8
             / start .card /
             #poll-content.card
-              - thank_you = true
-              - if thank_you
+              - if @user_vote
                 = render 'polls/thank_you'
               - else
                 =form_tag vote_poll_path(@poll)
@@ -43,10 +42,7 @@
                   .card-footer
                     .row
                       .col-sm-3
-                        -if @user_vote
-                          p Din stemme er gemt
-                        -else
-                          = submit_tag "Stem", class: 'btn btn-primary btn-lg btn-block'
+                        = submit_tag "Stem", class: 'btn btn-primary btn-lg btn-block'
                       .col-sm-9.text-center-xs
                         p.card-text.text-muted<>
                           |Du stemmer anonymt.
