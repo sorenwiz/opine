@@ -12,42 +12,46 @@
 .section-tabs
   .container
     ul.nav.nav-tabs role="tablist"
-      li class="active" role="presentation"
-        a href="#first" role="tab" data-toggle="tab" Din mening?
       li role="presentation"
+        a href="#first" role="tab" data-toggle="tab" Din mening?
+      li class="active" role="presentation"
         a href="#second" role="tab" data-toggle="tab" Resultater
 .section-tab-content
   .container
     .tab-content
-      #first.tab-pane.active role="tabpanel"
+      #first.tab-pane role="tabpanel"
         .flex-card-deck
           .flex-card-sm-12.flex-card-lg-8
             / start .card /
             #poll-content.card
-              =form_tag vote_poll_path(@poll)
-                .card-header
-                  h4.card-title
-                    span.fa.fa-fw.fa-bullhorn<>
-                    | Sæt din stemme
-                .card-body
-                  - @vote_options.each_with_index do |vote_option, i|
-                    .form-group
-                      .checkbox
-                        input id="vote_option_id_#{i}" type="radio" name="vote_option_id" value=vote_option.id
-                        label for="vote_option_id_#{i}" = vote_option.text
+              - thank_you = true
+              - if thank_you
+                = render 'polls/thank_you'
+              - else
+                =form_tag vote_poll_path(@poll)
+                  .card-header
+                    h4.card-title
+                      span.fa.fa-fw.fa-bullhorn<>
+                      | Sæt din stemme
+                  .card-body
+                    - @vote_options.each_with_index do |vote_option, i|
+                      .form-group
+                        .checkbox
+                          input id="vote_option_id_#{i}" type="radio" name="vote_option_id" value=vote_option.id
+                          label for="vote_option_id_#{i}" = vote_option.text
 
-                .card-footer
-                  .row
-                    .col-sm-3
-                      -if @user_vote
-                        p Din stemme er gemt
-                      -else
-                        = submit_tag "Stem", class: 'btn btn-primary btn-lg btn-block'
-                    .col-sm-9.text-center-xs
-                      p.card-text.text-muted<>
-                        |Du stemmer anonymt.
-                        br
-                        |Din stemme indgår kun i statistik
+                  .card-footer
+                    .row
+                      .col-sm-3
+                        -if @user_vote
+                          p Din stemme er gemt
+                        -else
+                          = submit_tag "Stem", class: 'btn btn-primary btn-lg btn-block'
+                      .col-sm-9.text-center-xs
+                        p.card-text.text-muted<>
+                          |Du stemmer anonymt.
+                          br
+                          |Din stemme indgår kun i statistik
             / end .card /
             .m-t-5
               h2 Hvad syntes du?
@@ -59,10 +63,75 @@
                 h4.card-title=@poll.description_heading
                 .card-meta
                   p=@poll.description
-      #second.tab-pane role="tabpanel"
+      #second.tab-pane.active role="tabpanel"
         .card
           .card-header
             h4.card-title Resultater vil være tilgængelige når mindst 1000 stemmer er indgivet.
+          .card-body
+            canvas#chartjs height="500"
+            - if true
+              javascript:
+                var ctx = document.getElementById("chartjs");
+                var myChart = new Chart(ctx, {
+                  type: 'bar',
+                  data: {
+                    labels: [
+                      "Krigen skal og kan kun stoppes militært.",
+                      "En international magt bør afsætte det syriske styre.",
+                      "Krigen skal stoppes af Assad og Rusland - militært eller diplomatisk.",
+                      "Krigen skal stoppes af USA og oprørene - militært eller diplomatisk.",
+                      "Krigen skal stoppes af USA og oprørene - militært eller diplomatisk.",
+                      "Krigen skal stoppes af test",
+                      "Krigen skal stoppes af test 2 teadasddsaf ddasasdd asdv dfsdff dsst",
+                      "Krigen skal stoppes af test 2 test",
+                      "Krigen skal stoppes af test 2 tes asdadasdadt"
+                    ],
+                    datasets: [
+                      {
+                        label: '# of Votes',
+                        data: [35, 29, 32, 19, 43, 40, 19, 52, 15],
+                        backgroundColor: [
+                          'rgba(90, 220, 150, 1)',
+                          'rgba(104, 31, 178, 1)',
+                          'rgba(0, 24, 255, 1)',
+                          'rgba(255, 252, 33, 1)',
+                          'rgba(250, 220, 210, 1)',
+                          'rgba(0, 0, 0, 1)',
+                          'rgba(213, 83, 123, 1)',
+                          'rgba(41, 59, 110, 1)'
+                        ]
+                      }
+                    ]
+                  },
+                  options: {
+                    legend: {
+                      display: false,
+                      labels: {
+                      }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                      yAxes: [{
+                        ticks: {
+                          beginAtZero: true
+                        }
+                      }],
+                      xAxes: [{
+                        ticks: {
+                          display: false,
+                          autoSkip: false,
+                          fontStyle: 'bold',
+                          maxRotation: 0,
+                          minRotation: 0,
+                          padding: 20
+                        },
+                        stacked: true
+                      }]
+                    }
+                  }
+                });
+                myChart.generateLegend();
 
     h2.m-t-5 Se andre afstemninger
     .card-deck-wrapper

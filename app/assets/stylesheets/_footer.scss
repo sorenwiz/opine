@@ -8,6 +8,7 @@
   }
 
   .footer-link {
+    font-size: $font-size-h4;
     color: $footer-default-link-color;
     &:hover {
       color: $footer-default-link-hover-color;
@@ -16,6 +17,10 @@
     &:focus {
       color: $footer-default-link-active-color;
     }
+  }
+  .footer-link--muted {
+    font-weight: normal;
+    color: #595959;
   }
 }
 
@@ -46,6 +51,16 @@
 
 .footer-item {
   font-size: 18px;
+  line-height: 41px;
+  padding: 5px 15px;
+  display: block;
+  @media only screen and (max-width: $screen-xs-max) {
+    width: 100%;
+  }
+  @media only screen and (min-width: $screen-sm-min) {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 @media only screen and (max-width: $screen-xs-min) {
@@ -55,10 +70,16 @@
     margin: $grid-gutter-width 0 0;
   }
 }
-@media only screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max){
+
+@media only screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
   .social-list {
     @include make-xs-column-offset(6);
     padding-left: 5px;
+    li {
+      &:nth-child(3n) {
+        clear: left;
+      }
+    }
   }
 }
 
@@ -70,4 +91,18 @@
   .fa-inverse {
     color: #121212;
   }
+}
+
+.footer-alt-list {
+
+}
+
+.footer-alt-list-item {
+  padding: 5px 15px;
+  line-height: 41px;
+}
+
+.footer-text-alt {
+  font-weight: normal;
+  color: #595959;
 }

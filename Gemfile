@@ -9,6 +9,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'autoprefixer-rails'
 # Toolkit for rapid development
 gem 'bootstrap-sass'
+# ChartJS for charts
+gem 'chart-js-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

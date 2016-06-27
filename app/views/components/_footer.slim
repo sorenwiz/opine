@@ -2,66 +2,46 @@
   .container
     footer.footer.footer-default
       .row
-        .col-sm-2.col-md-2.hidden-xs
+        .col-xs-12.col-sm-12.col-md-2.text-center-xs.text-center-sm
           = link_to "Opine", root_path, class: 'footer-brand'
-          p.text-muted Non-profit forening
-          p.text-muted Copyright 2016
-        .col-xs-6.col-sm-3.col-md-2
-          h4.footer-title Kategorier
+        .col-xs-12.col-sm-12.col-md-5.text-center-xs.text-center-sm
           ul.footer-list
-            -Category.all.each do |category|
-              li.footer-item
-                = link_to category.name, "", class: 'footer-link'
-        .col-xs-6.col-sm-3.col-md-2.col-md-offset-1
-          h4.footer-title Om Opine
-          ul.footer-list
+            li.footer-item
+              = link_to "Afstemninger", polls_path, class: 'footer-link'
+            li.footer-item
+              = link_to "Resultater", root_path, class: 'footer-link'
             li.footer-item
               = link_to "Konceptet", concept_path, class: 'footer-link'
             li.footer-item
               = link_to "Om os", about_us_path, class: 'footer-link'
-            li.footer-item
-              = link_to "Kontakt os", about_us_path, class: 'footer-link'
-        .col-xs-12.col-sm-4.col-md-4.col-md-offset-1
-          .hidden
-            h4.footer-title Fun Stats
-            ul.footer-list
-              li.footer-item
-                = link_to "593.234 har stemt.", "", class: 'footer-link'
-              li.footer-item
-                = link_to "#{Poll.active.count} aktive afstemninger.", "", class: 'footer-link'
-              li.footer-item
-                = link_to "324 har stemt i dag.", "", class: 'footer-link'
-            p
-              = link_to "Cookies", root_path, class: 'text-muted'
-              span.text-muted<> &mdash;
-              = link_to "Privatlivspolitik", root_path, class: 'text-muted'
-          .row
-            .col-xs-12.visible-xs
-              .row
-                .col-xs-6
-                  = link_to "Opine", root_path, class: 'footer-brand'
-                .col-xs-6
-                  p.text-muted Non-profit forening
-                  p.text-muted Copyright 2016
-            .col-xs-12.col-md-12
-              ul.list-inline.social-list
-                li
-                  = link_to 'https://www.facebook.com/opineofficial/', class: 'social-link'
-                    span.fa-stack.fa-lg
-                      i.fa.fa-circle.fa-stack-2x
-                      i.fa.fa-facebook.fa-stack-1x.fa-inverse
-                li
-                  = link_to 'https://twitter.com/opineofficial', class: 'social-link'
-                    span.fa-stack.fa-lg
-                      i.fa.fa-circle.fa-stack-2x
-                      i.fa.fa-twitter.fa-stack-1x.fa-inverse
-                li
-                  = link_to 'https://www.pinterest.com/opineofficial/', class: 'social-link'
-                    span.fa-stack.fa-lg
-                      i.fa.fa-circle.fa-stack-2x
-                      i.fa.fa-pinterest.fa-stack-1x.fa-inverse
-                li
-                  = link_to 'https://www.instagram.com/opineofficial/', class: 'social-link'
-                    span.fa-stack.fa-lg
-                      i.fa.fa-circle.fa-stack-2x
-                      i.fa.fa-instagram.fa-stack-1x.fa-inverse
+        .col-xs-12.col-sm-12.col-md-5.text-right.text-center-xs.text-center-sm
+          .m-b-1
+            ul.list-inline
+              li.footer-alt-list-item
+                = link_to "Cookies", root_path, class: 'footer-link footer-link--muted'
+              li.divider.footer-alt-list-item.footer-text-alt
+                span &mdash;
+              li.footer-alt-list-item
+                = link_to "Privatlivspolitik", root_path, class: 'footer-link footer-link--muted'
+              li.visible-xs-block.m-b-2
+              li
+                = link_to 'https://www.facebook.com/opineofficial/', class: 'social-link'
+                  span.fa-stack.fa-lg
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-facebook.fa-stack-1x.fa-inverse
+              li
+                = link_to 'https://twitter.com/opineofficial', class: 'social-link'
+                  span.fa-stack.fa-lg
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-twitter.fa-stack-1x.fa-inverse
+              li
+                = link_to 'https://www.pinterest.com/opineofficial/', class: 'social-link'
+                  span.fa-stack.fa-lg
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-pinterest.fa-stack-1x.fa-inverse
+              li
+                = link_to 'https://www.instagram.com/opineofficial/', class: 'social-link'
+                  span.fa-stack.fa-lg
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-instagram.fa-stack-1x.fa-inverse
+          h5.footer-text-alt.text-muted © Copyright  - Alle rettigheder forbeholdes - Opine 2016 - Non-profit forening
