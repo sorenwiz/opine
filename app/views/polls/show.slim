@@ -19,7 +19,7 @@
 .section-tab-content
   .container
     .tab-content
-      #first.tab-pane role="tabpanel"
+      #first.tab-pane.active role="tabpanel"
         .flex-card-deck
           .flex-card-sm-12.flex-card-lg-8
             / start .card /
@@ -63,7 +63,7 @@
                 h4.card-title=@poll.description_heading
                 .card-meta
                   p=@poll.description
-      #second.tab-pane.active role="tabpanel"
+      #second.tab-pane role="tabpanel"
         .card
           .card-header
             h4.card-title Resultater vil være tilgængelige når mindst 1000 stemmer er indgivet.
