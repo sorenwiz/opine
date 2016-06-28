@@ -165,8 +165,12 @@
 }
 
 .section-polls-title {
+  text-align: center;
   margin-bottom: 30px;
   font-weight: 400;
+  .fa {
+    font-size: 0.9em;
+  }
 }
 
 /* Start cards on the homepage */
