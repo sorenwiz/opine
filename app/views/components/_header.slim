@@ -25,11 +25,11 @@ header.wrapper
           li
             = link_to "Om os", about_us_path
           -if user_signed_in?
-            li.m-l-2
+            li.m-l-2.invisible-breakpoint
               = link_to root_path, class: 'navbar-user' do
                 = image_tag "http://graph.facebook.com/v2.5/#{current_user.facebook_id}/picture?width=84&height=84", class: "img-circle", width: 42, height: 42
-            li.m-l-2
-              = link_to "Log ud", destroy_user_session_path, method: :delete, class: "btn btn-primary-alt navbar-btn invisible-breakpoint"
+            li.m-l-2.invisible-breakpoint
+              = link_to "Log ud", destroy_user_session_path, method: :delete, class: "btn btn-primary-alt navbar-btn"
           -else
-            li.m-l-2
-              = link_to "Log ind", sign_in_path, class: "btn btn-secondary navbar-btn invisible-breakpoint"
+            li.m-l-2.invisible-breakpoint
+              = link_to "Log ind", sign_in_path, class: "btn btn-secondary navbar-btn"
