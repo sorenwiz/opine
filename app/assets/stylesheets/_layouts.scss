@@ -1,5 +1,8 @@
 .app-default {
-  background: #f1f1f1 no-repeat top center/cover;
+  background: #f1f1f1 no-repeat top center/contain;
+  @media only screen and (min-width: 1920px) {
+    background-size: cover;
+  }
 }
 
 .wrapper-footer {
