@@ -4,7 +4,7 @@
   padding: $footer-default-padding-y * 0.5 $footer-default-padding-x * 0.5;
 
   @media only screen and (min-width: $screen-sm-min) {
-    padding: round($footer-default-padding-y * 1.33) $footer-default-padding-x;
+    padding: $footer-default-padding-y $footer-default-padding-x;
   }
 
   .footer-link {
@@ -33,7 +33,6 @@
   width: 106px;
   height: 55px;
   color: #fff;
-  margin-bottom: 20px;
 }
 
 .footer-title {
@@ -47,13 +46,22 @@
   line-height: 2;
   padding-left: 0;
   list-style: none;
+  @media only screen and (min-width: $screen-sm-min) {
+    margin-bottom: 0;
+  }
 }
 
 .footer-item {
   font-size: 18px;
   line-height: 41px;
-  padding: 5px 15px;
+  padding: 0 15px;
   display: block;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
   @media only screen and (max-width: $screen-xs-max) {
     width: 100%;
   }
@@ -92,17 +100,18 @@
     color: #121212;
   }
 }
-
-.footer-alt-list {
-
+@media only screen and (min-width: $screen-sm-min) {
+  .footer-alt-list {
+    margin-bottom: 0;
+  }
 }
-
 .footer-alt-list-item {
-  padding: 5px 15px;
+  padding: 0 15px;
   line-height: 41px;
 }
 
 .footer-text-alt {
+  margin-top: 0;
   font-weight: normal;
   color: #595959;
 }
