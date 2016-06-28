@@ -32,6 +32,7 @@
                     h4.card-title
                       span.fa.fa-fw.fa-bullhorn<>
                       | Sæt din stemme
+                    h4= @poll.heading
                   .card-body
                     - @vote_options.each_with_index do |vote_option, i|
                       .form-group
