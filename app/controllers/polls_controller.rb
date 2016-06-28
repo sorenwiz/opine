@@ -10,7 +10,7 @@ class PollsController < ApplicationController
 
   def show
     @vote_options = @poll.vote_options.to_a.shuffle
-    @vote_counts =  @poll.votes.group(:vote_option_id).count
+    @vote_counts = @poll.votes.group(:vote_option_id).count
     @graph_data = @vote_options.map do |vote_option|
       [vote_option.text, @vote_counts.fetch(vote_option.id, 0)]
     end
@@ -20,7 +20,12 @@ class PollsController < ApplicationController
   end
 
   def vote
-    handle_vote(request.request_parameters[:vote_option_id].presence || session.delete(:last_vote_option_id))
+    vote_option_id = request.request_parameters[:vote_option_id].presence || session.delete(:last_vote_option_id)
+    if vote_option_id.present?
+      handle_vote(vote_option_id)
+    else
+      redirect_to poll_path(@poll)
+    end
   end
 
   private
