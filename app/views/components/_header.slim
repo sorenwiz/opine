@@ -1,4 +1,6 @@
-header.wrapper
+- skip_wrapper ||= false
+- header_class = skip_wrapper.presence || 'wrapper'
+header class=header_class
   .container
     nav.navbar.navbar-default.navbar-static-top
       .navbar-header

@@ -21,7 +21,8 @@ html
           - display_alert = false
           - if display_alert
             = render 'layouts/alert'
-          = render 'components/header'
+          - unless @skip_header
+            = render 'components/header'
           = yield
           = render 'components/footer'
       - else
