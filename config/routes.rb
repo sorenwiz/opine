@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   localized do
     resources :polls do
       member do
-        post 'vote'
+        match 'vote', via: [:get, :post]
       end
     end
 
