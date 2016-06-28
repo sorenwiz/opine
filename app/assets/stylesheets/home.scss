@@ -9,6 +9,20 @@
       padding-top: 35px;
     }
   }
+  .jumbotron-image-wrapper {
+    background: transparent image-url('jumbotron-image.png') no-repeat bottom/cover;
+    height: 140px;
+    max-width: 940px;
+    @media only screen and (min-width: $screen-sm-min) {
+      height: 200px;
+      background-size: contain;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @media only screen and (min-width: $screen-md-min) {
+      height: 313px;
+    }
+  }
 }
 .container {
   .jumbotron {
