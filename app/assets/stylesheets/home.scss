@@ -171,6 +171,13 @@
   .fa {
     font-size: 0.9em;
   }
+  @media only screen and (max-width: $grid-float-breakpoint-max) {
+    font-weight: bold;
+    font-size: 24px;
+    .fa {
+      display: none;
+    }
+  }
 }
 
 /* Start cards on the homepage */
