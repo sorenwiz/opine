@@ -18,7 +18,7 @@ html
     .app class=app_extra_class style=wallpaper_css
       - unless @skip_content
         .page-shadow class="#{controller_name}-wrapper #{action_name}-wrapper"
-          - display_alert = true
+          - display_alert = false
           - if display_alert
             = render 'layouts/alert'
           = render 'components/header'
