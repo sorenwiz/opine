@@ -1,6 +1,6 @@
 ActiveAdmin.register Poll do
   config.filters = false
-  permit_params :category_id, :image, :background_image, :wallpaper,:sub_heading, :order, :heading, :teaser, :description_heading, :description, :expires_at, vote_options_attributes: [:id, :text, :_destroy]
+  permit_params :category_id, :image, :background_image, :wallpaper, :sub_heading, :order, :heading, :question, :teaser, :description_heading, :description, :expires_at, vote_options_attributes: [:id, :text, :_destroy]
 
   index do
     column :heading
@@ -18,7 +18,7 @@ ActiveAdmin.register Poll do
 
   form do |f|
     f.semantic_errors # shows errors on :base
-    f.inputs :category, :heading, :sub_heading, :teaser, :description_heading, :description, :order, :expires_at
+    f.inputs :category, :heading, :question,:sub_heading, :teaser, :description_heading, :description, :order, :expires_at
 
     f.inputs "Images" do
       f.input :image, as: :file, hint: image_tag(f.object.image.url(:medium))
@@ -38,7 +38,7 @@ ActiveAdmin.register Poll do
   end
 
   show do
-    attributes_table :category, :heading, :sub_heading, :teaser, :description_heading, :description, :order, :expires_at
+    attributes_table :category, :heading, :sub_heading, :question,:teaser, :description_heading, :description, :order, :expires_at
 
     panel "Images" do
       attributes_table_for resource do

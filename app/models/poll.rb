@@ -27,6 +27,7 @@
 #  wallpaper_content_type        :string(255)
 #  wallpaper_file_size           :integer
 #  wallpaper_updated_at          :datetime
+#  question                      :string(255)
 #
 
 class Poll < ActiveRecord::Base
