@@ -54,20 +54,22 @@
 .footer-item {
   font-size: 18px;
   line-height: 41px;
-  padding: 0 15px;
+  padding: 0;
   display: block;
-  &:first-child {
-    padding-left: 0;
-  }
-  &:last-child {
-    padding-right: 0;
-  }
+
   @media only screen and (max-width: $screen-xs-max) {
     width: 100%;
   }
   @media only screen and (min-width: $screen-sm-min) {
     display: inline-block;
     vertical-align: middle;
+    padding: 0 15px;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
   }
 }
 
@@ -100,11 +102,13 @@
     color: #121212;
   }
 }
+
 @media only screen and (min-width: $screen-sm-min) {
   .footer-alt-list {
     margin-bottom: 0;
   }
 }
+
 .footer-alt-list-item {
   padding: 0 15px;
   line-height: 41px;
