@@ -21,3 +21,5 @@ poll_bg = Rails.root.join('app/assets/images/dummy_images/poll-bg-image.jpg')
     VoteOption.create! text: Faker::Lorem.sentence(3), poll: poll
   end
 end
+# Added by Refinery CMS Pages extension
+Refinery::Pages::Engine.load_seed

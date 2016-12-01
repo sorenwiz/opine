@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '~> 2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
@@ -32,16 +33,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'dotenv-rails'
 gem 'faker'
-gem 'mysql2'
 gem 'rails-i18n'
 gem 'omniauth-facebook', '=3.0.0'
 gem 'omniauth', '=1.3.1'
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app serverç
-# gem 'unicorn'
 gem 'therubyracer', '= 0.12.1'
 gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'active_skin'
@@ -55,6 +49,7 @@ group :development, :test do
   gem 'capistrano-passenger'
   gem 'capistrano-rvm'
   gem 'factory_girl_rails'
+  gem 'pg'
 end
 
 group :development do
@@ -65,4 +60,11 @@ group :development do
   gem 'spring'
   gem 'annotate'
 end
+
+group :production do
+  gem 'mysql2'
+end
+
+gem 'refinerycms', '~> 3.0.5'
+gem 'refinerycms-authentication-devise', '~> 1.0'
 
