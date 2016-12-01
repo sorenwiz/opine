@@ -1,15 +1,43 @@
 doctype html
 html
-body
+  head
+    = render "/refinery/head"
+    = render "/refinery/javascripts"
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    = render 'layouts/meta_tags'
+    title= @page_title.presence || 'Opine - Giv din mening til kende'
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = javascript_include_tag 'https://use.fontawesome.com/a7d9fb2ffb.js'
+    = render 'layouts/facebook_include'
+    = render 'layouts/icons'
+    = csrf_meta_tags
+  body id="#{canonical_id @page}" class="#{view_template_class @page }"
+  - app_extra_class = @app_extra_class || 'app-default'
+  - wallpaper_css = "background-image:url(\"#{@wallpaper}\")" if @wallpaper
+  .app class=app_extra_class style=wallpaper_css
   = render "/refinery/html_tag"
   - site_bar = render('/refinery/site_bar', :head => true)
-  = render "/refinery/head"
-  = render "/refinery/javascripts"
   = site_bar
   #page_container
+    - if @skip_content
+      = yield
+    - else
+      .page-shadow class="#{controller_name}-wrapper #{action_name}-wrapper"
+        - display_alert = false
+        - if display_alert
+          = render 'layouts/alert'
+        - unless @skip_header
+          = render 'components/header'
+        = yield
+        = render 'components/footer'
+
     header#header
       = render "/refinery/header"
     section#page
       = yield
     footer
       = render "/refinery/footer"
+  =render 'layouts/ga'
