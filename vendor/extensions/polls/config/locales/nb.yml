@@ -1,0 +1,38 @@
+nb:
+  refinery:
+    plugins:
+      polls:
+        title: Polls
+    polls:
+      admin:
+        polls:
+          actions:
+            create_new: Lag en ny Poll
+            reorder: Endre rekkefølgen på Polls
+            reorder_done: Ferdig å endre rekkefølgen Polls
+          records:
+            title: Polls
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Polls enda. Klikk på "Lag en ny Poll" for å legge til din første poll.
+          poll:
+            view_live_html: Vis hvordan denne poll ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne poll
+            delete: Fjern denne poll permanent
+      polls:
+        show:
+          other: Andre Polls
+  activerecord:
+    attributes:
+      'refinery/polls/poll':
+        heading: Heading
+        sub_heading: Sub Heading
+        teaser: Teaser
+        description_heading: Description Heading
+        description: Description
+        expires_at: Expires At
+        slug: Slug
+        image: Image
+        background_image: Background Image
+        wallpaper: Wallpaper
+        category_id: Category
+        question: Question

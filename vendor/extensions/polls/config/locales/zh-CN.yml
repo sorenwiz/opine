@@ -1,0 +1,40 @@
+zh-CN:
+  refinery:
+    plugins:
+      polls:
+        title: Polls
+    polls:
+      admin:
+        polls:
+          actions:
+            create_new: 建立新的 Poll
+            reorder: 对 Polls 重新排序
+            reorder_done: 对 Polls 的重新排序结束
+          records:
+            title: Polls
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Polls yet. Click "Add New Poll" to add your first poll.
+            no_items_yet: 目前没有 Polls . 点击 "Add New Poll" 创建一个poll.
+          poll:
+            view_live_html: 查看 poll 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 poll
+            delete: 永久删除 poll
+      polls:
+        show:
+          other: 其他 Polls
+  activerecord:
+    attributes:
+      'refinery/polls/poll':
+        heading: Heading
+        sub_heading: Sub Heading
+        teaser: Teaser
+        description_heading: Description Heading
+        description: Description
+        expires_at: Expires At
+        slug: Slug
+        image: Image
+        background_image: Background Image
+        wallpaper: Wallpaper
+        category_id: Category
+        question: Question

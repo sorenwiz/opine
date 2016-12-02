@@ -1,0 +1,38 @@
+sk:
+  refinery:
+    plugins:
+      polls:
+        title: Polls
+    polls:
+      admin:
+        polls:
+          actions:
+            create_new: Pridať Poll
+            reorder: Preusporiadať Polls
+            reorder_done: Koniec radenia Polls
+          records:
+            title: Polls
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Polls. Kliknite na "Pridať Poll" pre pridanie prvého poll.
+          poll:
+            view_live_html: Zobraziť náhľad poll<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť poll
+            delete: Zmazať poll
+      polls:
+        show:
+          other: Daľšie Polls
+  activerecord:
+    attributes:
+      'refinery/polls/poll':
+        heading: Heading
+        sub_heading: Sub Heading
+        teaser: Teaser
+        description_heading: Description Heading
+        description: Description
+        expires_at: Expires At
+        slug: Slug
+        image: Image
+        background_image: Background Image
+        wallpaper: Wallpaper
+        category_id: Category
+        question: Question

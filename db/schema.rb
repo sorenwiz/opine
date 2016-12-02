@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201120427) do
+ActiveRecord::Schema.define(version: 20161202085732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -224,6 +224,40 @@ ActiveRecord::Schema.define(version: 20161201120427) do
   add_index "refinery_pages", ["lft"], name: "index_refinery_pages_on_lft", using: :btree
   add_index "refinery_pages", ["parent_id"], name: "index_refinery_pages_on_parent_id", using: :btree
   add_index "refinery_pages", ["rgt"], name: "index_refinery_pages_on_rgt", using: :btree
+
+  create_table "refinery_poll_translations", force: :cascade do |t|
+    t.integer  "refinery_poll_id",    null: false
+    t.string   "locale",              null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.text     "heading"
+    t.text     "sub_heading"
+    t.text     "teaser"
+    t.text     "description_heading"
+    t.text     "description"
+    t.text     "question"
+  end
+
+  add_index "refinery_poll_translations", ["locale"], name: "index_refinery_poll_translations_on_locale", using: :btree
+  add_index "refinery_poll_translations", ["refinery_poll_id"], name: "index_refinery_poll_translations_on_refinery_poll_id", using: :btree
+
+  create_table "refinery_polls", force: :cascade do |t|
+    t.text     "heading"
+    t.text     "sub_heading"
+    t.text     "teaser"
+    t.text     "description_heading"
+    t.text     "description"
+    t.datetime "expires_at"
+    t.string   "slug"
+    t.integer  "image_id"
+    t.integer  "background_image_id"
+    t.integer  "wallpaper_id"
+    t.integer  "category_id"
+    t.text     "question"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "refinery_resource_translations", force: :cascade do |t|
     t.integer  "refinery_resource_id", null: false

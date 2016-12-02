@@ -1,0 +1,39 @@
+es:
+  refinery:
+    plugins:
+      polls:
+        title: Polls
+#        article: masculino/femenino
+    polls:
+      admin:
+        polls:
+          actions:
+            create_new: Crear nuevo poll
+            reorder: Reordenar polls
+            reorder_done: Reordenación de polls completada
+          records:
+            title: Polls
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay polls todavía. Pulsa en "Crear nuevo Poll" para crear tu primer poll.
+          poll:
+            view_live_html: Ver este poll como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este poll
+            delete: Borrar este poll para siempre
+      polls:
+        show:
+          other: Otros polls
+  activerecord:
+    attributes:
+      'refinery/polls/poll':
+        heading: Heading
+        sub_heading: Sub Heading
+        teaser: Teaser
+        description_heading: Description Heading
+        description: Description
+        expires_at: Expires At
+        slug: Slug
+        image: Image
+        background_image: Background Image
+        wallpaper: Wallpaper
+        category_id: Category
+        question: Question

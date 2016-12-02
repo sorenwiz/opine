@@ -1,0 +1,38 @@
+ru:
+  refinery:
+    plugins:
+      polls:
+        title: Polls
+    polls:
+      admin:
+        polls:
+          actions:
+            create_new: Добавить Poll
+            reorder: Изменить порядок Polls
+            reorder_done: Закончить изменять порядок Polls
+          records:
+            title: Polls
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Polls" не найдено. Нажмите "Добавить Poll" чтобы создать poll.
+          poll:
+            view_live_html: Просмотреть poll вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать poll
+            delete: Удалить poll навсегда
+      polls:
+        show:
+          other: Другие Polls
+  activerecord:
+    attributes:
+      'refinery/polls/poll':
+        heading: Heading
+        sub_heading: Sub Heading
+        teaser: Teaser
+        description_heading: Description Heading
+        description: Description
+        expires_at: Expires At
+        slug: Slug
+        image: Image
+        background_image: Background Image
+        wallpaper: Wallpaper
+        category_id: Category
+        question: Question

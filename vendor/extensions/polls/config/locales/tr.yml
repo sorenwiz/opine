@@ -1,0 +1,38 @@
+tr:
+  refinery:
+    plugins:
+      polls:
+        title: Polls
+    polls:
+      admin:
+        polls:
+          actions:
+            create_new: Yeni Ekle Poll
+            reorder: Tekrar sirala Polls
+            reorder_done: Tekrar siralama tamamlandiPolls
+          records:
+            title: Polls
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Polls yok henuz.  Tikla "Yeni Ekle Poll" eklemek senin ilk poll.
+          poll:
+            view_live_html: Bunu canlu poll goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle poll
+            delete: Bunu Sil poll sonsuza dek
+      polls:
+        show:
+          other: Diger Polls
+  activerecord:
+    attributes:
+      'refinery/polls/poll':
+        heading: Heading
+        sub_heading: Sub Heading
+        teaser: Teaser
+        description_heading: Description Heading
+        description: Description
+        expires_at: Expires At
+        slug: Slug
+        image: Image
+        background_image: Background Image
+        wallpaper: Wallpaper
+        category_id: Category
+        question: Question

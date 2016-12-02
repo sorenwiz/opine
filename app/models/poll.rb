@@ -3,31 +3,31 @@
 # Table name: polls
 #
 #  id                            :integer          not null, primary key
-#  heading                       :string(255)
-#  sub_heading                   :string(255)
-#  teaser                        :text(65535)
-#  description_heading           :string(255)
-#  description                   :text(65535)
+#  heading                       :string
+#  sub_heading                   :string
+#  teaser                        :text
+#  description_heading           :string
+#  description                   :text
 #  expires_at                    :date
 #  user_id                       :integer
 #  order                         :integer
 #  created_at                    :datetime         not null
 #  updated_at                    :datetime         not null
-#  slug                          :string(255)
+#  slug                          :string
 #  category_id                   :integer
-#  image_file_name               :string(255)
-#  image_content_type            :string(255)
+#  image_file_name               :string
+#  image_content_type            :string
 #  image_file_size               :integer
 #  image_updated_at              :datetime
-#  background_image_file_name    :string(255)
-#  background_image_content_type :string(255)
+#  background_image_file_name    :string
+#  background_image_content_type :string
 #  background_image_file_size    :integer
 #  background_image_updated_at   :datetime
-#  wallpaper_file_name           :string(255)
-#  wallpaper_content_type        :string(255)
+#  wallpaper_file_name           :string
+#  wallpaper_content_type        :string
 #  wallpaper_file_size           :integer
 #  wallpaper_updated_at          :datetime
-#  question                      :string(255)
+#  question                      :string
 #
 
 class Poll < ActiveRecord::Base

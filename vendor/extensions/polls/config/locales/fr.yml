@@ -1,0 +1,38 @@
+fr:
+  refinery:
+    plugins:
+      polls:
+        title: Polls
+    polls:
+      admin:
+        polls:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Poll
+            reorder: Réordonner les Polls
+            reorder_done: Fin de réordonnancement des Polls
+          records:
+            title: Polls
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Poll. Cliquer sur "Créer un(e) nouve(au/l/lle) Poll" pour créer votre premi(er/ère) poll.'
+          poll:
+            view_live_html: Voir ce(t/tte) poll <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) poll
+            delete: Supprimer définitivement ce(t/tte) poll
+      polls:
+        show:
+          other: Autres Polls
+  activerecord:
+    attributes:
+      'refinery/polls/poll':
+        heading: Heading
+        sub_heading: Sub Heading
+        teaser: Teaser
+        description_heading: Description Heading
+        description: Description
+        expires_at: Expires At
+        slug: Slug
+        image: Image
+        background_image: Background Image
+        wallpaper: Wallpaper
+        category_id: Category
+        question: Question

@@ -1,0 +1,38 @@
+nl:
+  refinery:
+    plugins:
+      polls:
+        title: Polls
+    polls:
+      admin:
+        polls:
+          actions:
+            create_new: Nieuwe Poll toevoegen
+            reorder: De volgorde van de Polls wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Poll-volgorde
+          records:
+            title: Polls
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Polls. Druk op 'Nieuwe Poll toevoegen' om de eerste toe te voegen.
+          poll:
+            view_live_html: Deze poll op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze poll
+            delete: Deze poll definitief verwijderen
+      polls:
+        show:
+          other: Andere Polls
+  activerecord:
+    attributes:
+      'refinery/polls/poll':
+        heading: Heading
+        sub_heading: Sub Heading
+        teaser: Teaser
+        description_heading: Description Heading
+        description: Description
+        expires_at: Expires At
+        slug: Slug
+        image: Image
+        background_image: Background Image
+        wallpaper: Wallpaper
+        category_id: Category
+        question: Question

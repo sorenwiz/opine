@@ -23,3 +23,6 @@ poll_bg = Rails.root.join('app/assets/images/dummy_images/poll-bg-image.jpg')
 end
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed
+
+# Added by Refinery CMS Polls extension
+Refinery::Polls::Engine.load_seed

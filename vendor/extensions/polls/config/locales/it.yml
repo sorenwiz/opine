@@ -1,0 +1,38 @@
+it:
+  refinery:
+    plugins:
+      polls:
+        title: Polls
+    polls:
+      admin:
+        polls:
+          actions:
+            create_new: Aggiungi Nuovo Poll
+            reorder: Riordina Polls
+            reorder_done: Termina il Riordino di Polls
+          records:
+            title: Polls
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Polls. Clicca "Aggiungi Nuovo Poll" per aggiungere il tuo primo poll.
+          poll:
+            view_live_html: Guarda live questo poll <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo poll
+            delete: Rimuovi per sempre questo poll
+      polls:
+        show:
+          other: Altri Polls
+  activerecord:
+    attributes:
+      'refinery/polls/poll':
+        heading: Heading
+        sub_heading: Sub Heading
+        teaser: Teaser
+        description_heading: Description Heading
+        description: Description
+        expires_at: Expires At
+        slug: Slug
+        image: Image
+        background_image: Background Image
+        wallpaper: Wallpaper
+        category_id: Category
+        question: Question
