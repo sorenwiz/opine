@@ -419,6 +419,7 @@ DEPENDENCIES
   rails-i18n
   refinerycms (~> 3.0.5)
   refinerycms-authentication-devise (~> 1.0)
+  refinerycms-i18n
   route_translator (= 4.3.0)
   rspec-rails
   sass-rails (~> 5.0)
