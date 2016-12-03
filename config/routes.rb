@@ -16,10 +16,6 @@ Rails.application.routes.draw do
 
   #ActiveAdmin.routes(self)
 
-
-  root 'home#index'
-
-
   resources :static_pages
   localized do
     resources :polls do

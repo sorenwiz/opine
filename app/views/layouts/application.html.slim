@@ -1,8 +1,6 @@
 doctype html
 html
   head
-    = render "/refinery/head"
-    = render "/refinery/javascripts"
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=edge"
     meta name="viewport" content="width=device-width, initial-scale=1"
@@ -14,30 +12,30 @@ html
     = render 'layouts/facebook_include'
     = render 'layouts/icons'
     = csrf_meta_tags
-  body id="#{canonical_id @page}" class="#{view_template_class @page }"
-  - app_extra_class = @app_extra_class || 'app-default'
-  - wallpaper_css = "background-image:url(\"#{@wallpaper}\")" if @wallpaper
-  .app class=app_extra_class style=wallpaper_css
+body id="#{ canonical_id @page }" class="#{ view_template_class @page }"
   = render "/refinery/html_tag"
   - site_bar = render('/refinery/site_bar', :head => true)
+  = render "/refinery/head"
+  = render "/refinery/javascripts"
   = site_bar
   #page_container
-    - if @skip_content
-      = yield
-    - else
-      .page-shadow class="#{controller_name}-wrapper #{action_name}-wrapper"
-        - display_alert = false
-        - if display_alert
-          = render 'layouts/alert'
-        - unless @skip_header
-          = render 'components/header'
+    - app_extra_class = @app_extra_class || 'app-default'
+    - wallpaper_css = "background-image:url(\"#{@wallpaper}\")" if @wallpaper
+    .app class=app_extra_class style=wallpaper_css
+      - if @skip_content
         = yield
-        = render 'components/footer'
-
-    header#header
-      = render "/refinery/header"
-    section#page
-      = yield
-    footer
-      = render "/refinery/footer"
-  =render 'layouts/ga'
+      - else
+        .page-shadow class="#{controller_name}-wrapper #{action_name}-wrapper"
+          header#header
+          - if !@skip_header
+            = render '/refinery/header'
+            = render 'components/header'
+          section#page
+            - display_alert = false
+            - if display_alert
+              = render 'layouts/alert'
+            = yield
+          footer
+            = render "/refinery/footer"
+            = render 'components/footer'
+= render 'layouts/ga'

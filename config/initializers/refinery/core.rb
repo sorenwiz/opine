@@ -55,7 +55,7 @@ Refinery::Core.configure do |config|
   # Make sure you clear the `tmp/cache` directory after changing this setting.
 
   # TODO: Remove this when the integration will be complete.
-  config.mounted_path = "/new"
+  config.mounted_path = "/"
 
 
   # Specify the order Refinery plugins appear in the admin view.

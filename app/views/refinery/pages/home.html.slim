@@ -21,20 +21,12 @@ section.wrapper.section-polls
       .card-deck
         = render @polls
     .m-y.text-center
-      = link_to 'Vis alle afstemninger', polls_path, class: 'btn btn-default btn-lg'
+      = link_to 'Vis alle afstemninger', polls_polls_path, class: 'btn btn-default btn-lg'
 
 section.wrapper-gray.section-info
   .container
     .row
       .col-xs-12.col-md-9
-        h2.section-info-title
-          span Mangler du også et sted at give
-          span.text-success<> din mening
-          span - og se hvad andre synes?
-        p.section-info-text
-          strong<> Det gør vi.
-          span
-            = render '/refinery/content_page'
-            Derfor har vi skabt Opine hvor vi alle kan vise hvad vi synes om aktuelle emner. Vi håber det kan fremme demokratiet.
+        = render '/refinery/content_page'
       .col-md-3.invisible-breakpoint
         = image_tag "section-info@2x.png", alt: 'Section info image', class: 'section-info-image', width: '232', height: '334'
