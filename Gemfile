@@ -68,6 +68,6 @@ end
 gem 'refinerycms', '~> 3.0.5'
 gem 'refinerycms-authentication-devise', '~> 1.0'
 gem 'refinerycms-i18n'
-
+gem 'refinerycms-nested_models'
 
 gem 'refinerycms-polls', path: 'vendor/extensions'

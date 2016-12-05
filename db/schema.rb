@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202085732) do
+ActiveRecord::Schema.define(version: 20161205081749) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -236,6 +236,7 @@ ActiveRecord::Schema.define(version: 20161202085732) do
     t.text     "description_heading"
     t.text     "description"
     t.text     "question"
+    t.text     "slug"
   end
 
   add_index "refinery_poll_translations", ["locale"], name: "index_refinery_poll_translations_on_locale", using: :btree

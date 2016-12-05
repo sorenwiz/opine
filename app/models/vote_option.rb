@@ -10,5 +10,5 @@
 #
 
 class VoteOption < ActiveRecord::Base
-  belongs_to :poll
+  belongs_to :poll, class_name: 'Refinery::Polls::Poll'
 end

@@ -10,7 +10,9 @@ module Refinery
 
         # Only allow a trusted parameter "white list" through.
         def poll_params
-          params.require(:poll).permit(:heading, :sub_heading, :teaser, :description_heading, :description, :expires_at, :slug, :image_id, :background_image_id, :wallpaper_id, :category_id, :question)
+          params.require(:poll).permit(:heading, :sub_heading, :teaser, :description_heading, :description, :expires_at,
+                                       :slug, :image_id, :background_image_id, :wallpaper_id, :category_id, :question,
+                                       :vote_options_attributes => [:text, :_destroy])
         end
       end
     end

@@ -4,7 +4,7 @@ module Refinery
       self.table_name = 'refinery_polls'
 
 
-      translates :heading, :sub_heading, :teaser, :description_heading, :description, :question
+      translates :heading, :sub_heading, :teaser, :description_heading, :description, :question, :slug
 
       validates :heading, :presence => true, :uniqueness => true
 
@@ -13,6 +13,9 @@ module Refinery
       belongs_to :background_image, :class_name => '::Refinery::Image'
 
       belongs_to :wallpaper, :class_name => '::Refinery::Image'
+
+      has_many :vote_options
+      accepts_nested_attributes_for :vote_options, allow_destroy: true
 
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:
       #

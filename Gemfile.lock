@@ -300,6 +300,8 @@ GEM
       dragonfly (~> 1.0.0)
       globalize (>= 4.0.0, < 5.2)
       refinerycms-core (= 3.0.5)
+    refinerycms-nested_models (0.1.1)
+      refinerycms-core (~> 3.0.0.dev)
     refinerycms-pages (3.0.5)
       awesome_nested_set (~> 3.0.0)
       babosa (!= 0.3.6)
@@ -427,6 +429,7 @@ DEPENDENCIES
   refinerycms (~> 3.0.5)
   refinerycms-authentication-devise (~> 1.0)
   refinerycms-i18n
+  refinerycms-nested_models
   refinerycms-polls!
   route_translator (= 4.3.0)
   rspec-rails
