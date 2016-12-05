@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      vote_options:
+        title: Vote Options
+    vote_options:
+      admin:
+        vote_options:
+          actions:
+            create_new: 建立新的 Vote Option
+            reorder: 对 Vote Options 重新排序
+            reorder_done: 对 Vote Options 的重新排序结束
+          records:
+            title: Vote Options
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Vote Options yet. Click "Add New Vote Option" to add your first vote option.
+            no_items_yet: 目前没有 Vote Options . 点击 "Add New Vote Option" 创建一个vote option.
+          vote_option:
+            view_live_html: 查看 vote option 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 vote option
+            delete: 永久删除 vote option
+      vote_options:
+        show:
+          other: 其他 Vote Options
+  activerecord:
+    attributes:
+      'refinery/vote_options/vote_option':
+        text: Text
+        alias: Alias
+        graph_rgb: Graph Rgb

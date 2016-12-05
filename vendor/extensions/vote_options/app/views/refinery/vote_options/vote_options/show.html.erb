@@ -1,0 +1,39 @@
+<% content_for :body_content_title do %>
+  <%= @vote_option.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Text</h1>
+    <p>
+      <%=raw @vote_option.text %>
+    </p>
+  </section>
+  <section>
+    <h1>Alias</h1>
+    <p>
+      <%=raw @vote_option.alias %>
+    </p>
+  </section>
+  <section>
+    <h1>Graph Rgb</h1>
+    <p>
+      <%=raw @vote_option.graph_rgb %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="vote_options">
+      <% @vote_options.each do |vote_option| %>
+        <li>
+          <%= link_to vote_option.title, refinery.vote_options_vote_option_path(vote_option) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

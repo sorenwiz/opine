@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::VoteOptions::Admin::VoteOptionsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.vote_options_admin_vote_options_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_vote_options_admin_vote_option_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::VoteOptions::Admin::VoteOptionsController.sortable? && ::Refinery::VoteOptions::VoteOption.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.vote_options_admin_vote_options_path,
+                     t('.reorder', what:  "Vote Options"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.vote_options_admin_vote_options_path,
+                      t('.reorder_done', what: "Vote Options"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

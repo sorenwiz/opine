@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      vote_options:
+        title: Vote Options
+    vote_options:
+      admin:
+        vote_options:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Vote Option
+            reorder: Réordonner les Vote Options
+            reorder_done: Fin de réordonnancement des Vote Options
+          records:
+            title: Vote Options
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Vote Option. Cliquer sur "Créer un(e) nouve(au/l/lle) Vote Option" pour créer votre premi(er/ère) vote option.'
+          vote_option:
+            view_live_html: Voir ce(t/tte) vote option <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) vote option
+            delete: Supprimer définitivement ce(t/tte) vote option
+      vote_options:
+        show:
+          other: Autres Vote Options
+  activerecord:
+    attributes:
+      'refinery/vote_options/vote_option':
+        text: Text
+        alias: Alias
+        graph_rgb: Graph Rgb

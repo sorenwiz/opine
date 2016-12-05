@@ -1,0 +1,29 @@
+sk:
+  refinery:
+    plugins:
+      vote_options:
+        title: Vote Options
+    vote_options:
+      admin:
+        vote_options:
+          actions:
+            create_new: Pridať Vote Option
+            reorder: Preusporiadať Vote Options
+            reorder_done: Koniec radenia Vote Options
+          records:
+            title: Vote Options
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Vote Options. Kliknite na "Pridať Vote Option" pre pridanie prvého vote option.
+          vote_option:
+            view_live_html: Zobraziť náhľad vote option<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť vote option
+            delete: Zmazať vote option
+      vote_options:
+        show:
+          other: Daľšie Vote Options
+  activerecord:
+    attributes:
+      'refinery/vote_options/vote_option':
+        text: Text
+        alias: Alias
+        graph_rgb: Graph Rgb

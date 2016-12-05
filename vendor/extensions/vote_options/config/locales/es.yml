@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      vote_options:
+        title: Vote Options
+#        article: masculino/femenino
+    vote_options:
+      admin:
+        vote_options:
+          actions:
+            create_new: Crear nuevo vote option
+            reorder: Reordenar vote options
+            reorder_done: Reordenación de vote options completada
+          records:
+            title: Vote Options
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay vote options todavía. Pulsa en "Crear nuevo Vote Option" para crear tu primer vote option.
+          vote_option:
+            view_live_html: Ver este vote option como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este vote option
+            delete: Borrar este vote option para siempre
+      vote_options:
+        show:
+          other: Otros vote options
+  activerecord:
+    attributes:
+      'refinery/vote_options/vote_option':
+        text: Text
+        alias: Alias
+        graph_rgb: Graph Rgb

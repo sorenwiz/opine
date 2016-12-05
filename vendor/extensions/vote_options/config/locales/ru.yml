@@ -1,0 +1,29 @@
+ru:
+  refinery:
+    plugins:
+      vote_options:
+        title: Vote Options
+    vote_options:
+      admin:
+        vote_options:
+          actions:
+            create_new: Добавить Vote Option
+            reorder: Изменить порядок Vote Options
+            reorder_done: Закончить изменять порядок Vote Options
+          records:
+            title: Vote Options
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Vote Options" не найдено. Нажмите "Добавить Vote Option" чтобы создать vote option.
+          vote_option:
+            view_live_html: Просмотреть vote option вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать vote option
+            delete: Удалить vote option навсегда
+      vote_options:
+        show:
+          other: Другие Vote Options
+  activerecord:
+    attributes:
+      'refinery/vote_options/vote_option':
+        text: Text
+        alias: Alias
+        graph_rgb: Graph Rgb

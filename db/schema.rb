@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161205081749) do
+ActiveRecord::Schema.define(version: 20161205095247) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -280,6 +280,31 @@ ActiveRecord::Schema.define(version: 20161205081749) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "refinery_vote_option_translations", force: :cascade do |t|
+    t.text     "text"
+    t.string   "alias"
+    t.string   "graph_rgb"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "refinery_vote_option_id"
+    t.string   "locale"
+  end
+
+  add_index "refinery_vote_option_translations", ["locale"], name: "votes_locales_idx", using: :btree
+  add_index "refinery_vote_option_translations", ["refinery_vote_option_id"], name: "votes_vote_option_idx", using: :btree
+
+  create_table "refinery_vote_options", force: :cascade do |t|
+    t.text     "text"
+    t.text     "alias"
+    t.text     "graph_rgb"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "poll_id"
+  end
+
+  add_index "refinery_vote_options", ["poll_id"], name: "index_refinery_vote_options_on_poll_id", using: :btree
 
   create_table "seo_meta", force: :cascade do |t|
     t.integer  "seo_meta_id"

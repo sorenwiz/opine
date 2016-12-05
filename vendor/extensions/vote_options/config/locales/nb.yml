@@ -1,0 +1,29 @@
+nb:
+  refinery:
+    plugins:
+      vote_options:
+        title: Vote Options
+    vote_options:
+      admin:
+        vote_options:
+          actions:
+            create_new: Lag en ny Vote Option
+            reorder: Endre rekkefølgen på Vote Options
+            reorder_done: Ferdig å endre rekkefølgen Vote Options
+          records:
+            title: Vote Options
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Vote Options enda. Klikk på "Lag en ny Vote Option" for å legge til din første vote option.
+          vote_option:
+            view_live_html: Vis hvordan denne vote option ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne vote option
+            delete: Fjern denne vote option permanent
+      vote_options:
+        show:
+          other: Andre Vote Options
+  activerecord:
+    attributes:
+      'refinery/vote_options/vote_option':
+        text: Text
+        alias: Alias
+        graph_rgb: Graph Rgb

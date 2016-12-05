@@ -1,0 +1,29 @@
+tr:
+  refinery:
+    plugins:
+      vote_options:
+        title: Vote Options
+    vote_options:
+      admin:
+        vote_options:
+          actions:
+            create_new: Yeni Ekle Vote Option
+            reorder: Tekrar sirala Vote Options
+            reorder_done: Tekrar siralama tamamlandiVote Options
+          records:
+            title: Vote Options
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Vote Options yok henuz.  Tikla "Yeni Ekle Vote Option" eklemek senin ilk vote option.
+          vote_option:
+            view_live_html: Bunu canlu vote option goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle vote option
+            delete: Bunu Sil vote option sonsuza dek
+      vote_options:
+        show:
+          other: Diger Vote Options
+  activerecord:
+    attributes:
+      'refinery/vote_options/vote_option':
+        text: Text
+        alias: Alias
+        graph_rgb: Graph Rgb

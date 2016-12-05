@@ -1,0 +1,29 @@
+nl:
+  refinery:
+    plugins:
+      vote_options:
+        title: Vote Options
+    vote_options:
+      admin:
+        vote_options:
+          actions:
+            create_new: Nieuwe Vote Option toevoegen
+            reorder: De volgorde van de Vote Options wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Vote Option-volgorde
+          records:
+            title: Vote Options
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Vote Options. Druk op 'Nieuwe Vote Option toevoegen' om de eerste toe te voegen.
+          vote_option:
+            view_live_html: Deze vote option op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze vote option
+            delete: Deze vote option definitief verwijderen
+      vote_options:
+        show:
+          other: Andere Vote Options
+  activerecord:
+    attributes:
+      'refinery/vote_options/vote_option':
+        text: Text
+        alias: Alias
+        graph_rgb: Graph Rgb

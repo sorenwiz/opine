@@ -1,0 +1,25 @@
+<%= form_for [refinery, :vote_options_admin, @vote_option] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @vote_option,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:text, :alias, :graph_rgb],
+                :object => "vote_options/vote_option" -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.vote_options.admin.vote_options.vote_option'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete') -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

@@ -4,6 +4,9 @@ PATH
     refinerycms-polls (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.5)
+    refinerycms-vote_options (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 3.0.5)
 
 GEM
   remote: https://rubygems.org/
@@ -431,6 +434,7 @@ DEPENDENCIES
   refinerycms-i18n
   refinerycms-nested_models
   refinerycms-polls!
+  refinerycms-vote_options!
   route_translator (= 4.3.0)
   rspec-rails
   sass-rails (~> 5.0)

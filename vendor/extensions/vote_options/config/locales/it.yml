@@ -1,0 +1,29 @@
+it:
+  refinery:
+    plugins:
+      vote_options:
+        title: Vote Options
+    vote_options:
+      admin:
+        vote_options:
+          actions:
+            create_new: Aggiungi Nuovo Vote Option
+            reorder: Riordina Vote Options
+            reorder_done: Termina il Riordino di Vote Options
+          records:
+            title: Vote Options
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Vote Options. Clicca "Aggiungi Nuovo Vote Option" per aggiungere il tuo primo vote option.
+          vote_option:
+            view_live_html: Guarda live questo vote option <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo vote option
+            delete: Rimuovi per sempre questo vote option
+      vote_options:
+        show:
+          other: Altri Vote Options
+  activerecord:
+    attributes:
+      'refinery/vote_options/vote_option':
+        text: Text
+        alias: Alias
+        graph_rgb: Graph Rgb
