@@ -49,8 +49,9 @@ group :development, :test do
   gem 'capistrano-passenger'
   gem 'capistrano-rvm'
   gem 'factory_girl_rails'
-  gem 'pg'
 end
+
+gem 'pg'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
