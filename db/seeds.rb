@@ -3,9 +3,6 @@ ActiveRecord::Base.connection.tables.each do |table|
   ActiveRecord::Base.connection.execute("TRUNCATE #{table}") if table != "schema_migrations"
 end
 
-
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
-
 Category.create! name: 'Politics'
 Category.create! name: 'Nature'
 Category.create! name: 'Society'

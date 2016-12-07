@@ -37,8 +37,6 @@ gem 'rails-i18n'
 gem 'omniauth-facebook', '=3.0.0'
 gem 'omniauth', '=1.3.1'
 gem 'therubyracer', '= 0.12.1'
-gem 'activeadmin', '~> 1.0.0.pre2'
-gem 'active_skin'
 gem 'unidecoder'
 
 group :development, :test do
