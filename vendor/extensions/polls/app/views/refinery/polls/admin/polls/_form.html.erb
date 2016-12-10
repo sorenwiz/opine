@@ -50,8 +50,13 @@
   </div>
 
   <div class='field'>
-    <%= f.label :category_id -%>
-    <%= f.number_field :category_id -%>
+    <%= f.label :order -%>
+    <%= f.number_field :order -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :category -%>
+    <%= f.select :category_id,  Category.all.collect { |p| [ p.name, p.id ] } -%>
   </div>
 
   <div class='field'>

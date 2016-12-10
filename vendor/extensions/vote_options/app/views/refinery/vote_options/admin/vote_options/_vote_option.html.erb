@@ -1,6 +1,6 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(vote_option) -%>">
   <span class='title'>
-    <%= vote_option.title %>
+    <%= vote_option.text %>
   </span>
 
   <span class='preview'></span>
@@ -10,6 +10,6 @@
     <%= action_icon(:edit,    refinery.edit_vote_options_admin_vote_option_path(vote_option), t('.edit') ) %>
     <%= action_icon(:delete,  refinery.vote_options_admin_vote_option_path(vote_option), t('.delete'),
       { class: "cancel confirm-delete",
-        data: {confirm: t('message',  scope: 'refinery.admin.delete', title: vote_option.title)}}  ) %>
+        data: {confirm: t('message',  scope: 'refinery.admin.delete', title: vote_option.text)}}  ) %>
   </span>
 </li>

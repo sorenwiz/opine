@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161205095247) do
+ActiveRecord::Schema.define(version: 20161207085324) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -258,7 +258,10 @@ ActiveRecord::Schema.define(version: 20161205095247) do
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "order",               default: 9999
   end
+
+  add_index "refinery_polls", ["order"], name: "index_refinery_polls_on_order", using: :btree
 
   create_table "refinery_resource_translations", force: :cascade do |t|
     t.integer  "refinery_resource_id", null: false

@@ -15,11 +15,11 @@ section.wrapper.section-polls
       | Aktuelle afstemninger
     .card-deck-wrapper
       .card-deck
-        = render @polls.pop(2)
+        = render partial: 'refinery/polls/poll', collection: @polls.pop(2)
         = render partial: 'card/purple'
     .card-deck-wrapper
       .card-deck
-        = render @polls
+        = render partial: 'refinery/polls/poll', collection: @polls
     .m-y.text-center
       = link_to 'Vis alle afstemninger', polls_polls_path, class: 'btn btn-default btn-lg'
 

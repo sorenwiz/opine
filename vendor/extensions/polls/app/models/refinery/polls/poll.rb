@@ -14,8 +14,15 @@ module Refinery
 
       belongs_to :wallpaper, :class_name => '::Refinery::Image'
 
-      has_many :vote_options, :class_name => '::Refinery::VoteOptions::VoteOption'
+      belongs_to :category
+
+      has_many :vote_options, :class_name => '::Refinery::VoteOptions::VoteOption', dependent: :destroy
+
+      has_many :votes, dependent: :destroy
+
       accepts_nested_attributes_for :vote_options, allow_destroy: true
+
+      scope :active, -> { where('expires_at >= ?', Date.today) }
 
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:
       #

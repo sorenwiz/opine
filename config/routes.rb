@@ -9,27 +9,21 @@ Rails.application.routes.draw do
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   mount Refinery::Core::Engine, at: Refinery::Core.mounted_path
 
-
-  # devise_for :admin_users, ActiveAdmin::Devise.config
-
   devise_for :users, controllers: {omniauth_callbacks: 'omniauth_callbacks'}
 
-  #ActiveAdmin.routes(self)
+  get "/" => redirect("/home")
+  #resources :static_pages
 
-  resources :static_pages
-  localized do
-    resources :polls do
-      member do
-        match 'vote', via: [:get, :post]
-      end
-    end
+  post 'vote/:id', to: 'votes#vote', as: :poll_vote
+
+  get 'sign_in' => 'pages#sign_in', as: 'sign_in'
 
 =begin
     get 'concept' => 'pages#concept', as: 'concept'
-    get 'sign_in' => 'pages#sign_in', as: 'sign_in'
+
     get 'about-us' => 'pages#about_us', as: 'about_us'
     post 'about-us' => 'contact_us#create'
   end
 =end
-  end
+
 end
