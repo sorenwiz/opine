@@ -10,7 +10,7 @@
     .flex-card-deck-wrapper
       .flex-card-deck
         .flex-card-sm-12.flex-card-lg-12.card.card--borderless
-          .card-image(style="background-image: url(#{image_path(@poll.background_image.url())}); height: 380px;")
+          .card-image(style="background-image: url(#{@poll.background_image.url}); height: 380px;")
 
 .section-tabs
   .container
@@ -127,4 +127,4 @@
     h2.m-t-5 Se andre afstemninger
     .card-deck-wrapper
       .card-deck.m-t-2
-        = render @related_polls
+        = render partial: 'refinery/polls/poll', collection: @related_polls

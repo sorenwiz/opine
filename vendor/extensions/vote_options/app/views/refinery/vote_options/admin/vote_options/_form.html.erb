@@ -3,11 +3,19 @@
               :object => @vote_option,
               :include_object_name => true %>
 
+  <%= render '/refinery/admin/locale_picker',
+              :current_locale => Globalize.locale %>
+
   <div class='field'>
     <%= render '/refinery/admin/wysiwyg',
                 :f => f,
                 :fields => [:text, :alias, :graph_rgb],
                 :object => "vote_options/vote_option" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label 'Poll' -%>
+    <%= f.select :poll_id,  Refinery::Polls::Poll.active.all.collect { |p| [ p.heading, p.id ] } -%>
   </div>
 
   <%= render '/refinery/admin/form_actions', :f => f,

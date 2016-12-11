@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name              = 'refinerycms-vote_options'
   s.version           = '1.0'
   s.description       = 'Ruby on Rails Vote Options extension for Refinery CMS'
-  s.date              = '2016-12-05'
+  s.date              = '2016-12-10'
   s.summary           = 'Vote Options extension for Refinery CMS'
   s.authors           = 
   s.require_paths     = %w(lib)

@@ -59,14 +59,6 @@
     <%= f.select :category_id,  Category.all.collect { |p| [ p.name, p.id ] } -%>
   </div>
 
-  <div class='field'>
-    <%= f.label :vote_options %>
-    <%= f.fields_for :vote_options do |j| %>
-        <%= render 'refinery/polls/admin/polls/vote_option_fields', :f => j %>
-    <% end %>
-    <%= link_to_add_fields 'Add nested model', f, :vote_options %>
-  </div>
-
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.polls.admin.polls.poll'),

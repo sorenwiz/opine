@@ -1,6 +1,8 @@
 LOCALES = /en|da/ unless defined? LOCALES
 
 Rails.application.routes.draw do
+  get '/users/auth/:action/callback', to: 'omniauth_callbacks#(?-mix:facebook)'
+
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
   # If you would like to change where this extension is mounted, simply change the
@@ -12,18 +14,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: 'omniauth_callbacks'}
 
   get "/" => redirect("/home")
-  #resources :static_pages
 
   post 'vote/:id', to: 'votes#vote', as: :poll_vote
 
   get 'sign_in' => 'pages#sign_in', as: 'sign_in'
-
-=begin
-    get 'concept' => 'pages#concept', as: 'concept'
-
-    get 'about-us' => 'pages#about_us', as: 'about_us'
-    post 'about-us' => 'contact_us#create'
-  end
-=end
-
 end

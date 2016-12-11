@@ -3,7 +3,6 @@ module Refinery
     class Poll < Refinery::Core::BaseModel
       self.table_name = 'refinery_polls'
 
-
       translates :heading, :sub_heading, :teaser, :description_heading, :description, :question, :slug
 
       validates :heading, :presence => true, :uniqueness => true
@@ -19,8 +18,6 @@ module Refinery
       has_many :vote_options, :class_name => '::Refinery::VoteOptions::VoteOption', dependent: :destroy
 
       has_many :votes, dependent: :destroy
-
-      accepts_nested_attributes_for :vote_options, allow_destroy: true
 
       scope :active, -> { where('expires_at >= ?', Date.today) }
 

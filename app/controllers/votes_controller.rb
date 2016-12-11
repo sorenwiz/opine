@@ -15,7 +15,7 @@ class VotesController < ApplicationController
 
   def handle_vote(vote_option_id)
     if user_has_voted?
-      redirect_to polls_poll_path(@poll), notice: 'Du har allerede stemt i denne afstemning'
+      redirect_to refinery.polls_poll_path(@poll), notice: 'Du har allerede stemt i denne afstemning'
     else
       vote_option = @poll.vote_options.find(vote_option_id)
       Vote.create! user: current_user, poll: @poll, vote_option: vote_option

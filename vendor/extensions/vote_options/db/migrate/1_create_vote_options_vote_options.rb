@@ -10,6 +10,8 @@ class CreateVoteOptionsVoteOptions < ActiveRecord::Migration
       t.timestamps
     end
 
+    Refinery::VoteOptions::VoteOption.create_translation_table! :text => :text, :alias => :text
+
   end
 
   def down
@@ -22,6 +24,8 @@ class CreateVoteOptionsVoteOptions < ActiveRecord::Migration
     end
 
     drop_table :refinery_vote_options
+
+    Refinery::VoteOptions::VoteOption.drop_translation_table!
 
   end
 
