@@ -21,9 +21,9 @@ header.header class=header_class
           li
             = link_to "Afstemninger", refinery.polls_polls_path
           li
-            = link_to "Konceptet", 'concept/'
+            = link_to "Konceptet", '/concept'
           li
-            = link_to "Om os", 'about/'
+            = link_to "Om os", '/about'
           - if user_signed_in?
             li.m-l-2.invisible-breakpoint
               = link_to '/', class: 'navbar-user' do

@@ -2,8 +2,6 @@ LOCALES = /en|da/ unless defined? LOCALES
 
 Rails.application.routes.draw do
 
-  get "/" => redirect("/home")
-
   devise_for :users, controllers: {omniauth_callbacks: 'omniauth_callbacks'}
 
   get 'concept', to: 'pages#concept', as: 'concept'

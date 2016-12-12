@@ -73,7 +73,7 @@ Refinery::I18n.frontend_locales.each do |lang|
       post.wallpaper = Refinery::Image.create(image: File.new(poll_bg))
     end
 
-    5.times do
+    3.times do
       Refinery::VoteOptions::VoteOption.create do |vo|
         vo.text = Faker::Lorem.sentence(2)
         vo.alias = Faker::Lorem.sentence(1)
