@@ -15,11 +15,11 @@ module Refinery
         @poll = Poll.where(id: params[:id]).first
         raise ActionController::RoutingError.new('Not Found') unless @poll.present?
 
-        @vote_options = @poll.vote_options.to_a
+        @vote_options = @poll.vote_options.includes(:translation).to_a
         @vote_counts = @poll.votes.group(:vote_option_id).count
 
         @graph_data = @vote_options.map do |vote_option|
-          [vote_option.text, @vote_counts.fetch(vote_option.id, 0)]
+          [vote_option.translation.text, @vote_counts.fetch(vote_option.id, 0)]
         end
 
         @related_polls = Poll.active.where.not(id: @poll.id).first(3)

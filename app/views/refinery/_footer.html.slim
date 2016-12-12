@@ -3,23 +3,23 @@
     footer.footer.footer-default
       .row.m-b-1
         .col-xs-12.col-sm-12.col-md-12.col-lg-2.text-center-xs.text-center-sm
-          = link_to "Opine", root_path, class: 'footer-brand'
+          = link_to "Opine", '/', class: 'footer-brand'
         .col-xs-12.col-sm-12.col-md-6.col-lg-5.text-center-xs.text-center-sm
           ul.footer-list
             li.footer-item
-              = link_to "Afstemninger", polls_path, class: 'footer-link'
+              = link_to "Afstemninger", refinery.polls_polls_path, class: 'footer-link'
             li.footer-item
-              = link_to "Konceptet", concept_path, class: 'footer-link'
+              = link_to "Konceptet", '/concept', class: 'footer-link'
             li.footer-item
-              = link_to "Om os", about_us_path, class: 'footer-link'
+              = link_to "Om os", '/about', class: 'footer-link'
         .col-xs-12.col-sm-12.col-md-6.col-lg-5.text-right.text-center-xs.text-center-sm
           ul.list-inline.footer-alt-list
             li.footer-alt-list-item
-              = link_to "Cookies", root_path, class: 'footer-link footer-link--muted'
+              = link_to "Cookies", '/', class: 'footer-link footer-link--muted'
             li.divider.footer-alt-list-item.footer-text-alt
               span &mdash;
             li.footer-alt-list-item
-              = link_to "Privatlivspolitik", root_path, class: 'footer-link footer-link--muted'
+              = link_to "Privatlivspolitik", '/', class: 'footer-link footer-link--muted'
             li.visible-xs-block.m-b-2
             li
               = link_to 'https://www.facebook.com/opineofficial/', class: 'social-link'

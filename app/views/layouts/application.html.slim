@@ -26,7 +26,6 @@ body id="#{ canonical_id @page }" class="#{ view_template_class @page }"
         = yield
       - else
         .page-shadow class="#{controller_name}-wrapper #{action_name}-wrapper"
-          header#header
           - if !@skip_header
             = render '/refinery/header'
             = render 'components/header'
@@ -37,5 +36,4 @@ body id="#{ canonical_id @page }" class="#{ view_template_class @page }"
             = yield
           footer
             = render "/refinery/footer"
-            = render 'components/footer'
 = render 'layouts/ga'

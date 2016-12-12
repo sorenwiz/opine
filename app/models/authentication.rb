@@ -3,7 +3,6 @@
 # Table name: authentications
 #
 #  id           :integer          not null, primary key
-#  user_id      :string
 #  provider     :string
 #  uid          :string
 #  token        :string
@@ -11,6 +10,11 @@
 #  expires_at   :datetime
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  user_id      :integer
+#
+# Indexes
+#
+#  index_authentications_on_user_id  (user_id)
 #
 
 class Authentication < ActiveRecord::Base

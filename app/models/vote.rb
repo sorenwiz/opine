@@ -12,8 +12,8 @@
 
 class Vote < ActiveRecord::Base
   belongs_to :user
-  belongs_to :poll
-  belongs_to :vote_option
+  belongs_to :poll, class_name: 'Refinery::Polls::Poll'
+  belongs_to :vote_option, class_name: 'Refinery::VoteOptions::VoteOption'
 
   validates_presence_of :user, :poll, :vote_option
   validates_uniqueness_of :user_id, scope: :poll_id
