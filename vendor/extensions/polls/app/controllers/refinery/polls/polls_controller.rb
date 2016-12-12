@@ -6,6 +6,7 @@ module Refinery
       before_action :find_page
 
       def index
+        @polls = @polls.to_a
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @poll in the line below:
         present(@page)
@@ -15,7 +16,7 @@ module Refinery
         @poll = Poll.where(id: params[:id]).first
         raise ActionController::RoutingError.new('Not Found') unless @poll.present?
 
-        @vote_options = @poll.vote_options.includes(:translation).to_a
+        @vote_options = @poll.vote_options.to_a
         @vote_counts = @poll.votes.group(:vote_option_id).count
 
         @graph_data = @vote_options.map do |vote_option|
@@ -35,7 +36,7 @@ module Refinery
     protected
 
       def find_all_polls
-        @polls = Poll.order('position ASC')
+        @polls = Poll.active.order('position ASC')
       end
 
       def find_page
