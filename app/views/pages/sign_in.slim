@@ -1,11 +1,14 @@
 .container.auth.auth-container
   .row.auth-navbar
     .col-xs-6.text-left
-      = link_to 'Opine', root_path, class: 'navbar-brand auth-navbar__brand'
+      = link_to 'Opine', '/', class: 'navbar-brand auth-navbar__brand'
     .col-xs-6.text-right
-      = link_to 'Log ind', root_path, class: 'btn btn-secondary auth-navbar__button'
+      = link_to 'Log ind', '/', class: 'btn btn-secondary auth-navbar__button'
   .auth-panel
-    h2.auth-title Login med Facebook
-    p.auth-text For at stemme på Opine skal du været logget ind. På Opine kan du logge ind med Facebook. Din stemme forbliver anonym.
-    = link_to 'Forbind til Facebook', user_omniauth_authorize_path(:facebook, origin: params[:after]), class: 'btn btn-primary-alt btn-lg'
-  p.text-muted.text-center Copyright &mdash; Foreningen Opine &mdash; 2016
+    h2.auth-title
+      = t(:sign_in_1)
+    p.auth-text
+      = t(:sign_in_2)
+    = link_to t(:sign_in_3), user_omniauth_authorize_path(:facebook, origin: params[:after]), class: 'btn btn-primary-alt btn-lg'
+  p.text-muted.text-center
+    = t(:sign_in_4)

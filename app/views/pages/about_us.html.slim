@@ -10,17 +10,18 @@
 section.wrapper.p-y-7
   .container
     p.section-paragraph.m-b-4
-      |Formålet for Foreningen Opine er at udvikle og drive den demokratiserende online platform Opine. Platformen består af funktionalitet og indhold som udgør afstemninger omkring nationale og internationale spørgsmål af bred folkelig relevans.
+    = t(:about_us_1)
       br
-      =link_to 'Se vores vedtægter', '/Vedtaegter_ForeningenOpine_v1.pdf'
+      =link_to t(:about_us_2), '/Vedtaegter_ForeningenOpine_v1.pdf'
     br
     form.row.contact-form
       .col-sm-12.col-lg-3.contact-info
-        h5.contact-title Kontakt os
+        h5.contact-title
+          = t(:about_us_3)
         = link_to "hello@opine.dk", "mailto:hello@opine.dk", class: "contact-link contact-link--email"
-        = link_to "tlf. 26 70 38 70", '/', class: "contact-link contact-link--tel"
+        = link_to t(:about_us_4), '/', class: "contact-link contact-link--tel"
         address.contact-address
-          | Valbyvej 71
+        = t(:about_us_5)
           br
-          | 4200 Slagelse
+        = t(:about_us_6)
 = render 'pages/shared/signup'

@@ -1,6 +1,8 @@
 .card-sm-12.card-lg-3.card.card--purple
   .card-header
-    h4.card-title.card-title--lg Har du et forslag til en afstemning?
-    .card-meta.card-meta--lg Vi opretter afstemninger over aktuelle emner i Danmark og i verden. Har du et spørgsmål du gerne vil have frem så skriv til os!
+    h4.card-title.card-title--lg
+      = t :purpler_header
+    .card-meta.card-meta--lg
+      = t :purpler_meta
   .card-footer
-    = link_to "Skriv til Opine", main_app.about_us_path, class: 'btn btn-outline-tertiary btn-lg card-button'
+    = link_to t(:purpler_skriv), main_app.about_us_path, class: 'btn btn-outline-tertiary btn-lg card-button'

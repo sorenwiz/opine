@@ -3,16 +3,20 @@
   .container
     .jumbotron.text-center
       h1.jumbotron-title
-        span Giv
-        span.text-success<> din mening
-        span til kende
-      p.jumbotron-subtitle Your opinion matters
+        span
+          = t(:home_1)
+        span.text-success<>
+          = t(:home_2)
+        span
+          = t(:home_3)
+      p.jumbotron-subtitle
+        = t(:concept_6)
       .jumbotron-image-wrapper
 section.wrapper.section-polls
   .container
     h2.section-polls-title
       span.fa.fa-fw.fa-line-chart>
-      | Aktuelle afstemninger
+      = t(:home_5)
     .card-deck-wrapper
       .card-deck
         = render partial: 'refinery/polls/poll', collection: @polls.pop(2)
@@ -21,7 +25,7 @@ section.wrapper.section-polls
       .card-deck
         = render partial: 'refinery/polls/poll', collection: @polls
     .m-y.text-center
-      = link_to 'Vis alle afstemninger', polls_polls_path, class: 'btn btn-default btn-lg'
+      = link_to t(:home_5), polls_polls_path, class: 'btn btn-default btn-lg'
 
 section.wrapper-gray.section-info
   .container

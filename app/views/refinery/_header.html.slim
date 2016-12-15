@@ -1,8 +1,8 @@
 - skip_wrapper ||= false
 - header_class = skip_wrapper.presence || 'wrapper'
-header.header class=header_class
-  nav.navbar.navbar-default.navbar-static-top
-    container-fluid
+.container
+  header.header class=header_class style='max-width: 1280px;'
+    nav.navbar.navbar-default.navbar-static-top
       .navbar-header
         button.navbar-toggle data-target="#navbar" data-toggle="collapse" type="button"
           span.sr-only Toggle navigation
@@ -12,10 +12,10 @@ header.header class=header_class
         - if user_signed_in?
           = link_to '/', class: 'navbar-user pull-right m-l-1 visible-breakpoint' do
             = image_tag "http://graph.facebook.com/v2.5/#{current_user.facebook_id}/picture?width=36&height=36", class: "img-circle", width: 36, height: 36
-          = link_to "Log ud", main_app.destroy_user_session_path, method: :delete, class: "btn btn-primary-alt navbar-btn pull-right visible-breakpoint"
+          = link_to t(:header_1), main_app.destroy_user_session_path, method: :delete, class: "btn btn-primary-alt navbar-btn pull-right visible-breakpoint"
         - else
-          = link_to "Log ind", main_app.sign_in_path, class: "btn btn-secondary navbar-btn pull-right visible-breakpoint"
-        = link_to "Opine", '/', class: "navbar-brand"
+          = link_to t(:header_2), main_app.sign_in_path, class: "btn btn-secondary navbar-btn pull-right visible-breakpoint"
+        = link_to t(:opine), '/', class: "navbar-brand"
 
       #navbar.collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-left
@@ -26,17 +26,17 @@ header.header class=header_class
               = link_to 'en'.upcase, refinery.url_for(params.merge(:locale => 'en'))
         ul.nav.navbar-nav.navbar-right
           li
-            = link_to "Afstemninger", refinery.polls_polls_path
+            = link_to t(:afstemninger), refinery.polls_polls_path
           li
-            = link_to "Konceptet", '/concept'
+            = link_to t(:konceptet), '/concept'
           li
-            = link_to "Om os", '/about'
+            = link_to t(:om_os), '/about'
           - if user_signed_in?
             li.m-l-2.invisible-breakpoint
               = link_to '/', class: 'navbar-user' do
                 = image_tag "http://graph.facebook.com/v2.5/#{current_user.facebook_id}/picture?width=84&height=84", class: "img-circle", width: 42, height: 42
             li.m-l-2.invisible-breakpoint
-              = link_to "Log ud", main_app.destroy_user_session_path, method: :delete, class: "btn btn-primary-alt navbar-btn"
+              = link_to t(:header_1), main_app.destroy_user_session_path, method: :delete, class: "btn btn-primary-alt navbar-btn"
           - else
             li.m-l-2.invisible-breakpoint
-              = link_to "Log ind", main_app.sign_in_path, class: "btn btn-secondary navbar-btn"
+              = link_to t(:header_2), main_app.sign_in_path, class: "btn btn-secondary navbar-btn"

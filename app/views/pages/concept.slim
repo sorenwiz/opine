@@ -3,25 +3,31 @@
     .jumbotron.p-b-0
       .flex.align-items--center.section-fixed-height.xs-flex-flow-column
         .flex-body.jumbotron--border-left
-          h1.jumbotron-title Din mening tæller.
-          p.jumbotron-subtitle.jumbotron-subtitle--sm På Opine giver du din mening til kende overfor dine medborgere, medier, organisationer, politikere og magthavere. Samlet tegner vore meninger billeder af hvad befolkningen synes, og dermed tæller din mening. Opine er for alle.
+          h1.jumbotron-title
+            = t(:concept_6)
+          p.jumbotron-subtitle.jumbotron-subtitle--sm
+            = t(:concept_7)
         .flex-figure.jumbotron-image-wrapper
-          = image_tag "konceptet-image@2x.png", alt: 'Din mening tæller.', class: 'jumbotron-image', width: '477', height: '635'
+          = image_tag "konceptet-image@2x.png", alt: t(:concept_6), class: 'jumbotron-image', width: '477', height: '635'
 section.wrapper.p-y-5
   .container
     .jumbotron.p-b-0
       .flex.align-items--center.section-fixed-height.xs-flex-flow-column
         .flex-body.jumbotron--border-top.text-right-lg.sm-order-2
-          h2.jumbotron-title Aktuelle emner.
-          p.jumbotron-subtitle.jumbotron-subtitle--sm Opine er åbne afstemninger om aktuelle nationale og internationale emner. Når du stemmer på Opine bidrager du til demokratiet ved at vise din mening – og sammen kan vi måske påvirke dem, som bestemmer?
-          = link_to "Opine er for alle.", "/", class: 'jumbotron-link jumbotron-link--lg'
+          h2.jumbotron-title
+            = t(:concept_1)
+          p.jumbotron-subtitle.jumbotron-subtitle--sm
+            = t(:concept_2)
+          = link_to t(:concept_3), "/", class: 'jumbotron-link jumbotron-link--lg'
         .text-figure.jumbotron-image-wrapper.sm-order-1.flex-body
-          = image_tag "konceptet-image-2@2x.png", alt: 'konceptet-image-2.png', class: 'jumbotron-image', width: '362', height: '380'
+          = image_tag "konceptet-image-2@2x.png", alt: t(:concept_6), class: 'jumbotron-image', width: '362', height: '380'
 section.bg-success.p-y-2
   .container.text-center
     .jumbotron.p-b-0.flex.align-items--center.section-fixed-height.flex-column.justify-content--center.xs-flex-flow-column
-      h2.jumbotron-title Bidrag - stem - vær med.
-      p.jumbotron-subtitle.jumbotron-subtitle--sm Konceptet er enkelt: Opine viser folks meninger via åbne, anonyme afstemninger. Du kan bidrage ved at stemme, foreslå afstemninger, dele afstemninger med dine venner og selvfølgelig ved at blive medlem i Foreningen Opine.
+      h2.jumbotron-title
+        = t(:concept_4)
+      p.jumbotron-subtitle.jumbotron-subtitle--sm
+        = t(:concept_5)
       .jumbotron-image-wrapper.concept-image-wrapper
-        = image_tag "jumbotron-image@2x.png", alt: 'Your opinion matters', class: 'concept-image jumbotron-image m-t-2', width: '762', height: '327'
+        = image_tag "jumbotron-image@2x.png", alt: t(:concept_6), class: 'concept-image jumbotron-image m-t-2', width: '762', height: '327'
 = render 'pages/shared/signup'

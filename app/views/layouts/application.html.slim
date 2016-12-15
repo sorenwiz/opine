@@ -5,7 +5,7 @@ html
     meta http-equiv="X-UA-Compatible" content="IE=edge"
     meta name="viewport" content="width=device-width, initial-scale=1"
     = render 'layouts/meta_tags'
-    title= @page_title.presence || 'Opine - Giv din mening til kende'
+    title= @page_title.presence || t(:page_title)
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = javascript_include_tag 'https://use.fontawesome.com/a7d9fb2ffb.js'
@@ -18,22 +18,19 @@ body id="#{ canonical_id @page }" class="#{ view_template_class @page }"
   = render "/refinery/head"
   = render "/refinery/javascripts"
   = site_bar
-  #page_container
-    - app_extra_class = @app_extra_class || 'app-default'
-    - wallpaper_css = "background-image:url(\"#{@wallpaper}\")" if @wallpaper
-    .app class=app_extra_class style=wallpaper_css
-      - if @skip_content
+  - app_extra_class = @app_extra_class || 'app-default'
+  - wallpaper_css = "background-image:url(\"#{@wallpaper}\")" if @wallpaper
+  .app class=app_extra_class style=wallpaper_css
+    - if @skip_content
+      = yield
+    - else
+      .page-shadow class="#{controller_name}-wrapper #{action_name}-wrapper"
+        - if !@skip_header
+          = render '/refinery/header'
+        - display_alert = false
+        - if display_alert
+          = render 'layouts/alert'
         = yield
-      - else
-        .page-shadow class="#{controller_name}-wrapper #{action_name}-wrapper"
-          - if !@skip_header
-            = render '/refinery/header'
-            = render 'components/header'
-          section#page
-            - display_alert = false
-            - if display_alert
-              = render 'layouts/alert'
-            = yield
-          footer
-            = render "/refinery/footer"
+        footer style='max-width: 1280px;'
+          = render "/refinery/footer"
 = render 'layouts/ga'
