@@ -1,10 +1,10 @@
 - skip_wrapper ||= false
 - header_class = skip_wrapper.presence || 'wrapper'
 header.header class=header_class
-  .container
-    nav.navbar.navbar-default.navbar-static-top
+  nav.navbar.navbar-default.navbar-static-top
+    container-fluid
       .navbar-header
-        button.navbar-toggle.navbar-btn data-target="#navbar" data-toggle="collapse" type="button"
+        button.navbar-toggle data-target="#navbar" data-toggle="collapse" type="button"
           span.sr-only Toggle navigation
           span.icon-bar
           span.icon-bar
@@ -16,7 +16,14 @@ header.header class=header_class
         - else
           = link_to "Log ind", main_app.sign_in_path, class: "btn btn-secondary navbar-btn pull-right visible-breakpoint"
         = link_to "Opine", '/', class: "navbar-brand"
+
       #navbar.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-left
+          li
+            - if I18n.locale.to_s == 'en'
+              = link_to 'da'.upcase, refinery.url_for(params.merge(:locale => 'da'))
+            - else
+              = link_to 'en'.upcase, refinery.url_for(params.merge(:locale => 'en'))
         ul.nav.navbar-nav.navbar-right
           li
             = link_to "Afstemninger", refinery.polls_polls_path
