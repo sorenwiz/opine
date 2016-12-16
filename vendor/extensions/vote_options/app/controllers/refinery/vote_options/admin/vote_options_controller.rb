@@ -10,7 +10,7 @@ module Refinery
 
         # Only allow a trusted parameter "white list" through.
         def vote_option_params
-          params.require(:vote_option).permit(:text, :alias, :graph_rgb, :_destroy)
+          params.require(:vote_option).permit(:text, :alias, :graph_rgb, :_destroy, :poll_id)
         end
       end
     end
