@@ -1,5 +1,5 @@
 en:
-  purpler_header: 'Har du et forslag til en afstemning?'
+  purpler_header: 'en'
   purpler_meta: 'Vi opretter afstemninger over aktuelle emner i Danmark og i verden. Har du et spørgsmål du gerne vil have frem så skriv til os!'
   purpler_skriv: 'Skriv til Opine'
   page_title: 'Opine - Giv din mening til kende'
@@ -41,8 +41,8 @@ en:
   har_stem: 'har stemt'
   opine: 'Opine'
   afstemninger: 'Afstemninger'
-  konceptet: 'Konceptet'
-  om_os: 'Om os'
+  konceptet: 'en'
+  om_os: 'en'
   footer_1: 'Cookies'
   footer_2: 'Privatlivspolitik'
   footer_3: '© Copyright  - Alle rettigheder forbeholdes - Opine 2016 - Non-profit forening'

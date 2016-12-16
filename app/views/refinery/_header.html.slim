@@ -10,30 +10,31 @@
           span.icon-bar
           span.icon-bar
         - if user_signed_in?
-          = link_to '/', class: 'navbar-user pull-right m-l-1 visible-breakpoint' do
+          = link_to "/#{I18n.locale.to_s}/", class: 'navbar-user pull-right m-l-1 visible-breakpoint' do
             = image_tag "http://graph.facebook.com/v2.5/#{current_user.facebook_id}/picture?width=36&height=36", class: "img-circle", width: 36, height: 36
           = link_to t(:header_1), main_app.destroy_user_session_path, method: :delete, class: "btn btn-primary-alt navbar-btn pull-right visible-breakpoint"
         - else
           = link_to t(:header_2), main_app.sign_in_path, class: "btn btn-secondary navbar-btn pull-right visible-breakpoint"
         = link_to t(:opine), '/', class: "navbar-brand"
+        - if current_page?('/') || current_page?('/en')|| current_page?('/da')
+          ul.nav.navbar-nav.navbar-left
+            li
+              - if I18n.locale.to_s == 'en'
+                = link_to 'da'.upcase, refinery.url_for(params.merge(:locale => 'da'))
+              - else
+                = link_to 'en'.upcase, refinery.url_for(params.merge(:locale => 'en'))
 
       #navbar.collapse.navbar-collapse
-        ul.nav.navbar-nav.navbar-left
-          li
-            - if I18n.locale.to_s == 'en'
-              = link_to 'da'.upcase, refinery.url_for(params.merge(:locale => 'da'))
-            - else
-              = link_to 'en'.upcase, refinery.url_for(params.merge(:locale => 'en'))
         ul.nav.navbar-nav.navbar-right
           li
             = link_to t(:afstemninger), refinery.polls_polls_path
           li
-            = link_to t(:konceptet), '/concept'
+            = link_to t(:konceptet), "/#{I18n.locale.to_s}/concept"
           li
-            = link_to t(:om_os), '/about'
+            = link_to t(:om_os), "/#{I18n.locale.to_s}/about"
           - if user_signed_in?
-            li.m-l-2.invisible-breakpoint
-              = link_to '/', class: 'navbar-user' do
+            li.m-l-2.invisible-breakpoint.navbar-user
+              = link_to "/#{I18n.locale.to_s}/", class: 'navbar-user' do
                 = image_tag "http://graph.facebook.com/v2.5/#{current_user.facebook_id}/picture?width=84&height=84", class: "img-circle", width: 42, height: 42
             li.m-l-2.invisible-breakpoint
               = link_to t(:header_1), main_app.destroy_user_session_path, method: :delete, class: "btn btn-primary-alt navbar-btn"

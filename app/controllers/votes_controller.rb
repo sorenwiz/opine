@@ -7,7 +7,7 @@ class VotesController < ApplicationController
     if vote_option_id.present?
       handle_vote(vote_option_id, @poll)
     else
-      redirect_to polls_poll_path(@poll)
+      redirect_to refinery.polls_poll_path(@poll)
     end
   end
 

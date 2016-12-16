@@ -3,13 +3,17 @@ LOCALES = /en|da/ unless defined? LOCALES
 Rails.application.routes.draw do
 
   devise_for :users, controllers: {omniauth_callbacks: 'omniauth_callbacks'}
+  #get '/:locale' => 'dashboard#index'
+  scope "(:locale)", locale: /en|da/ do
+    get 'concept', to: 'pages#concept', as: 'concept'
+    get 'about', to: 'pages#about_us', as: 'about_us'
+    post 'about-us', to:'contact_us#create'
+    get 'sign_in', to: 'pages#sign_in', as: 'sign_in'
 
-  get 'concept', to: 'pages#concept', as: 'concept'
-  get 'about', to: 'pages#about_us', as: 'about_us'
-  post 'about-us', to:'contact_us#create'
-  get 'sign_in', to: 'pages#sign_in', as: 'sign_in'
+    get 'vote/:id', to: 'votes#vote', as: :poll_vote
+    post 'vote/:id', to: 'votes#vote', as: :post_poll_vote
+  end
 
-  post 'vote/:id', to: 'votes#vote', as: :poll_vote
 
 
   # This line mounts Refinery's routes at the root of your application.

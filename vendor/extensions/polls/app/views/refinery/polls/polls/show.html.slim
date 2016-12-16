@@ -30,7 +30,7 @@
               - if @user_vote #TODO: Check this logic!
                 = render 'polls/thank_you'
               - else
-                =form_tag main_app.poll_vote_path(@poll)
+                =form_tag main_app.post_poll_vote_path()
                 .card-header
                   h4.card-title
                     span.fa.fa-fw.fa-bullhorn<>
