@@ -21,6 +21,9 @@ module Refinery
 
       scope :active, -> { where('expires_at >= ?', Date.today) }
 
+      scope :with_locale, -> (locale) { joins('RIGHT JOIN refinery_poll_translations ON refinery_poll_translations.refinery_poll_id = refinery_polls.id')
+                                             .where("refinery_poll_translations.locale = ?", locale) }
+
       # To enable admin searching, add acts_as_indexed on searchable fields, for example:
       #
       #   acts_as_indexed :fields => [:title]

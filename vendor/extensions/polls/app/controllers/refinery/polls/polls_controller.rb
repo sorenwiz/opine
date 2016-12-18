@@ -23,7 +23,12 @@ module Refinery
           [vote_option.translation.text, @vote_counts.fetch(vote_option.id, 0)]
         end
 
-        @related_polls = Poll.active.where.not(id: @poll.id).first(3)
+        @related_polls = Poll
+                             .active
+                             .with_locale(params[:locale].to_s)
+                             .order('"order" ASC')
+                             .where
+                             .not(id: @poll.id).first(3)
         @page_title = @poll.heading
         @user_vote = Vote.find_by(user_id: current_user.id, poll_id: @poll.id) if user_signed_in?
         @wallpaper = @poll.wallpaper.url if @poll.wallpaper_id.present?
@@ -36,7 +41,10 @@ module Refinery
     protected
 
       def find_all_polls
-        @polls = Poll.active.order('position ASC')
+        @polls = Poll
+                     .active
+                     .with_locale(params[:locale].to_s)
+                     .order('"order" ASC')
       end
 
       def find_page
