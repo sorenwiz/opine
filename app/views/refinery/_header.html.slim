@@ -1,16 +1,16 @@
 - skip_wrapper ||= false
 - header_class = skip_wrapper.presence || 'wrapper'
-.container
-  header.header class=header_class style='max-width: 1280px;'
+header class=header_class
+  .container
     nav.navbar.navbar-default.navbar-static-top
       .navbar-header
-        button.navbar-toggle data-target="#navbar" data-toggle="collapse" type="button"
+        button.navbar-toggle.navbar-btn data-target="#navbar" data-toggle="collapse" type="button"
           span.sr-only Toggle navigation
           span.icon-bar
           span.icon-bar
           span.icon-bar
         - if user_signed_in?
-          = link_to "/#{I18n.locale.to_s}/", class: 'navbar-user pull-right m-l-1 visible-breakpoint' do
+          = link_to root_path, class: 'navbar-user pull-right m-l-1 visible-breakpoint' do
             = image_tag "http://graph.facebook.com/v2.5/#{current_user.facebook_id}/picture?width=36&height=36", class: "img-circle", width: 36, height: 36
           = link_to t(:header_1), main_app.destroy_user_session_path, method: :delete, class: "btn btn-primary-alt navbar-btn pull-right visible-breakpoint"
         - else

@@ -7,7 +7,6 @@ html
     = render 'layouts/meta_tags'
     title= @page_title.presence || t(:page_title)
     = stylesheet_link_tag 'application', media: 'all'
-    = javascript_include_tag 'application'
     = javascript_include_tag 'https://use.fontawesome.com/a7d9fb2ffb.js'
     = render 'layouts/facebook_include'
     = render 'layouts/icons'
@@ -31,6 +30,6 @@ body id="#{ canonical_id @page }" class="#{ view_template_class @page }"
         - if display_alert
           = render 'layouts/alert'
         = yield
-        footer style='max-width: 1280px;'
+        footer
           = render "/refinery/footer"
 = render 'layouts/ga'
