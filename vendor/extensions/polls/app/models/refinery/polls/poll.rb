@@ -1,9 +1,13 @@
 module Refinery
   module Polls
     class Poll < Refinery::Core::BaseModel
+      extend FriendlyId
+
       self.table_name = 'refinery_polls'
 
-      translates :heading, :sub_heading, :teaser, :description_heading, :description, :question, :slug
+      friendly_id :question, :use => [:slugged]
+
+      translates :heading, :sub_heading, :teaser, :description_heading, :description, :question
 
       validates :heading, :presence => true, :uniqueness => true
 

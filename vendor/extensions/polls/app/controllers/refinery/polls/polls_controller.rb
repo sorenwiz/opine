@@ -2,7 +2,7 @@ module Refinery
   module Polls
     class PollsController < ::ApplicationController
 
-      before_action :find_all_polls
+      before_action :find_all_polls, only: :index
       before_action :find_page
 
       def index
@@ -13,7 +13,7 @@ module Refinery
       end
 
       def show
-        @poll = Poll.where(id: params[:id]).first
+        @poll = Poll.friendly.find(params[:id])
         raise ActionController::RoutingError.new('Not Found') unless @poll.present?
 
         @vote_options = @poll.vote_options.to_a
@@ -26,7 +26,8 @@ module Refinery
 
         @graph_data.sort! {|first, last| last[1] <=> first[1] }
 
-        @related_polls = Poll.active
+        @related_polls = Poll.friendly
+                             .active
                              .with_locale(params[:locale].to_s)
                              .order('"order" ASC')
                              .where
@@ -44,7 +45,8 @@ module Refinery
       protected
 
       def find_all_polls
-        @polls = Poll.active
+        @polls = Poll.friendly
+                     .active
                      .with_locale(params[:locale].to_s)
                      .order('"order" ASC')
       end

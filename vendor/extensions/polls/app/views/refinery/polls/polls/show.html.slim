@@ -10,7 +10,7 @@
     .flex-card-deck-wrapper
       .flex-card-deck
         .flex-card-sm-12.flex-card-lg-12.card.card--borderless
-          .card-image(style="background-image: url(#{@poll.background_image.url}); height: 380px;")
+          .card-image(style="background-image: url(#{@poll.background_image.try(:url)}); height: 380px;")
 
 .section-tabs
   .container
@@ -27,7 +27,7 @@
           .flex-card-sm-12.flex-card-lg-8
             / start .card /
             #poll-content.card
-              - if @user_vote #TODO: Check this logic!
+              - if @user_vote
                 = render 'polls/thank_you'
               - else
                 =form_tag main_app.post_poll_vote_path()
@@ -59,7 +59,7 @@
               .fb-comments data-href=request.url data-numposts="5" data-width="100%"
           .flex-card-lg-4.invisible-breakpoint
             .card
-              .card-image(style="background-image: url(#{image_path(@poll.image.url)});")
+              .card-image(style="background-image: url(#{image_path(@poll.image.try(:url))});")
               .card-header
                 h4.card-title=@poll.description_heading
                 .card-meta

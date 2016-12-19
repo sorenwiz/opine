@@ -10,7 +10,7 @@
 section.wrapper.p-y-7
   .container
     p.section-paragraph.m-b-4
-    = t(:about_us_1)
+      = t(:about_us_1)
       br
       =link_to t(:about_us_2), '/Vedtaegter_ForeningenOpine_v1.pdf'
     br
@@ -21,7 +21,7 @@ section.wrapper.p-y-7
         = link_to "hello@opine.dk", "mailto:hello@opine.dk", class: "contact-link contact-link--email"
         = link_to t(:about_us_4), '/', class: "contact-link contact-link--tel"
         address.contact-address
-        = t(:about_us_5)
+          = t(:about_us_5)
           br
-        = t(:about_us_6)
+          = t(:about_us_6)
 = render 'pages/shared/signup'

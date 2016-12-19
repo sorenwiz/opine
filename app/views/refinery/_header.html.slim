@@ -10,12 +10,12 @@ header class=header_class
           span.icon-bar
           span.icon-bar
         - if user_signed_in?
-          = link_to root_path, class: 'navbar-user pull-right m-l-1 visible-breakpoint' do
+          = link_to "/#{I18n.locale.to_s}/", class: 'navbar-user pull-right m-l-1 visible-breakpoint' do
             = image_tag "http://graph.facebook.com/v2.5/#{current_user.facebook_id}/picture?width=36&height=36", class: "img-circle", width: 36, height: 36
           = link_to t(:header_1), main_app.destroy_user_session_path, method: :delete, class: "btn btn-primary-alt navbar-btn pull-right visible-breakpoint"
         - else
           = link_to t(:header_2), main_app.sign_in_path, class: "btn btn-secondary navbar-btn pull-right visible-breakpoint"
-        = link_to t(:opine), '/', class: "navbar-brand"
+        = link_to t(:opine), "/#{I18n.locale.to_s}/", class: "navbar-brand"
         - if current_page?('/') || current_page?('/en')|| current_page?('/da')
           ul.nav.navbar-nav.navbar-left
             li

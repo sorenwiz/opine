@@ -19,7 +19,7 @@
 
   <div class='field'>
     <%= f.label :slug -%>
-    <%= f.text_field :slug -%>
+    <%= f.label @poll.slug || 'to_be_generate' , style: 'margin-top:0px;'-%>
   </div>
 
   <div class='field'>

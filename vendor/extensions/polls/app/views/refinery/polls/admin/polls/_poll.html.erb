@@ -1,12 +1,12 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(poll) -%>">
   <span class='title'>
-    <%= translated_field(poll, :slug) %>
+    <%= translated_field(poll, :heading) %>
   </span>
 
   <% if Refinery::I18n.frontend_locales.many? %>
     <span class='locales'>
       <% poll.translations.sort_by{ |t| Refinery::I18n.frontend_locales.index(t.locale)}.each do |translation| %>
-        <% if translation.slug.present? %>
+        <% if translation.heading.present? %>
           <%= link_to refinery.edit_polls_admin_poll_path(poll, :switch_locale => translation.locale),
                       class: 'locale', title: translation.locale.upcase do %>
 
@@ -26,6 +26,6 @@
     <%= action_icon(:edit,    refinery.edit_polls_admin_poll_path(poll), t('.edit') ) %>
     <%= action_icon(:delete,  refinery.polls_admin_poll_path(poll), t('.delete'),
       { class: "cancel confirm-delete",
-        data: {confirm: t('message',  scope: 'refinery.admin.delete', title: poll.slug)}}  ) %>
+        data: {confirm: t('message',  scope: 'refinery.admin.delete', title: poll.heading)}}  ) %>
   </span>
 </li>
