@@ -9,9 +9,17 @@
   <div class='field'>
     <%= render '/refinery/admin/wysiwyg',
                 :f => f,
-                :fields => [:text, :alias, :graph_rgb],
+                :fields => [:text, :alias],
                 :object => "vote_options/vote_option" -%>
   </div>
+
+
+  <div class='field'>
+    <%= f.label 'Graph RGB.' -%>
+    <%= label_tag(nil, 'Stick to this example: 123,243,124', style: 'margin-top:0px;')-%>
+    <%= f.text_field(:graph_rgb) -%>
+  </div>
+
 
   <div class='field'>
     <%= f.label 'Poll' -%>
