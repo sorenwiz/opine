@@ -48,3 +48,5 @@ en:
   footer_3: '© Copyright  - Alle rettigheder forbeholdes - Opine 2016 - Non-profit forening'
   header_1: 'Log ud'
   header_2: 'Log ind'
+  voted: 'Amount of votes'
+  total_votes: 'Total votes'

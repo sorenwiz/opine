@@ -77,7 +77,7 @@ Refinery::I18n.frontend_locales.each do |lang|
       Refinery::VoteOptions::VoteOption.create do |vo|
         vo.text = Faker::Lorem.sentence(2)
         vo.alias = Faker::Lorem.sentence(1)
-        vo.graph_rgb = '#9F3DE9'
+        vo.graph_rgb = '90,220,150'
         vo.poll_id = poll.id
       end
     end

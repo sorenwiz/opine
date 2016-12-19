@@ -67,37 +67,43 @@
       #second.tab-pane role="tabpanel"
         .card
           .card-header
-            h4.card-title
-          .card-body
-            canvas#chartjs data-labels=@graph_data.map(&:first) data-counts=@graph_data.map(&:last) data-graph-data= height="500"
+            h4.card-title.text-center
+              = "#{t(:total_votes)}: #{@vote_counts.values.sum}"
+          .card-body style='height:500px;'
+            canvas#chartjs data-labels=@graph_data.map(&:last) data-counts=@graph_data.map{|v| v[1]} data-graph-data= height="500"
             - if true
               javascript:
                 var ctx = document.getElementById("chartjs");
                 var myChart = new Chart(ctx, {
-                  type: 'bar',
+                  type: 'horizontalBar',
                   data: {
-                    labels: $('#chartjs').data().labels,
+                    labels: #{@graph_data.map(&:first).to_json.html_safe},
+                    yLabels: $('#chartjs').data().labels,
                     datasets: [
                       {
-                        label: 'Antal stemmer',
                         data: $('#chartjs').data().counts,
                         backgroundColor: [
-                          'rgba(90, 220, 150, 1)',
-                          'rgba(104, 31, 178, 1)',
-                          'rgba(0, 24, 255, 1)',
-                          'rgba(255, 252, 33, 1)',
-                          'rgba(250, 220, 210, 1)',
-                          'rgba(0, 0, 0, 1)',
-                          'rgba(213, 83, 123, 1)',
-                          'rgba(41, 59, 110, 1)'
+                          #{@graph_data.map {|v| v[2]}.join(',').html_safe}
                         ]
                       }
                     ]
                   },
                   options: {
+                    tooltips: {
+                      displayColors: false,
+                      callbacks: {
+                        title: function (tooltipItem, data) {
+                          return "#{t(:voted)}" +': ' + data.datasets[0].data[tooltipItem[0].index];
+                        },
+                        label: function (tooltipItem, data) {
+                                return data.labels[tooltipItem.index]
+                        }
+                      }
+                    },
                     legend: {
                       display: false,
                       labels: {
+                        fontSize: 16
                       }
                     },
                     responsive: true,
@@ -105,7 +111,8 @@
                     scales: {
                       yAxes: [{
                         ticks: {
-                          beginAtZero: true
+                          beginAtZero: true,
+                          fontSize: 14
                         }
                       }],
                       xAxes: [{
