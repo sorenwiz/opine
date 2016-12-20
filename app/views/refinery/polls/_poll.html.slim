@@ -1,13 +1,13 @@
 - extra_css ||= nil
 - card_class = extra_css.presence || 'card-sm-6 card-lg-4'
 
-.card.is-footer-fixed-bottom.js-card-clickable class=card_class data-href=refinery.polls_poll_path(poll)
+.card.is-footer-fixed-bottom.js-card-clickable class=card_class data-href=refinery.polls_poll_path(poll, locale: I18n.locale.to_s)
   .card-image(style="background-image: url(#{poll.image.present? ? poll.image.url() : ''});")
   .card-header
     h4.card-title= poll.heading
     .card-meta= truncate poll.teaser, length: 180, separator: ' '
   .card-footer
-    = link_to t(:stem), refinery.polls_poll_path(poll), class: 'btn btn-primary btn-lg'
+    = link_to t(:stem), refinery.polls_poll_path(poll, locale: I18n.locale.to_s), class: 'btn btn-primary btn-lg'
     .flex-end
       strong.card-text<>= poll.category.name
       span.card-text.text-muted<>

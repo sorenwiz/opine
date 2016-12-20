@@ -13,6 +13,8 @@ module Refinery
       end
 
       def show
+        ::I18n.locale = params[:locale] if params[:locale]
+
         @poll = Poll.friendly.find(params[:id])
         raise ActionController::RoutingError.new('Not Found') unless @poll.present?
 

@@ -50,3 +50,5 @@ en:
   header_2: 'Log ind'
   voted: 'Amount of votes'
   total_votes: 'Total votes'
+  votes_notice_1: 'Du har allerede stemt i denne afstemning'
+  votes_notice_1: 'Din stemme blev gemt!'

@@ -1,6 +1,7 @@
 section.wrapper
   .container
-    h2 Afstemninger
+    h2
+      = t(:afstemninger)
     - 2.times
       .card-deck-wrapper
         .card-deck
@@ -10,7 +11,7 @@ section.wrapper.section-polls
   .container
     h2.section-polls-title
       span.fa.fa-fw.fa-line-chart>
-      | Aktuelle afstemninger
+      = t(:aktuelle_afstemninger)
     .card-deck-wrapper
       .card-deck
         = render partial: 'refinery/polls/poll', collection: @polls.pop(3)

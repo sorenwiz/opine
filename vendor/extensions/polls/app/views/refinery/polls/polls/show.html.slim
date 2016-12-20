@@ -16,9 +16,11 @@
   .container
     ul.nav.nav-tabs role="tablist"
       li.active role="presentation"
-        a href="#first" role="tab" data-toggle="tab" Din mening?
+        a href="#first" role="tab" data-toggle="tab"
+          = t(:poll_show_3)
       li role="presentation"
-        a href="#second" role="tab" data-toggle="tab" Resultater
+        a href="#second" role="tab" data-toggle="tab"
+          = t(:poll_show_4)
 .section-tab-content
   .container
     .tab-content
@@ -30,11 +32,11 @@
               - if @user_vote
                 = render 'polls/thank_you'
               - else
-                =form_tag main_app.post_poll_vote_path()
+                =form_tag main_app.post_poll_vote_path(locale: ::I18n.locale.to_s)
                 .card-header
                   h4.card-title
                     span.fa.fa-fw.fa-bullhorn<>
-                    | Sæt din stemme
+                    = t(:poll_show_5)
                   h4= @poll.question
                   = render '/refinery/content_page'
                 .card-body
@@ -47,15 +49,16 @@
                 .card-footer
                   .row
                     .col-sm-3
-                      = submit_tag "Stem", class: 'btn btn-primary btn-lg btn-block'
+                      = submit_tag t(:stem), class: 'btn btn-primary btn-lg btn-block'
                     .col-sm-9.text-center-xs
                       p.card-text.text-muted<>
-                        |Du stemmer anonymt.
+                        = t(:poll_show_1)
                         br
-                        |Din stemme indgår kun i statistik
+                        = t(:poll_show_2)
             / end .card /
             .m-t-5
-              h2 Hvad syntes du?
+              h2
+                = t(:poll_show_6)
               .fb-comments data-href=request.url data-numposts="5" data-width="100%"
           .flex-card-lg-4.invisible-breakpoint
             .card
@@ -131,7 +134,8 @@
                 });
                 myChart.generateLegend();
 
-    h2.m-t-5 Se andre afstemninger
+    h2.m-t-5
+      = t(:poll_show_7)
     .card-deck-wrapper
       .card-deck.m-t-2
         = render partial: 'refinery/polls/poll', collection: @related_polls

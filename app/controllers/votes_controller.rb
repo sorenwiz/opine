@@ -15,11 +15,11 @@ class VotesController < ApplicationController
 
   def handle_vote(vote_option_id, poll)
     if user_has_voted?
-      redirect_to refinery.polls_poll_path(poll.id), notice: 'Du har allerede stemt i denne afstemning'
+      redirect_to refinery.polls_poll_path(poll.id, locale: I18n.locale.to_s), notice: t(:votes_notice_1)
     else
       vote_option = poll.vote_options.find(vote_option_id)
       Vote.create! user: current_user, poll_id: poll.id, vote_option_id: vote_option.id
-      redirect_to refinery.polls_poll_path(poll), notice: 'Din stemme blev gemt!'
+      redirect_to refinery.polls_poll_path(poll, locale: I18n.locale.to_s), notice:  t(:votes_notice_2)
     end
   end
 

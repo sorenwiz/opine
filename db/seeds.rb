@@ -67,7 +67,6 @@ Refinery::I18n.frontend_locales.each do |lang|
       post.teaser = lang.to_s + ' teaser ' +  Faker::Lorem.sentence(1)
       post.description_heading = lang.to_s + ' description ' +  Faker::Lorem.sentence(1)
       post.description = lang.to_s +  Faker::Lorem.sentence(5)
-      post.slug = lang.to_s + index.to_s + 'poll_slug'
       post.question = lang.to_s +  Faker::Lorem.sentence(2)
       post.expires_at = Time.now + 10.days
       post.order = index
