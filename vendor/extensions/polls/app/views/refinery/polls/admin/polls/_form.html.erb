@@ -56,7 +56,7 @@
 
   <div class='field'>
     <%= f.label :category -%>
-    <%= f.select :category_id,  Category.all.collect { |p| [ p.name, p.id ] } -%>
+    <%= f.select :category_id,  Refinery::Categories::Category.all.collect { |p| [ p.name, p.id ] } -%>
   </div>
 
   <%= render '/refinery/admin/form_actions', :f => f,

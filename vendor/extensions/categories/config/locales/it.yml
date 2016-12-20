@@ -1,0 +1,27 @@
+it:
+  refinery:
+    plugins:
+      categories:
+        title: Categories
+    categories:
+      admin:
+        categories:
+          actions:
+            create_new: Aggiungi Nuovo Category
+            reorder: Riordina Categories
+            reorder_done: Termina il Riordino di Categories
+          records:
+            title: Categories
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Categories. Clicca "Aggiungi Nuovo Category" per aggiungere il tuo primo category.
+          category:
+            view_live_html: Guarda live questo category <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo category
+            delete: Rimuovi per sempre questo category
+      categories:
+        show:
+          other: Altri Categories
+  activerecord:
+    attributes:
+      'refinery/categories/category':
+        name: Name

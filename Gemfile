@@ -68,3 +68,4 @@ gem 'refinerycms-nested_models'
 
 gem 'refinerycms-polls', path: 'vendor/extensions'
 gem 'refinerycms-vote_options', path: 'vendor/extensions'
+gem 'refinerycms-categories', path: 'vendor/extensions'

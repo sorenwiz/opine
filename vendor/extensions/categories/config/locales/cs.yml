@@ -1,0 +1,27 @@
+cs:
+  refinery:
+    plugins:
+      categories:
+        title: Categories
+    categories:
+      admin:
+        categories:
+          actions:
+            create_new: Přidat Category
+            reorder: Řadit Categories
+            reorder_done: Konec řazení Categories
+          records:
+            title: Categories
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Categories. Zvolte "Přidat Category" pro přidání prvního category.
+          category:
+            view_live_html: Zobrazit náhled category<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit category
+            delete: Smazat category
+      categories:
+        show:
+          other: Další Categories
+  activerecord:
+    attributes:
+      'refinery/categories/category':
+        name: Name

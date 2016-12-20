@@ -1,6 +1,9 @@
 PATH
   remote: vendor/extensions
   specs:
+    refinerycms-categories (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 3.0.5)
     refinerycms-polls (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.5)
@@ -385,6 +388,7 @@ DEPENDENCIES
   rails-i18n
   refinerycms (~> 3.0.5)
   refinerycms-authentication-devise (~> 1.0)
+  refinerycms-categories!
   refinerycms-i18n
   refinerycms-nested_models
   refinerycms-polls!

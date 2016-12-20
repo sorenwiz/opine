@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161211183751) do
+ActiveRecord::Schema.define(version: 20161219142949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -138,6 +138,24 @@ ActiveRecord::Schema.define(version: 20161211183751) do
   add_index "refinery_authentication_devise_users", ["id"], name: "index_refinery_authentication_devise_users_on_id", using: :btree
   add_index "refinery_authentication_devise_users", ["slug"], name: "index_refinery_authentication_devise_users_on_slug", using: :btree
 
+  create_table "refinery_categories", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_category_translations", force: :cascade do |t|
+    t.integer  "refinery_category_id", null: false
+    t.string   "locale",               null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "name"
+  end
+
+  add_index "refinery_category_translations", ["locale"], name: "index_refinery_category_translations_on_locale", using: :btree
+  add_index "refinery_category_translations", ["refinery_category_id"], name: "index_refinery_category_translations_on_refinery_category_id", using: :btree
+
   create_table "refinery_image_translations", force: :cascade do |t|
     t.integer  "refinery_image_id", null: false
     t.string   "locale",            null: false
@@ -238,7 +256,6 @@ ActiveRecord::Schema.define(version: 20161211183751) do
     t.text     "description_heading"
     t.text     "description"
     t.text     "question"
-    t.text     "slug"
   end
 
   add_index "refinery_poll_translations", ["locale"], name: "index_refinery_poll_translations_on_locale", using: :btree
@@ -264,6 +281,7 @@ ActiveRecord::Schema.define(version: 20161211183751) do
   end
 
   add_index "refinery_polls", ["order"], name: "index_refinery_polls_on_order", using: :btree
+  add_index "refinery_polls", ["slug"], name: "index_refinery_polls_on_slug", using: :btree
 
   create_table "refinery_resource_translations", force: :cascade do |t|
     t.integer  "refinery_resource_id", null: false
@@ -289,7 +307,6 @@ ActiveRecord::Schema.define(version: 20161211183751) do
   create_table "refinery_vote_option_translations", force: :cascade do |t|
     t.text     "text"
     t.string   "alias"
-    t.string   "graph_rgb"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "refinery_vote_option_id"

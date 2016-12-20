@@ -1,0 +1,29 @@
+zh-CN:
+  refinery:
+    plugins:
+      categories:
+        title: Categories
+    categories:
+      admin:
+        categories:
+          actions:
+            create_new: 建立新的 Category
+            reorder: 对 Categories 重新排序
+            reorder_done: 对 Categories 的重新排序结束
+          records:
+            title: Categories
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Categories yet. Click "Add New Category" to add your first category.
+            no_items_yet: 目前没有 Categories . 点击 "Add New Category" 创建一个category.
+          category:
+            view_live_html: 查看 category 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 category
+            delete: 永久删除 category
+      categories:
+        show:
+          other: 其他 Categories
+  activerecord:
+    attributes:
+      'refinery/categories/category':
+        name: Name

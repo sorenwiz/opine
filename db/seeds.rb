@@ -11,12 +11,12 @@ home_page = Refinery::Page.create!(
 )
 home_page.parts.create(
     title: "Body",
-    body: "<p>Welcome to our site. This is just a place holder page while we gather our content.</p>",
+    body: '<h2 class="section-info-title"><span>Mangler du også et sted at give</span> <span class="text-success">din mening</span> <span>- og se hvad andre synes?</span></h2>',
     position: 0
 )
 home_page.parts.create(
     title: "Side Body",
-    body: "<p>This is another block of content over here.</p>",
+    body: '<p class="section-info-text"> <strong>Det gør vi.</strong> <span>Derfor har vi skabt Opine hvor vi alle kan vise hvad vi synes om aktuelle emner. Vi håber det kan fremme demokratiet.</span></p>',
     position: 1
 )
 
@@ -45,18 +45,22 @@ Refinery::I18n.frontend_locales.each do |lang|
   end
 end
 
-Category.create! name: 'Politics'
-Category.create! name: 'Nature'
-Category.create! name: 'Society'
 
-category_id = Category.last.id
+categories = %w[Politics Nature Society Environment War Economy Conflicts Technology Science Ethics Public Industrial]
+categories << 'Human Rights'
+categories << 'Liberal Rights'
+
+categories.each { |name| Refinery::Categories::Category.create!(name: name) }
+
+
+category_id = Refinery::Categories::Category.last.id
 
 poll_image = Rails.root.join('app/assets/images/dummy_images/poll-image.jpg')
 poll_bg = Rails.root.join('app/assets/images/dummy_images/poll-bg-image.jpg')
 
 Refinery::I18n.frontend_locales.each do |lang|
   I18n.locale = lang
-  5.times do |index|
+  2.times do |index|
     poll = Refinery::Polls::Poll.create do |post|
       post.heading = lang.to_s + ' Heading' + Faker::Lorem.sentence(1)
       post.sub_heading = lang.to_s + ' sub_heading' + Faker::Lorem.sentence(1)
@@ -87,3 +91,6 @@ end
 I18n.locale = ::Refinery::I18n.default_locale
 
 
+
+# Added by Refinery CMS Categories extension
+Refinery::Categories::Engine.load_seed

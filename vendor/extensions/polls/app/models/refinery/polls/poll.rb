@@ -17,7 +17,7 @@ module Refinery
 
       belongs_to :wallpaper, :class_name => '::Refinery::Image'
 
-      belongs_to :category
+      belongs_to :category, :class_name => '::Refinery::Categories::Category'
 
       has_many :vote_options, :class_name => '::Refinery::VoteOptions::VoteOption', dependent: :destroy
 

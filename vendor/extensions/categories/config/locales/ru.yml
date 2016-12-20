@@ -1,0 +1,27 @@
+ru:
+  refinery:
+    plugins:
+      categories:
+        title: Categories
+    categories:
+      admin:
+        categories:
+          actions:
+            create_new: Добавить Category
+            reorder: Изменить порядок Categories
+            reorder_done: Закончить изменять порядок Categories
+          records:
+            title: Categories
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Categories" не найдено. Нажмите "Добавить Category" чтобы создать category.
+          category:
+            view_live_html: Просмотреть category вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать category
+            delete: Удалить category навсегда
+      categories:
+        show:
+          other: Другие Categories
+  activerecord:
+    attributes:
+      'refinery/categories/category':
+        name: Name
