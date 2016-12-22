@@ -3,10 +3,12 @@
     .jumbotron.p-a-0
       .flex.align-items--center.section-fixed-height.xs-flex-flow-column
         .flex-body.p-y-4
-          h1.jumbotron-title.m-b-2 Opine er for alle.
-          p.jumbotron-subtitle.jumbotron-subtitle--sm Foreningen Opine blev stiftet i 2016. Vi er fortsat kun få ildsjæle i foreningen, men vores vision er at udvikle Opine til at være en anerkendt platform for åbne afstemninger. Vi ønsker en platform, hvor alle kan give deres mening til kende og hvor alle kan se, hvad folk mener.
+          h1.jumbotron-title.m-b-2
+            = t(:about_us_7)
+          p.jumbotron-subtitle.jumbotron-subtitle--sm
+            = t(:about_us_8)
         .flex-figure.p-y-4.jumbotron-image-wrapper
-          = image_tag "omos-image@2x.png", alt: 'Din mening tæller.', class: 'jumbotron-image m-r-0', width: '320', height: '380'
+          = image_tag "omos-image@2x.png", alt: t(:concept_6), class: 'jumbotron-image m-r-0', width: '320', height: '380'
 section.wrapper.p-y-7
   .container
     p.section-paragraph.m-b-4

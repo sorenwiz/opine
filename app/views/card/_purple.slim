@@ -5,4 +5,4 @@
     .card-meta.card-meta--lg
       = t :purpler_meta
   .card-footer
-    = link_to t(:purpler_skriv), main_app.about_us_path, class: 'btn btn-outline-tertiary btn-lg card-button'
+    = link_to t(:purpler_skriv), main_app.about_us_path(locale: I18n.locale.to_s), class: 'btn btn-outline-tertiary btn-lg card-button'
