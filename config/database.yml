@@ -10,23 +10,23 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 
 development:
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
   reconnect: false
   database: opine_development
   pool: 5
-  username: dromanovsky
-  password: 1
+  username: root
+  password: root
   host: localhost
 
 test:
-  adapter: postgresql
+  adapter: mysql2
   encoding: utf8
   reconnect: false
   database: opine_test
   pool: 5
-  username: dromanovsky
-  password: 1
+  username: root
+  password: root
   host: localhost
 
 production:
