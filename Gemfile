@@ -49,10 +49,11 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
-gem 'pg'
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'pg'
   gem 'web-console', '~> 2.0'
   gem 'annotate'
 end
