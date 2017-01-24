@@ -23,9 +23,6 @@ require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano/passenger'
 
-# Load custom tasks from `lib/capistrano/tasks` if you have any defined
-Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
-
 task :upload_dotenv do
   on roles(:web) do
     upload! ".env", release_path
