@@ -1,3 +1,4 @@
+---
 en:
   purpler_header: 'Do you have a suggestion for a poll?'
   purpler_meta: 'We create polls about current issues in the world. Do you have an idea for a poll - write to us!'
@@ -7,7 +8,7 @@ en:
   sign_up_1: 'Want to join us?'
   sign_up_2: 'You are very welcome as a member of the Association Opine! Read our'
   sign_up_3: 'statutes of association'
-  sign_up_4: 'and send us an email if you want to join. As a member you can be part of the editorial boards who formulate Opine's polls, and help to develop Opine.'
+  sign_up_4: "and send us an email if you want to join. As a member you can be part of the editorial boards who formulate Opine's polls, and help to develop Opine."
   sign_up_5: 'Join'
   sign_in_1: 'Login with Facebook'
   sign_in_2: 'You must log in to vote on Opine. On Opine you can log in with Facebook. Your vote will remain anonymous.'
@@ -25,7 +26,7 @@ en:
   concept_2: 'Opine open polls on current national and international issues. When you vote on opine you contribute to democracy by showing your opinion - and together we can perhaps affect those who decides?'
   concept_3: 'Opine is for everyone.'
   concept_4: 'Contribute - Vote - Join us.'
-  concept_5: 'The concept is simple: Opine shows people's opinions through open, anonymous polls. You can help by voting, suggest polls, share polls with your friends and of course by being a member of the Association Opine.'
+  concept_5: "The concept is simple: Opine shows people's opinions through open, anonymous polls. You can help by voting, suggest polls, share polls with your friends and of course by being a member of the Association Opine."
   concept_6: 'Your opinion counts.'
   concept_7: 'On Opine you state your opinion to your fellow citizens, media organizations, politicians and those in power. When combined, our votes describe the public opinion, and thus your opinion counts. Opine is for everyone.'
   thanks_1: 'Thank you for your vote.'
