@@ -18,7 +18,7 @@ body id="#{ canonical_id @page }" class="#{ view_template_class @page }"
   = render "/refinery/javascripts"
   = site_bar
   - app_extra_class = @app_extra_class || 'app-default'
-  - wallpaper_css = "background-image:url(\"#{@wallpaper}\")" if @wallpaper
+  - wallpaper_css ="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.50) 100%), url(\"#{@wallpaper}\") no-repeat top center/contain;" if @wallpaper
   .app class=app_extra_class style=wallpaper_css
     - if @skip_content
       = yield
