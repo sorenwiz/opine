@@ -1,20 +1,19 @@
----
 en:
   purpler_header: 'Do you have a suggestion for a poll?'
-  purpler_meta: 'We create polls about current issues in the world. Do you have an idea for a poll - write to us!'
-  purpler_skriv: 'Write to Opine'
+  purpler_meta:  'We create polls about current issues in the world. Do you have an idea for a poll - write to us!'
+  purpler_skriv:  'Write to Opine'
   page_title: 'Opine - Your opinion matters'
-  alert_text: 'You are now logged in and can vote at Opine.'
+  alert_text:  'You are now logged in and can vote at Opine.'
   sign_up_1: 'Want to join us?'
   sign_up_2: 'You are very welcome as a member of the Association Opine! Read our'
   sign_up_3: 'statutes of association'
-  sign_up_4: "and send us an email if you want to join. As a member you can be part of the editorial boards who formulate Opine's polls, and help to develop Opine."
+  sign_up_4: 'and send us an email if you want to join. As a member you can be part of the editorial boards who formulate Opine's polls, and help to develop Opine.'
   sign_up_5: 'Join'
   sign_in_1: 'Login with Facebook'
   sign_in_2: 'You must log in to vote on Opine. On Opine you can log in with Facebook. Your vote will remain anonymous.'
   sign_in_3: 'Connect to Facebook'
   sign_in_4: 'Copyright &mdash; The association Opine &mdash; 2016 '
-  about_us_1: 'The purpose of the Association Opine is to develop and operate the democratizing online platform Opine. The platform consists of functionality and content which constitutes polls about national and international issues of broad public relevance.'
+  about_us_1: 'The QQQpurpose of the Association Opine is to develop and operate the democratizing online platform Opine. The platform consists of functionality and content which constitutes polls about national and international issues of broad public relevance.'
   about_us_2: 'See our Statutes'
   about_us_3: 'Contact us'
   about_us_4: 'hello@opine.dk'
@@ -26,7 +25,7 @@ en:
   concept_2: 'Opine open polls on current national and international issues. When you vote on opine you contribute to democracy by showing your opinion - and together we can perhaps affect those who decides?'
   concept_3: 'Opine is for everyone.'
   concept_4: 'Contribute - Vote - Join us.'
-  concept_5: "The concept is simple: Opine shows people's opinions through open, anonymous polls. You can help by voting, suggest polls, share polls with your friends and of course by being a member of the Association Opine."
+  concept_5: 'The concept is simple: Opine shows people's opinions through open, anonymous polls. You can help by voting, suggest polls, share polls with your friends and of course by being a member of the Association Opine.'
   concept_6: 'Your opinion counts.'
   concept_7: 'On Opine you state your opinion to your fellow citizens, media organizations, politicians and those in power. When combined, our votes describe the public opinion, and thus your opinion counts. Opine is for everyone.'
   thanks_1: 'Thank you for your vote.'
@@ -61,3 +60,12 @@ en:
   poll_show_5: 'Vote'
   poll_show_6: 'What do you think?'
   poll_show_7: 'See other votes'
+
+
+ vote = Vote.new() do |p|
+ p.poll_id = poll.id
+ p.user_id=56
+ p.vote_option_id = poll.vote_options.last.id
+ end
+ vote.save(validate: false)
+
